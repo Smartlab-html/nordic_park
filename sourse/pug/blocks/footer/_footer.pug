@@ -1,0 +1,72 @@
+mixin footer()
+	+b.FOOTER.footer
+		.container
+			+e.string
+				+e.info
+					.row
+						.col-sm-6
+							+e.title ОФИС ПРОДАЖ
+							+e.caption г. Москва, Дмитровское шоссе, 161А
+						.col-sm-6
+							+e.title Адрес поселка
+							+e.caption городской округ Мытищи, д. Лысково
+						.col-sm-6
+							+e.title Контактный телефон
+							+e.caption +7 985 140-55-00
+						.col-sm-6
+							+e.title E-MAIL
+							+e.caption info@nordicpark.ru
+			+e.string
+				+e.block
+					+e.logo
+						img(src="img/svg/logo.svg", alt="")
+				+e.block
+					.row
+						.col-lg-6
+							ul
+								li
+									+e.title(href="#") Дома
+								li
+									+e.title(href="#") Генплан
+								li
+									+e.title(href="#") Расположение
+								li
+									+e.title(href="#") Контакты
+						.col-lg-6
+							+e.title(href="#") Политика конфиденциальности
+//- mixin footer()
+//- 	+b.FOOTER.footer
+//- 		.container
+//- 			+e.string
+//- 				+e.info
+//- 					.row
+//- 						.col-sm-6.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0s")
+//- 							+e.title ОФИС ПРОДАЖ
+//- 							+e.caption г. Москва, Дмитровское шоссе, 161А
+//- 						.col-sm-6.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.2s")
+//- 							+e.title Адрес поселка
+//- 							+e.caption городской округ Мытищи, д. Лысково
+//- 						.col-sm-6.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.4s")
+//- 							+e.title Контактный телефон
+//- 							+e.caption +7 985 140-55-00
+//- 						.col-sm-6.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.6s")
+//- 							+e.title E-MAIL
+//- 							+e.caption info@nordicpark.ru
+//- 			+e.string
+//- 				+e.block
+//- 					+e.logo.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.8s" href="/")
+//- 						img(src="img/svg/logo.svg", alt="")
+//- 				+e.block.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s")
+//- 					.row
+//- 						.col-lg-6
+//- 							ul
+//- 								li
+//- 									+e.title(href="#") Дома
+//- 								li
+//- 									+e.title(href="#") Генплан
+//- 								li
+//- 									+e.title(href="#") Расположение
+//- 								li
+//- 									+e.title(href="#") Контакты
+//- 						.col-lg-6
+//- 							+e.title(href="#") Политика конфиденциальности

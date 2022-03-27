@@ -1,0 +1,27 @@
+mixin sAboutIndex(data)
+	// start sAboutIndex
+	+b.sAboutIndex#sAboutIndex&attributes(attributes)
+		+e.caption-block
+			.container
+				+e.caption-block-wrap
+					+e.caption-block-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0s") О поселке
+					+e.caption-block-info
+						//- h2.animate__animated.animate__fadeIn.animate__slow Nordic Park
+						h2.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.5s") Nordic Park
+						p.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s") Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к&nbsp;которому привыкли в мегаполисе.
+						+e.down-link(href="#sAboutIndexInfo")
+							+icon(`arrow-down`)
+		
+	// end sAboutIndex
+mixin sAboutIndexInfo(data)
+	+b.sAboutIndexInfo#sAboutIndexInfo
+		.container
+			+e.wrap
+				+e.picture-block
+					+e.picture.wow.animate__slideInLeft(data-wow-duration="1s" data-wow-delay="1s")
+							+img(`@2x/house.jpg`)
+				+e.phylosophy-block
+					+e.phylosophy-block-wrap
+						+e.phylosophy-block-title Философия
+						h3.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") lagom
+						p.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Мы&nbsp;вдохновлялись шведской философией умеренности и&nbsp;гармонии. Слово Lagom переводится как &laquo;столько, сколько нужно&raquo;, &laquo;в&nbsp;самый раз&raquo;.<br /><br />Достаточность без излишеств. Современный минимализм<br />в&nbsp;архитектурном стиле домов и&nbsp;дизайне интерьеров в&nbsp;сочетании с&nbsp;уникальным расположением поселка позволил создать пространство, в&nbsp;котором все преимущества жизни на&nbsp;природе сочетаются с&nbsp;возможностями городской архитектуры.

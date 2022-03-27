@@ -1,0 +1,38 @@
+mixin sIndexSlider(data)
+	// start sIndexSlider
+	+b.sIndexSlider.section#sIndexSlider&attributes(attributes)
+		+e.pic-slider--js.swiper
+			.swiper-wrapper
+				+e.pic-slider-item.swiper-slide
+					+e.pic-slider-title Современная архитектура
+					+e.pic-slider-bg
+						+pic2(`index-slide-1.jpg`,``,0)
+					+e.pic-slider-caption Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+				+e.pic-slider-item.swiper-slide
+					+e.pic-slider-title Современная архитектура
+					+e.pic-slider-bg
+						+pic2(`index-slide-1.jpg`,``,0)
+					+e.pic-slider-caption Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+				+e.pic-slider-item.swiper-slide
+					+e.pic-slider-title Современная архитектура
+					+e.pic-slider-bg
+						+pic2(`index-slide-1.jpg`,``,0)
+					+e.pic-slider-caption Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+			+arrow
+			.swiper-pagination
+		+e.caption-slider-block
+			+e.caption-slider--js.swiper
+				.swiper-wrapper
+					+e.caption-slider-item.swiper-slide
+						+e.caption-slider-title Современная архитектура
+						+e.caption-slider-text.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+					+e.caption-slider-item.swiper-slide
+						+e.caption-slider-title Современная архитектура
+						+e.caption-slider-text.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+					+e.caption-slider-item.swiper-slide
+						+e.caption-slider-title Современная архитектура
+						+e.caption-slider-text.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+				+e.caption-slider-arrows.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s")
+					+arrow
+				.swiper-pagination
+	// end sIndexSlider

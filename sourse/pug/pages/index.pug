@@ -1,0 +1,37 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sAboutIndex/_sAboutIndex.pug
+include ../blocks/sIndexSlider/_sIndexSlider.pug
+include ../blocks/sIndexInfo/_sIndexInfo.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let title= 'Главная'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav
+		+headerBlockIndex
+	+sAboutIndex
+	+sAboutIndexInfo
+	+sIndexSlider
+	+sIndexInfo
+	+sForm()
+	+footer()
+      
+
+
+

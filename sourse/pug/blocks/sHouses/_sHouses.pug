@@ -1,0 +1,31 @@
+mixin sHouses(data)
+	// start sHouses
+	+b.SECTION.sHouses.section#sHouses&attributes(attributes)
+		.container
+			+breadcrumb(`ГЛАВНАЯ`,`ДОМА`)
+			h1.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0s") Дома
+			.row
+				.col-lg-6
+					+house-item(`VIND`,`148`,`1`,`0`)
+				.col-lg-6
+					+house-item(`FELT`,`180`,`2`,`1`)
+				.col-lg-6
+					+house-item(`BARN`,`215`,`3`,`2`)
+				.col-lg-6
+					+house-item(`JORD`,`220`,`4`,`3`)
+				.col-lg-6
+					+house-item(`SKOG`,`260`,`5`,`4`)
+				.col-lg-6
+					+house-item(`STEN`,`286`,`6`,`5`)
+	// end sHouses
+
+mixin house-item(title,square,img,delay)
+	+b.house-item.bg-wrap.wow.animate__zoomIn(data-wow-duration="0.4s" data-wow-delay=`${delay}.0s`)
+		+pic(`house-item-${img}.jpg`,``,0).picture-bg
+		h3.wow.animate__zoomIn(data-wow-duration="0.2s" data-wow-delay=`${delay}.4s`)!=title
+		+e.square.wow.animate__zoomIn(data-wow-duration="0.2s" data-wow-delay=`${delay}.6s`)
+			+e.square-info!=square
+			+e.square-title Общая площадь, м²
+		+e.more.wow.animate__zoomIn(data-wow-duration="0.2s" data-wow-delay=`${delay}.8s`)(href="#")
+			span Подробнее
+			+icon(`chevron-right`)

@@ -1,0 +1,26 @@
+- const version = '0.0.1'
+mixin allcss() 
+	link(href="libs/swiper/swiper.min.css", rel="stylesheet")
+	link(href="libs/@fancyapps/ui/fancybox.css", rel="stylesheet")
+	link(href="libs/animate.css/animate.min.css", rel="stylesheet")
+	link(rel='preconnect' href='https://fonts.googleapis.com')
+	link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+	link(href='https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap' rel='stylesheet')
+	link(href=`css/main.min.css?v=${version}`, rel="stylesheet")
+
+mixin allcjs() 
+	script(src="libs/jquery/jquery.min.js")
+	script(src="libs/@fancyapps/ui/fancybox.umd.js") 
+	script(src="libs/swiper/swiper-bundle.min.js")  
+	script(src="libs/inputmask/inputmask.min.js") 
+
+
+	script(src="js/TweenMax.min.js")
+	script(src="libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js")
+	script(src="libs/gsap/ScrollToPlugin.min.js")
+	script(src="libs/gsap/EasePack.min.js")
+	script(src="libs/wowjs/wow.min.js")
+	script(src="libs/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js")
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+	script(src=`js/common.js?v=${version}`)

@@ -1,0 +1,21 @@
+// start .topLine
+.topLine {
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+	//
+	@include media-breakpoint-only(md) {
+	}
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	&.fixed{
+		
+	}
+} // end.topLine

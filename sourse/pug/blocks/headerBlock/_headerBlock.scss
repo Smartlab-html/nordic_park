@@ -1,0 +1,129 @@
+// start .headerBlock
+.headerBlock {
+	margin-bottom: 1px;
+	min-height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
+	// background-image: url(../img);
+	// background-color: #000000;
+	@include media-breakpoint-up(xl) {
+	}
+
+	@include media-breakpoint-up(lg) {
+	}
+
+	@include media-breakpoint-up(md) {
+	}
+}
+
+// end.headerBlock
+
+.headerBlockIndex {
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(236)};
+		--sPB: #{rem(120)};
+	}
+	--sPT: #{rem(216)};
+	--sPB: #{rem(80)};
+	display: flex;
+	flex-direction: column;
+	color: $white;
+	.container {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	picture {
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(0deg, rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.6));
+			z-index: 1;
+		}
+	}
+	&__wrap {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			flex-grow: 1;
+			align-items: flex-start;
+		}
+		flex-direction: column;
+	}
+	h1 {
+		max-width: rem(632);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(92);
+			margin-right: 32px;
+			margin-bottom: 0;
+		}
+		margin-bottom: 30px;
+		@include media-breakpoint-up(sm) {
+			font-size: 80px;
+		}
+		font-size: 44px;
+		line-height: 100%;
+		padding-bottom: 50px;
+	}
+	&__caption {
+		line-height: 150%;
+		font-weight: 500;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(44);
+		}
+		margin-bottom: rem(64);
+		@include media-breakpoint-up(sm) {
+			font-size: $large;
+		}
+		font-size: 14px;
+		--animate-delay: 0.5s;
+		animation-delay: var(--animate-delay);
+	}
+	&__numbers-wrap {
+		display: flex;
+	}
+	&__info-block {
+		@include media-breakpoint-up(lg) {
+			align-self: end;
+		}
+	}
+	&__number {
+		width: 50%;
+		max-width: 50%;
+		padding-right: rem(10);
+		--animate-delay: 1s;
+		--animate-duration: 0.5s;
+		&:last-child{
+			--animate-delay: 1.5s;
+		}
+		animation-delay: var(--animate-delay);
+	}
+	&__number-title {
+		font-weight: 500;
+		line-height: 100%;
+		@include media-breakpoint-up(sm) {
+			font-size: 96px;
+		}
+		font-size: 80px;
+		margin-bottom: rem(4);
+	}
+	&__number-caption {
+		@include media-breakpoint-up(sm) {
+			font-size: $large;
+		}
+		font-size: 14px;
+		line-height: 140%;
+		font-weight: 500;
+	}
+}
