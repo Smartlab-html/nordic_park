@@ -26,6 +26,6 @@ mixin house-item(title,square,img,delay)
 		+e.square.wow.animate__zoomIn(data-wow-duration="0.2s" data-wow-delay=`${delay}.6s`)
 			+e.square-info!=square
 			+e.square-title Общая площадь, м²
-		+e.more.wow.animate__zoomIn(data-wow-duration="0.2s" data-wow-delay=`${delay}.8s`)(href="#")
+		+e.more.wow.animate__zoomIn(data-wow-duration="0.2s" data-wow-delay=`${delay}.8s` href="#")
 			span Подробнее
 			+icon(`chevron-right`)

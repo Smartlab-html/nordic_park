@@ -2,6 +2,9 @@ mixin headerBlockIndex()
 	// start headerBlock
 	+b.headerBlockIndex.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
 		+pic(`index-bg.jpg`,``,0).picture-bg
+		video.picture-bg(loading='lazy' preload='auto' no-controls  autoplay  loop  playsinline  muted  )
+			source(src="video/video.webp" type='video/webp')
+			source(src="video/video.mp4" type='video/mp4')
 		.container
 			+e.wrap
 				h1.animate__animated.animate__fadeInUp Коттеджный поселок в реликтовом лесу

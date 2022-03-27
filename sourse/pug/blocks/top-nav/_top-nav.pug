@@ -20,10 +20,10 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		+e.logo.animate__fadeIn.animate__animated(href="/")
+		+e.logo.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.1s" href="/")
 			img(src="img/svg/logo.svg", alt="")
-		+e.menu
-			+e.menu-item--special.animate__bounceInLeft.animate__animated(href="#") Выбрать дом
+		+e.menu.wow.animate__bounceInLeft(data-wow-duration="1s" data-wow-delay="0.2s")
+			+e.menu-item--special Выбрать дом
 			+e.menu-item.animate__bounceInLeft.animate__animated(href="#") Расположение
 			+e.menu-item.animate__bounceInLeft.animate__animated(href="#") Генплан
 		+b.menu-mobile--js
@@ -33,6 +33,6 @@ mixin top-nav()
 				+e.item(href="#") Расположение
 				+e.item(href="#") Контакты
 		+e.wrap
-			+e.tel.animate__bounceInRight.animate__animated(href="tel:+79851405500") +7 985 140-55-00
+			+e.tel.wow.animate__bounceInRight(data-wow-duration="1s" data-wow-delay="0.2s" href="tel:+79851405500") +7 985 140-55-00
 			+menu-toggle
 	// end top-nav

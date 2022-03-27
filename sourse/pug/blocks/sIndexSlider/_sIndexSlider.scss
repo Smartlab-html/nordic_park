@@ -14,8 +14,12 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
-	padding-left: 32px;
-	padding-right: 32px;
+	@include media-breakpoint-up(sm) {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	padding-left: 10px;
+	padding-right: 10px;
 	background-color: $white;
 	@include media-breakpoint-up(md) {
 	}
@@ -111,16 +115,23 @@
 			// 	display: none;
 			// }
 			transition-duration: 0.4s;
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				opacity: 0;
-				&:hover{
+				&:hover {
 					opacity: 1;
 				}
 			}
 			border: none;
+			@include media-breakpoint-down(sm){
+				top: -50px;
+			}
 			.icon {
-				width: 32px;
+				@include media-breakpoint-up(sm){
+					width: 32px;
 				height: 32px;
+				}
+				width: 16px;
+				height: 16px;
 				stroke: $body-color;
 				color: transparent;
 				position: absolute;
@@ -129,8 +140,12 @@
 				transform: translate(-50%, -50%);
 			}
 		}
-		--swiperArrowPosition: 32px;
+		@include media-breakpoint-up(sm){
+			--swiperArrowPosition: 32px;
 		--swiperArrowSize: #{rem(72)};
+		}
+		--swiperArrowPosition: 16px;
+		--swiperArrowSize: #{rem(36)};
 
 		.swiper-pagination {
 			@include media-breakpoint-up(lg) {
@@ -145,14 +160,14 @@
 	}
 	&__pic-slider-bg {
 		@include block(1923, 900);
-		picture{
+		picture {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
 		}
-		img{
+		img {
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -178,13 +193,6 @@
 	&__pic-slider-item {
 		position: relative;
 		picture {
-			@include media-breakpoint-up(lg) {
-				margin-bottom: 0;
-			}
-			@include media-breakpoint-up(md) {
-				margin-bottom: rem(48);
-			}
-			margin-bottom: rem(30);
 			img {
 				width: 100%;
 			}
@@ -198,10 +206,12 @@
 		@include media-breakpoint-up(md) {
 			font-size: $large;
 		}
+		@include media-breakpoint-up(md) {
+			margin-top: rem(48);
+		}
+		margin-top: rem(30);
 		font-size: rem(16);
 	}
-
-
 
 	&__pic-slider-item * {
 	}
@@ -211,7 +221,6 @@
 	// z-index: 2;
 	overflow: hidden;
 }
-.sIndexSlider__pic-slider-item *{
+.sIndexSlider__pic-slider-item * {
 	// z-index: 2 !important;
-
 }

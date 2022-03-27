@@ -473,7 +473,7 @@ function eventHandler() {
 		.Scene({ triggerElement: ".sAboutIndexInfo", duration: '90%', offset: -300 })
 		.setTween(tween)
 		// .setPin(".headerBlock")
-		.addIndicators() // add indicators (requires plugin)
+		// .addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
 
 	// var scene2 = new ScrollMagic.Scene({ triggerElement: ".sAboutIndex" })
@@ -489,7 +489,7 @@ function eventHandler() {
 			offset: 400,
 			duration: '100%'
 		})
-		.addIndicators() // add indicators (requires plugin)
+		// .addIndicators() // add indicators (requires plugin)
 		.addTo(controller)
 		.setTween(tween2)
 	// var slides = document.querySelectorAll(".scroll-slide");

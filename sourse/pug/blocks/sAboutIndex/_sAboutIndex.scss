@@ -102,6 +102,7 @@
 		padding-bottom: rem(200);
 		background-color: $white;
 	}
+	background-color: #f2f2f2;
 	.row {
 		@include media-breakpoint-up(lg) {
 			--bs-gutter-y: 0;
@@ -131,6 +132,9 @@
 			margin-left: auto;
 			position: relative;
 			// margin-top: -190px;
+		}
+		@include media-breakpoint-down(lg){
+			transform: none !important;
 		}
 		&::before {
 			background-color: #f2f2f2;

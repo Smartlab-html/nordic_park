@@ -21,11 +21,11 @@
 			<header class="header" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
-					<a class="top-nav__logo animate__fadeIn animate__animated" href="/"><img src="img/svg/logo.svg" alt=""/>
+					<a class="top-nav__logo wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.1s" href="/"><img src="img/svg/logo.svg" alt=""/>
 					</a>
-					<div class="top-nav__menu">
-						<a class="top-nav__menu-item top-nav__menu-item--special animate__bounceInLeft animate__animated" href="#">Выбрать дом
-						</a>
+					<div class="top-nav__menu wow animate__bounceInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+						<div class="top-nav__menu-item top-nav__menu-item--special">Выбрать дом
+						</div>
 						<a class="top-nav__menu-item animate__bounceInLeft animate__animated" href="#">Расположение
 						</a>
 						<a class="top-nav__menu-item animate__bounceInLeft animate__animated" href="#">Генплан
@@ -44,7 +44,7 @@
 						</div>
 					</div>
 					<div class="top-nav__wrap">
-						<a class="top-nav__tel animate__bounceInRight animate__animated" href="tel:+79851405500">+7 985 140-55-00
+						<a class="top-nav__tel wow animate__bounceInRight" data-wow-duration="1s" data-wow-delay="0.2s" href="tel:+79851405500">+7 985 140-55-00
 						</a>
 						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 						</div>
@@ -58,6 +58,10 @@
 						<source type="image/webp" srcset="img/@2x/webp/index-bg.webp"/><img src="img/@2x/index-bg.jpg" alt="" loading="lazy"/>
 					</picture>
 					<!-- /picture-->
+					<video class="picture-bg" loading="lazy" preload="auto" no-controls="no-controls" autoplay="autoplay" loop="loop" playsinline="playsinline" muted="muted">
+						<source src="video/video.webp" type="video/webp"/>
+						<source src="video/video.mp4" type="video/mp4"/>
+					</video>
 					<div class="container">
 						<div class="headerBlockIndex__wrap">
 							<h1 class="animate__animated animate__fadeInUp">Коттеджный поселок в реликтовом лесу</h1>

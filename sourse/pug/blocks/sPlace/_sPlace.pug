@@ -1,0 +1,11 @@
+mixin sPlace(data)
+	// start sPlace
+	+b.SECTION.sPlace.section#sPlace&attributes(attributes)
+		.container
+			+breadcrumb-light(`Главная`,`Расположение`)
+			h1 Расположение
+			+e.caption.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Коттеджный поселок расположен в&nbsp;одном из&nbsp;самых экологически чистых мест Подмосковья&nbsp;&mdash; в&nbsp;20&nbsp;км от&nbsp;МКАД по&nbsp;Дмитровскому шоссе, в&nbsp;окружении реликтового леса.
+			+e.down-link.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s" href="#sPlace__map")
+				+icon(`arrow-down`)
+		+e.map#sPlace__map
+	// end sPlace
