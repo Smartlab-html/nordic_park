@@ -56,11 +56,13 @@
 		}
 		position: absolute;
 		// bottom: rem(-220);
-		left: 0;
+		left: -70px;
 		width: 40.6vw;
+		top: 220px;
 		img{
 			max-height: 100%;
 			max-width: 100%;
+			width: 100%;
 		}
 	}
 	.row{

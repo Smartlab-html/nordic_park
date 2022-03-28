@@ -20,10 +20,10 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		+e.logo.animate__animated.animate__fadeIn(href="/")
+		+e.logo.animate__animated.animate__fadeIn.animate__slow(href="/")
 			img(src="img/svg/logo.svg", alt="")
 		//- +e.menu.wow.animate__bounceInLeft(data-wow-duration="1s" data-wow-delay="0.2s")
-		+e.menu.animate__animated.animate__bounceInLeft
+		+e.menu.animate__animated.animate__fadeIn
 			+e.menu-item--special(href="#")
 				+e.menu-item-text-wrap
 					+e.SPAN.menu-item-text Выбрать дом
@@ -33,6 +33,9 @@ mixin top-nav()
 			+e.menu-item(href="#")
 				+e.menu-item-text-wrap
 					+e.SPAN.menu-item-text Генплан
+			+e.menu-item(href="#")
+				+e.menu-item-text-wrap
+					+e.SPAN.menu-item-text Контакты
 		+b.menu-mobile--js
 			+e.wrap
 				+e.item(href="#") Дома
@@ -40,7 +43,7 @@ mixin top-nav()
 				+e.item(href="#") Расположение
 				+e.item(href="#") Контакты
 		+e.wrap
-			+e.tel.animate__animated.animate__bounceInRight(href="tel:+79851405500") 
+			+e.tel.animate__animated.animate__fadeIn(href="tel:+79851405500") 
 				+e.tel-text-wrap
 					+e.tel-text +7 985 140-55-00
 			+menu-toggle

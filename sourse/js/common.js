@@ -482,14 +482,14 @@ function eventHandler() {
 	// 	.addIndicators({ name: "1 - add a class" }) // add indicators (requires plugin)
 	// 	.addTo(controller);
 	var tween2 = new TimelineMax()
-		.from(".sIndexInfo__picture", 10, { y: 600, duration: 1500, })
+		.from(".sIndexInfo__picture", 10, { x: 100, duration: 3500, })
 	let scene2 = new ScrollMagic
 		.Scene({
 			triggerElement: ".sIndexInfo",
-			offset: 400,
+			offset: 100,
 			duration: '100%'
 		})
-		// .addIndicators() // add indicators (requires plugin)
+		.addIndicators() // add indicators (requires plugin)
 		.addTo(controller)
 		.setTween(tween2)
 	// var slides = document.querySelectorAll(".scroll-slide");

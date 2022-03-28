@@ -73,6 +73,9 @@
 	}
 	h1 {
 		max-width: rem(632);
+		@include media-breakpoint-up(xxl){
+			font-size: calc(50px + 2.8vw);
+		}
 		@include media-breakpoint-up(lg) {
 			font-size: rem(92);
 			margin-right: 32px;
@@ -93,6 +96,9 @@
 			margin-bottom: rem(44);
 		}
 		margin-bottom: rem(64);
+		@include media-breakpoint-up(xxl){
+			font-size: calc(15px + 0.3vw);
+		}
 		@include media-breakpoint-up(sm) {
 			font-size: $large;
 		}
