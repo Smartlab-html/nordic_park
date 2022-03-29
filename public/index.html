@@ -21,22 +21,22 @@
 			<header class="header" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
-					<a class="top-nav__logo animate__animated animate__fadeIn animate__slow" href="/"><img src="img/svg/logo.svg" alt=""/>
+					<a class="top-nav__logo animate__animated animate__fadeIn" href="/"><img src="img/svg/logo.svg" alt=""/>
 					</a>
-					<div class="top-nav__menu animate__animated animate__fadeIn">
-						<a class="top-nav__menu-item top-nav__menu-item--special" href="#">
+					<div class="top-nav__menu">
+						<a class="top-nav__menu-item top-nav__menu-item--special animate__animated animate__fadeInLeft" href="#">
 							<div class="top-nav__menu-item-text-wrap"><span class="top-nav__menu-item-text">Выбрать дом</span>
 							</div>
 						</a>
-						<a class="top-nav__menu-item" href="#">
+						<a class="top-nav__menu-item animate__animated animate__fadeInLeft" href="#">
 							<div class="top-nav__menu-item-text-wrap"><span class="top-nav__menu-item-text">Расположение</span>
 							</div>
 						</a>
-						<a class="top-nav__menu-item" href="#">
+						<a class="top-nav__menu-item animate__animated animate__fadeInLeft" href="#">
 							<div class="top-nav__menu-item-text-wrap"><span class="top-nav__menu-item-text">Генплан</span>
 							</div>
 						</a>
-						<a class="top-nav__menu-item" href="#">
+						<a class="top-nav__menu-item animate__animated animate__fadeInLeft" href="#">
 							<div class="top-nav__menu-item-text-wrap"><span class="top-nav__menu-item-text">Контакты</span>
 							</div>
 						</a>
@@ -80,7 +80,15 @@
 						<div class="headerBlockIndex__wrap">
 							<h1 class="animate__animated animate__fadeInUp">Коттеджный поселок в реликтовом лесу</h1>
 							<div class="headerBlockIndex__info-block">
-								<div class="headerBlockIndex__caption animate__animated animate__fadeIn animate__slow">Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
+								<div class="headerBlockIndex__caption swiper animate__animated animate__fadeIn animate__slow">
+									<div class="swiper-wrapper">
+										<div class="headerBlockIndex__caption-slide swiper-slide">В 20 минутах от города, посреди реликтового леса, в шаговой доступности от большой воды.
+										</div>
+										<div class="headerBlockIndex__caption-slide swiper-slide">6 типов домов площадью от 150 до 300 м2 по проектам ведущего архитектурного бюро в стиле современный минимализм и Барн-Хаус.
+										</div>
+										<div class="headerBlockIndex__caption-slide swiper-slide">По всей протяженности поселка на площади более 2 га расположился живописный ландшафтный парк с детскими игровыми и work out площадками, прогулочными дорожками, летним кафе 
+										</div>
+									</div>
 								</div>
 								<div class="headerBlockIndex__numbers-wrap">
 									<div class="headerBlockIndex__number animate__animated animate__fadeInUp animate__slow">
@@ -444,6 +452,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/scrooth.js"></script>
 		<script src="js/TweenMax.min.js"></script>
 		<script src="libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
 		<script src="libs/gsap/ScrollToPlugin.min.js"></script>

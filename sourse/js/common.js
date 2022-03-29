@@ -353,7 +353,7 @@ function eventHandler() {
 	}
 	var interleaveOffset = 0.5;
 
-		var swiperOptions = {
+	var swiperOptions = {
 		// slidesPerView: 1,
 		// pagination: {
 		// 	el: ".swiper-pagination",
@@ -406,8 +406,8 @@ function eventHandler() {
 			}
 		}
 
-		};
-	
+	};
+
 	const IndexPicSlider = new Swiper('.sIndexSlider__pic-slider--js', swiperOptions);
 	const IndexCaptionSlider = new Swiper('.sIndexSlider__caption-slider--js', {
 		slidesPerView: 1,
@@ -427,7 +427,14 @@ function eventHandler() {
 	});
 
 	IndexCaptionSlider.controller.control = IndexPicSlider;
-	IndexPicSlider.controller.control = 	IndexCaptionSlider;
+	IndexPicSlider.controller.control = IndexCaptionSlider;
+	const HeaderSlider = new Swiper('.headerBlockIndex__caption ', {
+		slidesPerView: '1',
+		// effect: "fade",
+		autoplay: {
+			delay: 4000,
+		},
+	});
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -449,7 +456,11 @@ function eventHandler() {
 	);
 	wow.init();
 
-
+	const scroll = new Scrooth({
+		strength: 16,
+		acceleration: 1.2,
+		deceleration: 0.975
+	});
 
 
 	var controller = new ScrollMagic.Controller();
@@ -457,7 +468,7 @@ function eventHandler() {
 
 	let height = window.innerHeight;
 	var tween = new TimelineMax()
-		.to(".sAboutIndexInfo__phylosophy-block-wrap", 10, { y: -260, duration: 2500, })
+		.to(".sAboutIndexInfo__phylosophy-block-wrap", 10, { y: -320, duration: 2500, })
 	// .from(".picture-block--1", 3000, { y: height / 1.8 ,duration: 1500,})
 	// .from(".picture-block--1 .picture-block__caption", 10, { opacity: 0 ,duration: 1500,})
 	// .from(".picture-block--2", 3000, { y: height ,duration: 1500,})
@@ -470,7 +481,7 @@ function eventHandler() {
 	// .to(".picture-block--3", 3000, { opacity: .4, delay: -50 ,duration: 1500,})
 	// build scene
 	new ScrollMagic
-		.Scene({ triggerElement: ".sAboutIndexInfo", duration: '90%', offset: -300 })
+		.Scene({ triggerElement: ".sAboutIndexInfo", duration: '90%', offset: -200 })
 		.setTween(tween)
 		// .setPin(".headerBlock")
 		// .addIndicators() // add indicators (requires plugin)
@@ -482,14 +493,14 @@ function eventHandler() {
 	// 	.addIndicators({ name: "1 - add a class" }) // add indicators (requires plugin)
 	// 	.addTo(controller);
 	var tween2 = new TimelineMax()
-		.from(".sIndexInfo__picture", 10, { x: 100, duration: 3500, })
+		.from(".sIndexInfo__picture img", 10, { x: 200, duration: 3500, })
 	let scene2 = new ScrollMagic
 		.Scene({
 			triggerElement: ".sIndexInfo",
 			offset: 100,
 			duration: '100%'
 		})
-		.addIndicators() // add indicators (requires plugin)
+		// .addIndicators() // add indicators (requires plugin)
 		.addTo(controller)
 		.setTween(tween2)
 	// var slides = document.querySelectorAll(".scroll-slide");

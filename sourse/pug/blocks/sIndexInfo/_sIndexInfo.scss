@@ -55,14 +55,19 @@
 			display: none;
 		}
 		position: absolute;
+		max-width: 1000px;
+		max-height: 1000px;
 		// bottom: rem(-220);
 		left: -70px;
 		width: 40.6vw;
 		top: 220px;
+		overflow: hidden;
 		img{
-			max-height: 100%;
-			max-width: 100%;
-			width: 100%;
+			max-height: 1000px;
+			width: 130%;
+			object-fit: cover;
+			position: relative;
+			left: -140px;
 		}
 	}
 	.row{

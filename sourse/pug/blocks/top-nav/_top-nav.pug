@@ -20,20 +20,20 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		+e.logo.animate__animated.animate__fadeIn.animate__slow(href="/")
+		+e.logo.animate__animated.animate__fadeIn(href="/")
 			img(src="img/svg/logo.svg", alt="")
 		//- +e.menu.wow.animate__bounceInLeft(data-wow-duration="1s" data-wow-delay="0.2s")
-		+e.menu.animate__animated.animate__fadeIn
-			+e.menu-item--special(href="#")
+		+e.menu
+			+e.menu-item--special.animate__animated.animate__fadeInLeft(href="#")
 				+e.menu-item-text-wrap
 					+e.SPAN.menu-item-text Выбрать дом
-			+e.menu-item(href="#")
+			+e.menu-item.animate__animated.animate__fadeInLeft(href="#")
 				+e.menu-item-text-wrap
 					+e.SPAN.menu-item-text Расположение
-			+e.menu-item(href="#")
+			+e.menu-item.animate__animated.animate__fadeInLeft(href="#")
 				+e.menu-item-text-wrap
 					+e.SPAN.menu-item-text Генплан
-			+e.menu-item(href="#")
+			+e.menu-item.animate__animated.animate__fadeInLeft(href="#")
 				+e.menu-item-text-wrap
 					+e.SPAN.menu-item-text Контакты
 		+b.menu-mobile--js

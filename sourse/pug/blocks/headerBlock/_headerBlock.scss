@@ -95,6 +95,7 @@
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(44);
 		}
+		max-width: 100%;
 		margin-bottom: rem(64);
 		@include media-breakpoint-up(xxl){
 			font-size: calc(15px + 0.3vw);
@@ -112,7 +113,9 @@
 	&__info-block {
 		@include media-breakpoint-up(lg) {
 			align-self: end;
+			max-width: 50%;
 		}
+		max-width: 100%;
 	}
 	&__number {
 		width: 50%;

@@ -9,7 +9,12 @@ mixin headerBlockIndex()
 			+e.wrap
 				h1.animate__animated.animate__fadeInUp Коттеджный поселок в реликтовом лесу
 				+e.info-block
-					+e.caption.animate__animated.animate__fadeIn.animate__slow Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
+					//- +e.caption Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
+					+e.caption.swiper.animate__animated.animate__fadeIn.animate__slow
+						.swiper-wrapper
+							+e.caption-slide.swiper-slide В 20 минутах от города, посреди реликтового леса, в шаговой доступности от большой воды.
+							+e.caption-slide.swiper-slide 6 типов домов площадью от 150 до 300 м2 по проектам ведущего архитектурного бюро в стиле современный минимализм и Барн-Хаус.
+							+e.caption-slide.swiper-slide По всей протяженности поселка на площади более 2 га расположился живописный ландшафтный парк с детскими игровыми и work out площадками, прогулочными дорожками, летним кафе 
 					+e.numbers-wrap
 						+e.number.animate__animated.animate__fadeInUp.animate__slow
 							+e.number-title 20
