@@ -217,14 +217,14 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	animateScroll() {
-		$(document).on('click', " .menu li a, .scroll-link", function () {
+		$(document).on('click', ".scroll-link", function () {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", '/' + elementClick)
 			}
 			else {
 				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
+				$('html, body').animate({ scrollTop: destination - 120 }, 400);
 				return false;
 			}
 		});
@@ -296,7 +296,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	// JSCCommon.animateScroll();
+	JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -329,6 +329,9 @@ function eventHandler() {
 
 	whenResize();
 
+	// $(`.sForm__ask`).click(function () {
+	// 	$(`.sForm form-wrap__input`).toggleClass(`hide`);
+	// });
 
 	let defaultSl = {
 		spaceBetween: 0,
@@ -369,6 +372,13 @@ function eventHandler() {
 		watchSlidesProgress: true,
 		mousewheelControl: true,
 		keyboardControl: true,
+		// Disable preloading of all images
+		preloadImages: false,
+		// Enable lazy loading
+		lazy: {
+			enabled: true,
+			loadPrevNext: true
+		},
 		// autoplay: {
 		// 	delay: 5000,
 		// },
@@ -457,9 +467,9 @@ function eventHandler() {
 	wow.init();
 
 	const scroll = new Scrooth({
-		strength: 16,
+		strength: 8,
 		acceleration: 1.2,
-		deceleration: 0.975
+		// deceleration: 0.975
 	});
 
 

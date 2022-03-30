@@ -3,21 +3,16 @@ mixin sIndexSlider(data)
 	+b.sIndexSlider.section#sIndexSlider&attributes(attributes)
 		+e.pic-slider--js.swiper
 			.swiper-wrapper
-				+e.pic-slider-item.swiper-slide
-					+e.pic-slider-title Современная архитектура
-					+e.pic-slider-bg
-						+pic2(`index-slide-1.jpg`,``,0)
-					+e.pic-slider-caption Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
-				+e.pic-slider-item.swiper-slide
-					+e.pic-slider-title Современная архитектура
-					+e.pic-slider-bg
-						+pic2(`index-slide-1.jpg`,``,0)
-					+e.pic-slider-caption Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
-				+e.pic-slider-item.swiper-slide
-					+e.pic-slider-title Современная архитектура
-					+e.pic-slider-bg
-						+pic2(`index-slide-1.jpg`,``,0)
-					+e.pic-slider-caption Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+				mixin slide()
+					+e.pic-slider-item.swiper-slide
+						+e.pic-slider-title Современная архитектура
+						+e.pic-slider-bg
+							picture(style='transform: translate3d(0px, 0px, 0px); transition: all 0ms ease 0s;')
+								img(data-src='img/@2x/index-slide-1.jpg' alt='' class="swiper-lazy")
+						+e.pic-slider-caption Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+				+slide
+				+slide
+				+slide
 			+arrow
 			.swiper-pagination
 		+e.caption-slider-block

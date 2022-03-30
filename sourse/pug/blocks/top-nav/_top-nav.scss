@@ -1,5 +1,5 @@
 .top-nav {
-	background-color: rgba(10, 10, 10, 0.48);
+	background-color: transparent;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -27,6 +27,7 @@
 		justify-content: space-between;
 	}
 	&.fixed {
+		background-color: rgba(10, 10, 10, 0.48);
 	}
 	&.active {
 		background-color: $primary;
