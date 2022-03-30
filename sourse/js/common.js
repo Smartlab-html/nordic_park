@@ -466,11 +466,10 @@ function eventHandler() {
 	);
 	wow.init();
 
-	const scroll = new Scrooth({
-		strength: 8,
-		acceleration: 1.2,
-		// deceleration: 0.975
-	});
+	// const scroll = new Scrooth({
+	// 	strength: 8,
+	// 	acceleration: 1.2,
+	// });
 
 
 	var controller = new ScrollMagic.Controller();
