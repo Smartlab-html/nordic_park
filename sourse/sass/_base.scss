@@ -36,6 +36,9 @@
 body,
 html {
 	font-size: var(--bs-body-font-size);
+	@include media-breakpoint-up(lg) {
+		font-size: calc(var(--bs-body-font-size) + 0.101vw + 0.101vh);
+	}
 }
 html {
 	-webkit-text-size-adjust: 100%;

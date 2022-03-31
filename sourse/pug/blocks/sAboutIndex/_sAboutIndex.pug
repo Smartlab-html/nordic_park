@@ -18,8 +18,9 @@ mixin sAboutIndexInfo(data)
 		.container
 			+e.wrap
 				+e.picture-block
-					+e.picture.wow.animate__slideInLeft(data-wow-duration="1s" data-wow-delay="1s")
-							+img(`@2x/house.jpg`)
+					+e.picture
+						+e.picture-bg.wow.animate__slideInLeft(data-wow-duration="2s" data-wow-delay="1s")
+						+img(`@2x/house.jpg`)
 				+e.phylosophy-block
 					+e.phylosophy-block-wrap
 						+e.phylosophy-block-title Философия

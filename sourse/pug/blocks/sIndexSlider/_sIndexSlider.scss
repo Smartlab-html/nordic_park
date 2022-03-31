@@ -63,6 +63,7 @@
 			width: auto;
 			bottom: 0;
 			right: 0;
+
 		}
 	}
 	&__caption-slider-arrows {
@@ -151,6 +152,7 @@
 			@include media-breakpoint-up(lg) {
 				display: none;
 			}
+			z-index: 2;
 			background-color: $white;
 			position: absolute;
 			top: 0;

@@ -388,7 +388,7 @@ function eventHandler() {
 		},
 		pagination: {
 			el: ".swiper-pagination",
-			type: 'bullets',
+			type: "fraction",
 			clickable: true,
 		},
 		on: {
@@ -441,9 +441,11 @@ function eventHandler() {
 	const HeaderSlider = new Swiper('.headerBlockIndex__caption ', {
 		slidesPerView: '1',
 		// effect: "fade",
+		effect: "fade",
 		autoplay: {
 			delay: 4000,
 		},
+		loop: true
 	});
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
@@ -461,6 +463,7 @@ function eventHandler() {
 	var wow = new WOW(
 		{
 			animateClass: 'animate__animated', // animation css class (default is animated)
+			offset: 0,
 			mobile: false // trigger animations on mobile devices (default is true)
 		}
 	);
