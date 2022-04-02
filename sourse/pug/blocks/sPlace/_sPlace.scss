@@ -23,12 +23,12 @@
 		font-size: rem(46);
 		margin-bottom: rem(46);
 	}
-	&__caption{
-		@include media-breakpoint-up(lg){
+	&__caption {
+		@include media-breakpoint-up(lg) {
 			max-width: rem(326);
 			margin-bottom: rem(80);
 		}
-		@include media-breakpoint-up(sm){
+		@include media-breakpoint-up(sm) {
 			margin-bottom: rem(100);
 		}
 		margin-bottom: rem(60);
@@ -47,6 +47,23 @@
 			animation-name: downLinkAnimate;
 			animation-iteration-count: infinite;
 			animation-duration: 2s;
+		}
+	}
+	&__map {
+		@include media-breakpoint-up(lg) {
+			height: calc(100vh - rem(135));
+			min-height: rem(400);
+		}
+		@include media-breakpoint-up(sm){
+			height: calc(100vh - 120px);
+		}
+		height: calc(100vh - 100px);
+		min-height: rem(300);
+	}
+	&__map-widget {
+		height: 100%;
+		& > * {
+			height: 100%;
 		}
 	}
 	@include media-breakpoint-up(xl) {

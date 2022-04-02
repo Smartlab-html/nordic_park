@@ -1,0 +1,59 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPlace/_sPlace.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let title= 'Расположение'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav
+	+sContacts
+	+sForm()
+	+footer()
+	script.
+		if (document.querySelector('.sPlace__map')) {
+		ymaps.ready(function () {
+		var myMap = new ymaps.Map('map-place', {
+		center: [56.086711, 37.541952],
+		zoom: 11,
+		controls: []
+		}, {
+		searchControlProvider: 'yandex#search'
+		}),
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+		}, {
+		// Опции.
+		// Необходимо указать данный тип макета.
+		iconLayout: 'default#image',
+		// Своё изображение иконки метки.
+		iconImageHref: 'img/svg/place-map-nordic.svg',
+		// Размеры метки.
+		iconImageSize: [212, 78],
+		// Смещение левого верхнего угла иконки относительно
+		// её "ножки" (точки привязки).
+		iconImageOffset: [-200, -80]
+		});
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		//... отключаем перетаскивание карты
+		myMap.zoom = 11;
+		}
+		myMap.geoObjects
+		.add(myPlacemark);
+		// myMap.behaviors.disable('drag');
+		});
+		}
+
+
+

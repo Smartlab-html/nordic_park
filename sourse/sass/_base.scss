@@ -43,8 +43,8 @@ html {
   //   margin: 0;
   //   padding: 0;
 	font-size: var(--bs-body-font-size);
-	@include media-breakpoint-up(lg) {
-		font-size: calc(var(--bs-body-font-size) + 0.101vw + 0.101vh);
+	@include media-breakpoint-up(xxl) {
+		font-size: calc(var(--bs-body-font-size) + 0.09vw + 0.09vh);
 	}
 }
 html {
@@ -504,8 +504,12 @@ h6 {
 .header {
 	position: unset;
 }
-
-
+.ymaps-2-1-79-map-copyrights-promo{
+	display: none !important;
+}
+.ymaps-2-1-79-copyright{
+	display: none !important;
+}
 .nicescroll-rails{
 	z-index: 900 !important;
 }
