@@ -74,11 +74,11 @@
 						<ol class="breadcrumb breadcrumb--light wow animate__slideInLeft" data-wow-duration="1s" data-wow-delay="0s" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Расположение</span>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Контакты</span>
 									<meta itemprop="position" content="2"/></a></li>
 						</ol>
 					</nav>
-					<h1>Расположение</h1>
+					<h1>Контакты</h1>
 					<div class="sPlace__caption wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Коттеджный поселок расположен в&nbsp;одном из&nbsp;самых экологически чистых мест Подмосковья&nbsp;&mdash; в&nbsp;20&nbsp;км от&nbsp;МКАД по&nbsp;Дмитровскому шоссе, в&nbsp;окружении реликтового леса.
 					</div>
 					<a class="sPlace__down-link wow animate__fadeInUp scroll-link" data-wow-duration="1s" data-wow-delay="0s" href="#sPlace__map">
@@ -208,69 +208,13 @@
 				// Смещение левого верхнего угла иконки относительно
 				// её "ножки" (точки привязки).
 				iconImageOffset: [-200, -80]
-				}),
-				myPlacemark2 = new ymaps.Placemark([56.129043, 37.540323], {
-				}, {
-				// Опции.
-				// Необходимо указать данный тип макета.
-				iconLayout: 'default#image',
-				// Своё изображение иконки метки.
-				iconImageHref: 'img/svg/place-map-iksha.svg',
-				// Размеры метки.
-				iconImageSize: [211, 48],
-				// Смещение левого верхнего угла иконки относительно
-				// её "ножки" (точки привязки).
-				iconImageOffset: [-20, -40],
-				}),
-				myPlacemark3 = new ymaps.Placemark([56.096516, 37.628376], {
-				}, {
-				// Опции.
-				// Необходимо указать данный тип макета.
-				iconLayout: 'default#image',
-				// Своё изображение иконки метки.
-				iconImageHref: 'img/svg/place-map-pestovo.svg',
-				// Размеры метки.
-				iconImageSize: [297, 48],
-				// Смещение левого верхнего угла иконки относительно
-				// её "ножки" (точки привязки).
-				iconImageOffset: [-40, -43],
-				}),
-				myPlacemark4 = new ymaps.Placemark([56.085216, 37.635986], {
-				}, {
-				// Опции.
-				// Необходимо указать данный тип макета.
-				iconLayout: 'default#image',
-				// Своё изображение иконки метки.
-				iconImageHref: 'img/svg/place-map-lomonosov.svg',
-				// Размеры метки.
-				iconImageSize: [255, 48],
-				// Смещение левого верхнего угла иконки относительно
-				// её "ножки" (точки привязки).
-				iconImageOffset: [-20, 0],
-				}),
-				myPlacemark5 = new ymaps.Placemark([56.055794, 37.531309], {
-				}, {
-				// Опции.
-				// Необходимо указать данный тип макета.
-				iconLayout: 'default#image',
-				// Своё изображение иконки метки.
-				iconImageHref: 'img/svg/place-map-kashtan.svg',
-				// Размеры метки.
-				iconImageSize: [260, 48],
-				// Смещение левого верхнего угла иконки относительно
-				// её "ножки" (точки привязки).
-				iconImageOffset: [-20, 0],
 				});
 				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 				//... отключаем перетаскивание карты
 				myMap.zoom = 11;
 				}
 				myMap.geoObjects
-				.add(myPlacemark)
-				.add(myPlacemark2)
-				.add(myPlacemark3)
-				.add(myPlacemark4)
-				.add(myPlacemark5);
+				.add(myPlacemark);
 				// myMap.behaviors.disable('drag');
 				});
 				}
