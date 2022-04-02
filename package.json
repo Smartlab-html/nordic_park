@@ -50,7 +50,9 @@
     "gsap": "^3.6.1",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
+    "jquery.nicescroll": "^3.7.6",
     "scrollmagic": "^2.0.8",
+    "smooth-scrollbar": "^8.7.4",
     "swiper": "^8.0.7",
     "wowjs": "^1.1.3"
   }

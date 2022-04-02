@@ -547,6 +547,21 @@ function eventHandler() {
 	// 	// .setPin(".fixed-block")
 	// 	// .addIndicators({name: "3 (duration: 0)"}) // add indicators (requires plugin)
 	// 	.addTo(controller);
+
+	$("body").niceScroll({
+		scrollspeed: 60, // scrolling speed
+    mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
+    touchbehavior: true, // DEPRECATED!! use "touchemulate"
+    emulatetouch: true, // enable cursor-drag scrolling like touch devices in desktop computer
+    hwacceleration: true, // use hardware accelerated scroll when supported
+    boxzoom: true, // enable zoom for box content
+    dblclickzoom: true, // (only when boxzoom=true) zoom activated when double click on box
+    gesturezoom: true, // (only when boxzoom=true and with touch devices) zoom activated when pinch out/in on box
+    grabcursorenabled: false, // (only when touchbehavior=true) display "grab" icon
+    bouncescroll: true, // (only when touchbehavior=true) display "grab" icon
+    autohidemode: false, 
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -554,10 +569,3 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
