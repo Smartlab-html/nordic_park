@@ -134,9 +134,22 @@
 			}
 		}
 	}
+	.menu-mobile:not(.active){
+		top: 0 !important;
+	}
 }
 @include media-breakpoint-down(sm){
 	.menu-mobile{
 		top: 95px;
+	}
+}
+@media screen and(max-height:500px){
+	.menu-mobile__wrap{
+		top: 30px;
+		transform: none;
+	}
+	.menu-mobile__item{
+		margin-bottom: 24px;
+		font-size: 24px;
 	}
 }

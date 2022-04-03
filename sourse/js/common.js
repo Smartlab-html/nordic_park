@@ -512,44 +512,11 @@ function eventHandler() {
 			offset: 100,
 			duration: '100%'
 		})
-		.addIndicators() // add indicators (requires plugin)
+		// .addIndicators() // add indicators (requires plugin)
 		.addTo(controller)
 		.setTween(tween2)
-	// var slides = document.querySelectorAll(".scroll-slide");
 
-	// // create scene for every slide
-	// for (var i = 0; i < slides.length; i++) {
-	// 	new ScrollMagic.Scene({
-	// 		triggerElement: slides[i],
-	// 		triggerHook: 'onLeave',
-	// 		duration: "100%"
-	// 	})
-	// 		.setPin(slides[i], { pushFollowers: false })
-	// 		.addIndicators() // add indicators (requires plugin)
-	// 		.addTo(controller);
-	// }
-	// 	// .setPin(".fixed-block")
-	// 	// .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
-	// 	.addIndicators() // add indicators (requires plugin)
-	// 	.addTo(controller)
-
-	// var tween3 = new TimelineMax()
-	// 	.from(".sMap h2", 2000, {opacity:0 ,duration: 1500,})
-	// 	.from(".map-block", 2000, {y: '50%', opacity:0 ,duration: 1500,})
-	// let scene3 = new ScrollMagic
-	// 	.Scene({
-	// 		triggerElement: "#sMap",
-	// 		duration: "100%",
-	// 		// offset: '0%',
-	// 		// triggerHook: 'onLeave',
-	// 	})
-	// 	.setTween(tween3)
-	// 	// .setPin(".fixed-block")
-	// 	// .addIndicators({name: "3 (duration: 0)"}) // add indicators (requires plugin)
-	// 	.addTo(controller);
-
-	
-	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		$("body").niceScroll({
 			scrollspeed: 60, // scrolling speed
 			mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
@@ -563,11 +530,34 @@ function eventHandler() {
 			bouncescroll: true, // (only when touchbehavior=true) display "grab" icon
 			autohidemode: false,
 		});
-	 }
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// gsap.to(".sForm", {
+// 	yPercent: -100,
+// 	ease: "none",
+// 	stagger: 0.5,
+// 	scrollTrigger: {
+// 		trigger: "#sForm",
+// 		start: "top top",
+// 		end: "+=300%",
+// 		scrub: true,
+// 		pin: true
+// 	}
+// });
+
+
+// gsap.set(".sForm", { zIndex: (i, target, targets) => targets.length - i });
+// if (document.readyState !== 'loading') {
+// 	eventHandler();
+// } else {
+// 	document.addEventListener('DOMContentLoaded', eventHandler);
+// }
 

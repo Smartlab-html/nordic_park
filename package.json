@@ -47,7 +47,7 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.26",
     "animate.css": "^4.1.1",
-    "gsap": "^3.6.1",
+    "gsap": "^3.10.2",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
     "jquery.nicescroll": "^3.7.6",

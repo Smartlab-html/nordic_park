@@ -3,11 +3,13 @@
 	background-color: $body-color;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	z-index: 0;
+	@include media-breakpoint-up(lg) {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 0;
+	}
 	@include media-breakpoint-up(sm) {
 		padding-bottom: rem(80);
 		padding-top: rem(100);
@@ -106,7 +108,7 @@
 		list-style-type: none;
 	}
 	li {
-		@include media-breakpoint-up(sm){
+		@include media-breakpoint-up(sm) {
 			margin-bottom: rem(28);
 		}
 		margin-bottom: rem(14);

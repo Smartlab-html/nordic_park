@@ -18,16 +18,16 @@
 	@include media-breakpoint-up(lg) {
 		padding-bottom: rem(798);
 	}
-	@include media-breakpoint-up(md) {
-		padding-bottom: rem(739);
-	}
-	@include media-breakpoint-up(sm) {
-		padding-bottom: rem(790);
-	}
-	padding-bottom: rem(458);
-	@media screen and(min-width:464px) {
-		padding-bottom: 439px;
-	}
+	// @include media-breakpoint-up(md) {
+	// 	padding-bottom: rem(739);
+	// }
+	// @include media-breakpoint-up(sm) {
+	// 	padding-bottom: rem(790);
+	// }
+	// padding-bottom: rem(458);
+	// @media screen and(min-width:464px) {
+	// 	padding-bottom: 439px;
+	// }
 	& > * {
 		position: relative;
 		z-index: 2;
