@@ -2,9 +2,18 @@
 .sPlace {
 	--sPT: #{rem(206)};
 	--sPB: #{rem(0)};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(80)};
+	}
+	@include media-breakpoint-up(sm) {
+		--sPB: #{rem(100)};
+	}
+	--sPB: #{rem(60)};
 	// --sTPB: #{rem()};
 	background-color: $primary;
 	color: $white;
+	position: relative;
+	z-index: 1;
 	.breadcrumb {
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(64);
@@ -20,18 +29,39 @@
 			font-size: rem(64);
 			margin-bottom: rem(64);
 		}
-		font-size: rem(46);
+		font-size: rem(40);
 		margin-bottom: rem(46);
+	}
+	.row {
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(60);
+		}
+		@include media-breakpoint-up(sm) {
+			--bs-gutter-x: #{rem(32)};
+			--bs-gutter-y: #{rem(48)};
+		}
+		--bs-gutter-x: #{rem(24)};
+		--bs-gutter-y: #{rem(36)};
+	}
+	&__title {
+		font-size: rem(14);
+		margin-bottom: rem(12);
+		color: rgba(255, 255, 255, 0.5);
+		text-transform: uppercase;
 	}
 	&__caption {
 		@include media-breakpoint-up(lg) {
 			max-width: rem(326);
-			margin-bottom: rem(80);
+			// margin-bottom: rem(80);
 		}
 		@include media-breakpoint-up(sm) {
-			margin-bottom: rem(100);
+			// margin-bottom: rem(100);
 		}
-		margin-bottom: rem(60);
+		// margin-bottom: rem(60);
+	}
+	&__caption-info{
+		font-size: rem(18);
+		line-height: 160%;
 	}
 	&__down-link {
 		@include media-breakpoint-down(lg) {
@@ -49,23 +79,7 @@
 			animation-duration: 2s;
 		}
 	}
-	&__map {
-		@include media-breakpoint-up(lg) {
-			height: calc(100vh - rem(135));
-			min-height: rem(400);
-		}
-		@include media-breakpoint-up(sm){
-			height: calc(100vh - 120px);
-		}
-		height: calc(100vh - 100px);
-		min-height: rem(300);
-	}
-	&__map-widget {
-		height: 100%;
-		& > * {
-			height: 100%;
-		}
-	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -81,3 +95,33 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sPlace
+.with-map {
+	.sMap {
+		@include media-breakpoint-up(lg) {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 0;
+		}
+	}
+}
+
+.sMap {
+	@include media-breakpoint-up(lg) {
+		height: calc(100vh - rem(135));
+		min-height: rem(400);
+	}
+	@include media-breakpoint-up(sm) {
+		height: calc(100vh - 120px);
+	}
+	height: calc(100vh - 100px);
+	min-height: rem(300);
+
+	&__map-widget {
+		height: 100%;
+		& > * {
+			height: 100%;
+		}
+	}
+}

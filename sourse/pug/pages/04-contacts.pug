@@ -7,11 +7,11 @@ include ../blocks/sPlace/_sPlace.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'main-page with-map' 
 	- let  bg= null
 
 block title
-	- let title= 'Расположение'
+	- let title= 'Контакты'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -20,10 +20,9 @@ block pagecontent
 	+header()
 		+top-nav
 	+sContacts
-	+sForm()
-	+footer()
+	+sMapContacts
 	script.
-		if (document.querySelector('.sPlace__map')) {
+		if (document.querySelector('.sMap')) {
 		ymaps.ready(function () {
 		var myMap = new ymaps.Map('map-place', {
 		center: [56.086711, 37.541952],

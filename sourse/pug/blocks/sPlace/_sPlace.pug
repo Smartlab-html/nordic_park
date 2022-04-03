@@ -4,24 +4,40 @@ mixin sPlace(data)
 		.container
 			+breadcrumb-light(`Главная`,`Расположение`)
 			h1 Расположение
-			+e.caption.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Коттеджный поселок расположен в&nbsp;одном из&nbsp;самых экологически чистых мест Подмосковья&nbsp;&mdash; в&nbsp;20&nbsp;км от&nbsp;МКАД по&nbsp;Дмитровскому шоссе, в&nbsp;окружении реликтового леса.
-			+e.down-link.wow.animate__fadeInUp.scroll-link(data-wow-duration="1s" data-wow-delay="0s" href="#sPlace__map")
+			+e.caption.animate__animated.animate__fadeInUp Коттеджный поселок расположен в&nbsp;одном из&nbsp;самых экологически чистых мест Подмосковья&nbsp;&mdash; в&nbsp;20&nbsp;км от&nbsp;МКАД по&nbsp;Дмитровскому шоссе, в&nbsp;окружении реликтового леса.
+			+e.down-link.animate__animated.animate__fadeInUp.scroll-link( href="#sPlace__map")
 				+icon(`arrow-down`)
-		+e.map#sPlace__map
-			script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
-			+e.map-widget#map-place
+		
 	// end sPlace
+
+mixin sMap
+	+b.sMap#sPlace__map
+		script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
+		+e.map-widget#map-place
+
+mixin sMapContacts
+	+b.sMap#sContacts__map
+		script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
+		+e.map-widget#map-place
 
 mixin sContacts(data)
 	// start sPlace
-	+b.SECTION.sPlace.section#sPlace&attributes(attributes)
+	+b.SECTION.sPlace.sContacts.section#sPlace&attributes(attributes)
 		.container
 			+breadcrumb-light(`Главная`,`Контакты`)
 			h1 Контакты
-			+e.caption.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Коттеджный поселок расположен в&nbsp;одном из&nbsp;самых экологически чистых мест Подмосковья&nbsp;&mdash; в&nbsp;20&nbsp;км от&nbsp;МКАД по&nbsp;Дмитровскому шоссе, в&nbsp;окружении реликтового леса.
-			+e.down-link.wow.animate__fadeInUp.scroll-link(data-wow-duration="1s" data-wow-delay="0s" href="#sPlace__map")
+			.row
+				mixin item(title,caption)
+					+e.title!=title
+					+e.caption-info!=caption
+				.col-lg-3.col-sm-6.animate__animated.animate__fadeIn.animate__slow.animate__delay-1s(style=`--animate-duration: 800ms; --animate-delay:0.5s;`)
+					+item(`ОФИС ПРОДАЖ`,`г. Москва, Дмитровское шоссе, 161А`)
+				.col-lg-9.col-sm-6.animate__animated.animate__fadeIn.animate__slow.animate__delay-1s(style=`--animate-duration: 800ms; --animate-delay:1s;`)
+					+item(`Адрес поселка`,`городской округ Мытищи, д. Лысково`)
+				.col-lg-3.col-sm-6.animate__animated.animate__fadeIn.animate__slow.animate__delay-1s(style=`--animate-duration: 800ms; --animate-delay:1.5s;`)
+					+item(`Контактный телефон`,`+7 985 140-55-00`)
+				.col-lg-9.col-sm-6.animate__animated.animate__fadeIn.animate__slow.animate__delay-1s(style=`--animate-duration: 800ms; --animate-delay:2s;`)
+					+item(`E-MAIL`,`info@nordicpark.ru`)
+			+e.down-link.animate__animated.animate__fadeInUp.scroll-link(data-wow-duration="1s" data-wow-delay="0s" href="#sContacts__map")
 				+icon(`arrow-down`)
-		+e.map#sPlace__map
-			script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
-			+e.map-widget#map-place
 	// end sPlace

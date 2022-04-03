@@ -79,21 +79,21 @@
 						</ol>
 					</nav>
 					<h1>Расположение</h1>
-					<div class="sPlace__caption wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Коттеджный поселок расположен в&nbsp;одном из&nbsp;самых экологически чистых мест Подмосковья&nbsp;&mdash; в&nbsp;20&nbsp;км от&nbsp;МКАД по&nbsp;Дмитровскому шоссе, в&nbsp;окружении реликтового леса.
+					<div class="sPlace__caption animate__animated animate__fadeInUp">Коттеджный поселок расположен в&nbsp;одном из&nbsp;самых экологически чистых мест Подмосковья&nbsp;&mdash; в&nbsp;20&nbsp;км от&nbsp;МКАД по&nbsp;Дмитровскому шоссе, в&nbsp;окружении реликтового леса.
 					</div>
-					<a class="sPlace__down-link wow animate__fadeInUp scroll-link" data-wow-duration="1s" data-wow-delay="0s" href="#sPlace__map">
+					<a class="sPlace__down-link animate__animated animate__fadeInUp scroll-link" href="#sPlace__map">
 						<svg class="icon icon-arrow-down ">
 							<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
 						</svg>
 					</a>
 				</div>
-				<div class="sPlace__map" id="sPlace__map">
-					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f"></script>
-					<div class="sPlace__map-widget" id="map-place">
-					</div>
-				</div>
 			</section>
 			<!-- end sPlace-->
+			<div class="sMap" id="sPlace__map">
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f"></script>
+				<div class="sMap__map-widget" id="map-place">
+				</div>
+			</div>
 			<!-- start sForm-->
 			<section class="sForm section scroll-slide" id="sForm">
 				<div class="container">
@@ -187,7 +187,7 @@
 				</div>
 			</footer>
 			<script>
-				if (document.querySelector('.sPlace__map')) {
+				if (document.querySelector('.sMap')) {
 				ymaps.ready(function () {
 				var myMap = new ymaps.Map('map-place', {
 				center: [56.086711, 37.541952],

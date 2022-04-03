@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Расположение</title>
+		<title>Контакты</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -15,7 +15,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page with-map">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -68,7 +68,7 @@
 			</header>
 			<!-- end header-->
 			<!-- start sPlace-->
-			<section class="sPlace section" id="sPlace">
+			<section class="sPlace sContacts section" id="sPlace">
 				<div class="container">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb breadcrumb--light animate__animated animate__slideInLeft" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
@@ -79,115 +79,47 @@
 						</ol>
 					</nav>
 					<h1>Контакты</h1>
-					<div class="sPlace__caption wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Коттеджный поселок расположен в&nbsp;одном из&nbsp;самых экологически чистых мест Подмосковья&nbsp;&mdash; в&nbsp;20&nbsp;км от&nbsp;МКАД по&nbsp;Дмитровскому шоссе, в&nbsp;окружении реликтового леса.
+					<div class="row">
+						<div class="col-lg-3 col-sm-6 animate__animated animate__fadeIn animate__slow animate__delay-1s" style="--animate-duration: 800ms; --animate-delay:0.5s;">
+									<div class="sPlace__title">ОФИС ПРОДАЖ
+									</div>
+									<div class="sPlace__caption-info">г. Москва, Дмитровское шоссе, 161А
+									</div>
+						</div>
+						<div class="col-lg-9 col-sm-6 animate__animated animate__fadeIn animate__slow animate__delay-1s" style="--animate-duration: 800ms; --animate-delay:1s;">
+									<div class="sPlace__title">Адрес поселка
+									</div>
+									<div class="sPlace__caption-info">городской округ Мытищи, д. Лысково
+									</div>
+						</div>
+						<div class="col-lg-3 col-sm-6 animate__animated animate__fadeIn animate__slow animate__delay-1s" style="--animate-duration: 800ms; --animate-delay:1.5s;">
+									<div class="sPlace__title">Контактный телефон
+									</div>
+									<div class="sPlace__caption-info">+7 985 140-55-00
+									</div>
+						</div>
+						<div class="col-lg-9 col-sm-6 animate__animated animate__fadeIn animate__slow animate__delay-1s" style="--animate-duration: 800ms; --animate-delay:2s;">
+									<div class="sPlace__title">E-MAIL
+									</div>
+									<div class="sPlace__caption-info">info@nordicpark.ru
+									</div>
+						</div>
 					</div>
-					<a class="sPlace__down-link wow animate__fadeInUp scroll-link" data-wow-duration="1s" data-wow-delay="0s" href="#sPlace__map">
+					<a class="sPlace__down-link animate__animated animate__fadeInUp scroll-link" data-wow-duration="1s" data-wow-delay="0s" href="#sContacts__map">
 						<svg class="icon icon-arrow-down ">
 							<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
 						</svg>
 					</a>
 				</div>
-				<div class="sPlace__map" id="sPlace__map">
-					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f"></script>
-					<div class="sPlace__map-widget" id="map-place">
-					</div>
-				</div>
 			</section>
 			<!-- end sPlace-->
-			<!-- start sForm-->
-			<section class="sForm section scroll-slide" id="sForm">
-				<div class="container">
-					<div class="sForm__wrap">
-						<div class="sForm__title wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">СВЯЖИТЕСЬ С НАМИ
-						</div>
-						<div class="sForm__main">
-							<h2 class="wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">Нужна помощь при выборе дома?</h2>
-							<div class="sForm__caption wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">Оставьте номер телефона, мы перезвоним вам в ближайшее время.
-							</div>
-							<div class="form-wrap">
-								<form>
-									<div class="form-wrap__input-wrap form-group">
-										<input class="form-wrap__input form-control" name="tel" type="tel" placeholder="НОМЕР ТЕЛЕФОНА" pattern="[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" inputmode="text"/>
-										<div class="sForm__thanks">Спасибо, мы скоро вам перезвоним!</div>
-									</div><a class="sForm__ask wow animate__zoomIn" data-wow-duration="1s" data-wow-delay="1.2s" href="#">
-										<div class="sForm__ask-text-wrap"><span class="sForm__ask-text">ЗАДАТЬ ВОПРОС</span></div></a>
-								</form>
-							</div>
-						</div>
-					</div>
+			<div class="sMap" id="sContacts__map">
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f"></script>
+				<div class="sMap__map-widget" id="map-place">
 				</div>
-			</section>
-			<!-- end sForm-->
-			<footer class="footer">
-				<div class="container">
-					<div class="footer__string">
-						<div class="footer__info">
-							<div class="row">
-								<div class="col-6">
-									<div class="footer__title">ОФИС ПРОДАЖ
-									</div>
-									<div class="footer__caption">г. Москва, Дмитровское шоссе, 161А
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="footer__title">Адрес поселка
-									</div>
-									<div class="footer__caption">городской округ Мытищи, д. Лысково
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="footer__title">Контактный телефон
-									</div>
-									<div class="footer__caption">+7 985 140-55-00
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="footer__title">E-MAIL
-									</div>
-									<div class="footer__caption">info@nordicpark.ru
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="footer__string">
-						<div class="footer__block">
-							<a class="footer__logo" href="/"><img src="img/svg/logo.svg" alt=""/>
-							</a>
-						</div>
-						<div class="footer__block">
-							<div class="row">
-								<div class="col-lg-6">
-									<ul>
-										<li>
-											<a class="footer__title" href="#">Дома
-											</a>
-										</li>
-										<li>
-											<a class="footer__title" href="#">Генплан
-											</a>
-										</li>
-										<li>
-											<a class="footer__title" href="#">Расположение
-											</a>
-										</li>
-										<li>
-											<a class="footer__title" href="#">Контакты
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-lg-6">
-									<a class="footer__title" href="#">Политика конфиденциальности
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
+			</div>
 			<script>
-				if (document.querySelector('.sPlace__map')) {
+				if (document.querySelector('.sMap')) {
 				ymaps.ready(function () {
 				var myMap = new ymaps.Map('map-place', {
 				center: [56.086711, 37.541952],

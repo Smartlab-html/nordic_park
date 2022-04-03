@@ -20,10 +20,11 @@ block pagecontent
 	+header()
 		+top-nav
 	+sPlace
+	+sMap
 	+sForm()
 	+footer()
 	script.
-		if (document.querySelector('.sPlace__map')) {
+		if (document.querySelector('.sMap')) {
 		ymaps.ready(function () {
 		var myMap = new ymaps.Map('map-place', {
 		center: [56.086711, 37.541952],
