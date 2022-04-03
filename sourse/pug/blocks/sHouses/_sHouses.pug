@@ -3,7 +3,8 @@ mixin sHouses(data)
 	+b.SECTION.sHouses.section#sHouses&attributes(attributes)
 		.container
 			+breadcrumb(`ГЛАВНАЯ`,`ДОМА`)
-			h1.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0s") Дома
+			+e.title-wrap.animate__animated.animate__fadeIn.animate__delay-1s
+				h1 Дома
 			.row
 				.col-lg-6
 					+house-item(`VIND`,`148`,`1`,`0`)
@@ -20,12 +21,12 @@ mixin sHouses(data)
 	// end sHouses
 
 mixin house-item(title,square,img,delay)
-	+b.house-item.bg-wrap.wow.animate__zoomIn(data-wow-duration="0.4s" data-wow-delay=`${delay}.0s`)
+	+b.house-item.bg-wrap.animate__animated.animate__zoomIn.animate__slow.animate__delay-1s(style=`--animate-duration: 400ms; --animate-delay:${delay}.0s;`)
 		+pic(`house-item-${img}.jpg`,``,0).picture-bg
-		h3.wow.animate__zoomIn(data-wow-duration="0.2s" data-wow-delay=`${delay}.4s`)!=title
-		+e.square.wow.animate__zoomIn(data-wow-duration="0.2s" data-wow-delay=`${delay}.6s`)
+		h3.animate__animated.animate__zoomIn.animate__slow.animate__delay-1s(style=`--animate-duration: 200ms; --animate-delay:${delay}.4s;`)!=title
+		+e.square.animate__animated.animate__zoomIn.animate__slow.animate__delay-1s(style=`--animate-duration: 200ms; --animate-delay:${delay}.6s;`)
 			+e.square-info!=square
 			+e.square-title Общая площадь, м²
-		+e.more.wow.animate__zoomIn(data-wow-duration="0.2s" data-wow-delay=`${delay}.8s` href="#")
+		+e.more.animate__animated.animate__zoomIn.animate__slow.animate__delay-1s(style=`--animate-duration: 200ms; --animate-delay:${delay}.8s;`)
 			span Подробнее
 			+icon(`chevron-right`)
