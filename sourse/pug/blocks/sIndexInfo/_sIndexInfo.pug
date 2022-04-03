@@ -6,7 +6,8 @@ mixin sIndexInfo(data)
 				+e.block
 					+e.title ПРЕИМУЩЕСТВА
 					+e.picture
-						+img(`index-info.jpg`)
+						+e.pic-wrap
+							+img(`index-info.jpg`)
 				+e.block
 					h2.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Коротко <br>о главном
 					.row

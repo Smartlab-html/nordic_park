@@ -505,14 +505,14 @@ function eventHandler() {
 	// 	.addIndicators({ name: "1 - add a class" }) // add indicators (requires plugin)
 	// 	.addTo(controller);
 	var tween2 = new TimelineMax()
-		.from(".sIndexInfo__picture img", 10, { x: 200, duration: 3500, })
+		.from(".sIndexInfo__picture img", 10, { x: 150, duration: 3500, })
 	let scene2 = new ScrollMagic
 		.Scene({
 			triggerElement: ".sIndexInfo",
 			offset: 100,
 			duration: '100%'
 		})
-		// .addIndicators() // add indicators (requires plugin)
+		.addIndicators() // add indicators (requires plugin)
 		.addTo(controller)
 		.setTween(tween2)
 	// var slides = document.querySelectorAll(".scroll-slide");
@@ -548,20 +548,22 @@ function eventHandler() {
 	// 	// .addIndicators({name: "3 (duration: 0)"}) // add indicators (requires plugin)
 	// 	.addTo(controller);
 
-	$("body").niceScroll({
-		scrollspeed: 60, // scrolling speed
-    mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
-    touchbehavior: true, // DEPRECATED!! use "touchemulate"
-    emulatetouch: true, // enable cursor-drag scrolling like touch devices in desktop computer
-    hwacceleration: true, // use hardware accelerated scroll when supported
-    boxzoom: true, // enable zoom for box content
-    dblclickzoom: true, // (only when boxzoom=true) zoom activated when double click on box
-    gesturezoom: true, // (only when boxzoom=true and with touch devices) zoom activated when pinch out/in on box
-    grabcursorenabled: false, // (only when touchbehavior=true) display "grab" icon
-    bouncescroll: true, // (only when touchbehavior=true) display "grab" icon
-    autohidemode: false, 
-	});
-
+	
+	if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$("body").niceScroll({
+			scrollspeed: 60, // scrolling speed
+			mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
+			touchbehavior: true, // DEPRECATED!! use "touchemulate"
+			emulatetouch: true, // enable cursor-drag scrolling like touch devices in desktop computer
+			hwacceleration: true, // use hardware accelerated scroll when supported
+			boxzoom: true, // enable zoom for box content
+			dblclickzoom: true, // (only when boxzoom=true) zoom activated when double click on box
+			gesturezoom: true, // (only when boxzoom=true and with touch devices) zoom activated when pinch out/in on box
+			grabcursorenabled: false, // (only when touchbehavior=true) display "grab" icon
+			bouncescroll: true, // (only when touchbehavior=true) display "grab" icon
+			autohidemode: false,
+		});
+	 }
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
