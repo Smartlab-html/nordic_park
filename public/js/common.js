@@ -530,7 +530,7 @@ function eventHandler() {
 			bouncescroll: true, // (only when touchbehavior=true) display "grab" icon
 			autohidemode: false,
 			smoothscroll: true, // scroll with ease movement
-			sensitiverail: true,
+			sensitiverail: true
 		});
 	}
 };
