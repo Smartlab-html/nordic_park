@@ -529,6 +529,8 @@ function eventHandler() {
 			grabcursorenabled: false, // (only when touchbehavior=true) display "grab" icon
 			bouncescroll: true, // (only when touchbehavior=true) display "grab" icon
 			autohidemode: false,
+			smoothscroll: true, // scroll with ease movement
+			sensitiverail: true,
 		});
 	}
 };
