@@ -518,8 +518,8 @@ function eventHandler() {
 
 	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		$("body").niceScroll({
-			scrollspeed: 140, // scrolling speed
-			mousescrollstep: 30, // scrolling speed with mouse wheel (pixel)
+			scrollspeed: 180, // scrolling speed
+			mousescrollstep: 20, // scrolling speed with mouse wheel (pixel)
 			touchbehavior: true, // DEPRECATED!! use "touchemulate"
 			emulatetouch: true, // enable cursor-drag scrolling like touch devices in desktop computer
 			hwacceleration: true, // use hardware accelerated scroll when supported
