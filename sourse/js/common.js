@@ -473,6 +473,7 @@ function eventHandler() {
 		scroller: scroller,
 		start: 'top -80',
 		end: 99999,
+		toggleActions: "play none none none", 
 		// markers: true,
 		toggleClass: {className: 'fixed', targets: '.top-nav'}
 	});
