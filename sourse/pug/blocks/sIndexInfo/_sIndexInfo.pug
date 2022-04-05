@@ -9,14 +9,14 @@ mixin sIndexInfo(data)
 						+e.pic-wrap
 							+img(`index-info.jpg`)
 				+e.block
-					h2.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Коротко <br>о главном
+					h2.wow(data-animate="animate__fadeInUp"  data-wow-duration="1s" data-wow-delay="0s") Коротко <br>о главном
 					.row
 						mixin item(text,pic,delay)
 							.col-sm-6
 								+e.item
-									+e.pic.wow.animate__zoomIn(data-wow-duration="0.8s" data-wow-delay=`${delay}s`)
+									+e.pic.wow(data-animate="animate__zoomIn"  data-wow-duration="0.8s" data-wow-delay=`${delay}s`)
 										+icon(`index-info-${pic}`)
-									+e.item-text.wow.animate__fadeIn(data-wow-duration="1.2s" data-wow-delay=`${delay}s`)!=text
+									+e.item-text.wow( data-animate="animate__fadeIn" data-wow-duration="1.2s" data-wow-delay=`${delay}s`)!=text
 						+item(`Уникальное расположение поселка<br>в&nbsp;сердце реликтового леса`,`1`,`0.5`)
 						+item(`Всего 20&nbsp;минут в&nbsp;пути от&nbsp;города до&nbsp;дома по&nbsp;скоростному шоссе`,`2`,`1`)
 						+item(`Все участки имеют выход в&nbsp;лес или<br />в&nbsp;парк, вы&nbsp;будете жить в&nbsp;окружении природы`,`3`,`1.5`)

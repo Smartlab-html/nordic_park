@@ -4,11 +4,11 @@ mixin sAboutIndex(data)
 		+e.caption-block
 			.container
 				+e.caption-block-wrap
-					+e.caption-block-title.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0s") О поселке
+					+e.caption-block-title.wow(data-animate="animate__fadeIn" data-wow-duration="1s" data-wow-delay="0s") О поселке
 					+e.caption-block-info
-						//- h2.animate__animated.animate__fadeIn.animate__slow Nordic Park
-						h2.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="0.5s") Nordic Park
-						p.wow.animate__fadeIn(data-wow-duration="1s" data-wow-delay="1s") Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к&nbsp;которому привыкли в мегаполисе.
+						//- h2.animate__animated.data-animate="animate__fadeIn" animate__slow Nordic Park
+						h2.wow(data-animate="animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.5s") Nordic Park
+						p.wow(data-animate="animate__fadeIn" data-wow-duration="1s" data-wow-delay="1s") Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к&nbsp;которому привыкли в мегаполисе.
 						+e.down-link.scroll-link(href="#sAboutIndexInfo")
 							+icon(`arrow-down`)
 		
@@ -19,10 +19,10 @@ mixin sAboutIndexInfo(data)
 			+e.wrap
 				+e.picture-block
 					+e.picture
-						+e.picture-bg.wow.animate__slideInLeft(data-wow-duration="2s" data-wow-delay="1s")
+						+e.picture-bg
 						+img(`@2x/house.jpg`)
 				+e.phylosophy-block
 					+e.phylosophy-block-wrap
 						+e.phylosophy-block-title Философия
-						h3.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") lagom
-						p.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") Мы&nbsp;вдохновлялись шведской философией умеренности и&nbsp;гармонии. Слово Lagom переводится как &laquo;столько, сколько нужно&raquo;, &laquo;в&nbsp;самый раз&raquo;.<br /><br />Достаточность без излишеств. Современный минимализм<br />в&nbsp;архитектурном стиле домов и&nbsp;дизайне интерьеров в&nbsp;сочетании с&nbsp;уникальным расположением поселка позволил создать пространство, в&nbsp;котором все преимущества жизни на&nbsp;природе сочетаются с&nbsp;возможностями городской архитектуры.
+						h3.wow( data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s") lagom
+						p.wow( data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s") Мы&nbsp;вдохновлялись шведской философией умеренности и&nbsp;гармонии. Слово Lagom переводится как &laquo;столько, сколько нужно&raquo;, &laquo;в&nbsp;самый раз&raquo;.<br /><br />Достаточность без излишеств. Современный минимализм<br />в&nbsp;архитектурном стиле домов и&nbsp;дизайне интерьеров в&nbsp;сочетании с&nbsp;уникальным расположением поселка позволил создать пространство, в&nbsp;котором все преимущества жизни на&nbsp;природе сочетаются с&nbsp;возможностями городской архитектуры.

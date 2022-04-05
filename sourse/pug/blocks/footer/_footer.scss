@@ -4,7 +4,8 @@
 	padding-top: 30px;
 	padding-bottom: 30px;
 	@include media-breakpoint-up(lg) {
-		position: fixed;
+		// position: fixed;
+		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: 100%;

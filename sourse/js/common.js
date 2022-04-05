@@ -307,27 +307,6 @@ function eventHandler() {
 	}
 
 
-	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
-	}
-
-	function whenResize() {
-		setFixedNav();
-	}
-
-	window.addEventListener('scroll', () => {
-		setFixedNav();
-
-	}, { passive: true })
-	window.addEventListener('resize', () => {
-		whenResize();
-	}, { passive: true });
-
-	whenResize();
 
 	// $(`.sForm__ask`).click(function () {
 	// 	$(`.sForm form-wrap__input`).toggleClass(`hide`);
@@ -460,79 +439,190 @@ function eventHandler() {
 	});
 	// modal window
 
-	var wow = new WOW(
-		{
-			animateClass: 'animate__animated', // animation css class (default is animated)
-			offset: 0,
-			mobile: false // trigger animations on mobile devices (default is true)
-		}
-	);
-	wow.init();
+
 
 	// const scroll = new Scrooth({
 	// 	strength: 8,
 	// 	acceleration: 1.2,
 	// });
 
+	let scroller = document.querySelector(".scroller")
+	gsap.registerPlugin(ScrollTrigger);
 
-	var controller = new ScrollMagic.Controller();
+	ScrollTrigger.defaults({
+		toggleActions: "play none reverse none", 
+	});
+	let bodyScrollBar = Scrollbar.init(scroller, {
+	// let bodyScrollBar = Scrollbar.init(document.body, {
+		damping: 0.1,
+		thumbMinSize: 20,
+		delegateTo: document,
+	});
+	ScrollTrigger.scrollerProxy(scroller, {
+		scrollTop(value) {
+			if (arguments.length) {
+				bodyScrollBar.scrollTop = value;
+			}
+			return bodyScrollBar.scrollTop;
+		},
+	});
+	bodyScrollBar.addListener(ScrollTrigger.update);
 
+	ScrollTrigger.create({
+		scroller: scroller,
+		start: 'top -80',
+		end: 99999,
+		// markers: true,
+		toggleClass: {className: 'fixed', targets: '.top-nav'}
+	});
+	// ScrollTrigger.create({
+	// 	scroller: scroller,
+	// 	start: 'top -80',
+	// 	end: 99999,
+	// 	toggleClass: {className: 'animate__animated', targets: '.top-nav'}
+	// });
+ 
+	gsap.utils.toArray(" .wow").forEach(wow => { 
+		
 
-	let height = window.innerHeight;
-	var tween = new TimelineMax()
-		.to(".sAboutIndexInfo__phylosophy-block-wrap", 10, { y: -320, duration: 2500, })
-	// .from(".picture-block--1", 3000, { y: height / 1.8 ,duration: 1500,})
-	// .from(".picture-block--1 .picture-block__caption", 10, { opacity: 0 ,duration: 1500,})
-	// .from(".picture-block--2", 3000, { y: height ,duration: 1500,})
-	// .to(".picture-block--2 .picture-block__caption", 10, { x: '50%', opacity: 0 ,duration: 1500,})
-	// .to(".picture-block--2 ", 3000, { scale: '.8', x: '10%' ,duration: 1500,})
-	// .from(".picture-block--3", 3000, { y: height, delay: -1 ,duration: 1500,})
-	// .from(".picture-block--3", 3000, { scale: '.5', x: '-10%' ,duration: 1500,})
-	// .to(".picture-block--1, .picture-block--2", 100, { opacity: 0, delay: -50 ,duration: 1500,})
-	// .to(".headerBlock__block", 3000, { opacity: 0,  duration: 1500,})
-	// .to(".picture-block--3", 3000, { opacity: .4, delay: -50 ,duration: 1500,})
-	// build scene
-	new ScrollMagic
-		.Scene({ triggerElement: ".sAboutIndexInfo", duration: '90%', offset: -200 })
-		.setTween(tween)
-		// .setPin(".headerBlock")
-		// .addIndicators() // add indicators (requires plugin)
-		.addTo(controller);
+		const animate = wow.dataset.animate;
+		console.log(animate);
+		function myfunction() {
+			wow.classList.toggle(`animate__animated`); 
+			if (animate) {
+				wow.classList.toggle(animate);
+			}
+		};
+		const rect = wow.getBoundingClientRect();
+		console.log(rect.top);
 
-	// var scene2 = new ScrollMagic.Scene({ triggerElement: ".sAboutIndex" })
-	// 	// trigger animation by adding a css class
-	// 	.setClassToggle(".sAboutIndex__caption-block-title", "animated")
-	// 	.addIndicators({ name: "1 - add a class" }) // add indicators (requires plugin)
-	// 	.addTo(controller);
-	var tween2 = new TimelineMax()
-		.from(".sIndexInfo__picture img", 10, { x: 150, duration: 3500, })
-	let scene2 = new ScrollMagic
-		.Scene({
-			triggerElement: ".sIndexInfo",
-			offset: 100,
-			duration: '100%'
-		})
-		// .addIndicators() // add indicators (requires plugin)
-		.addTo(controller)
-		.setTween(tween2)
-
-	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		$("body").niceScroll({
-			scrollspeed: 180, // scrolling speed
-			mousescrollstep: 20, // scrolling speed with mouse wheel (pixel)
-			touchbehavior: true, // DEPRECATED!! use "touchemulate"
-			emulatetouch: true, // enable cursor-drag scrolling like touch devices in desktop computer
-			hwacceleration: true, // use hardware accelerated scroll when supported
-			boxzoom: true, // enable zoom for box content
-			dblclickzoom: true, // (only when boxzoom=true) zoom activated when double click on box
-			gesturezoom: true, // (only when boxzoom=true and with touch devices) zoom activated when pinch out/in on box
-			grabcursorenabled: false, // (only when touchbehavior=true) display "grab" icon
-			bouncescroll: true, // (only when touchbehavior=true) display "grab" icon
-			autohidemode: false,
-			smoothscroll: true, // scroll with ease movement
-			sensitiverail: true
+		ScrollTrigger.create({
+			scroller: scroller,
+			trigger: wow,
+			start: 'top 90%', 
+			// end: 'bottom +100 top', 
+			// markers: true,
+			
+			onEnter: () => myfunction(),
+			// onLeave: () => myfunction(),
+			onLeaveBack: () => myfunction(),
+			// onEnterBack: () => myfunction(),
+			invalidateOnRefresh: true,
 		});
-	}
+	})
+
+	 
+
+	// var tl = gsap.timeline({
+    
+  //   scrollTrigger: {
+  //     trigger: ".sAboutIndexInfo",
+  //     scroller,
+  //     start: '-40% bottom',
+	// 		end: 'bottom',
+	// 		scrub: true,
+	// 		markers: true,
+  //     toggleActions: "play none reverse none",
+  //     invalidateOnRefresh: true,     
+  //   }
+    
+  // })
+	// tl
+	// .fromTo(".sAboutIndexInfo__picture-bg", { x: '-100%' }, { x: 0 })
+	
+	
+	gsap.from(".sAboutIndexInfo__picture-bg", {
+		scrollTrigger: {
+				scroller,
+				trigger:".sAboutIndexInfo",
+			start: '-10% -10%',
+			end: 'bottom bottom', 
+			// markers: true,
+			}, 
+			x: '-100%'
+		});
+	
+	
+	var t2 = gsap.timeline({
+    
+    scrollTrigger: {
+      trigger: ".sAboutIndexInfo",
+      scroller,
+      start: '-10% bottom',
+			end: 'bottom',
+			scrub: true,
+			// markers: true, 
+      invalidateOnRefresh: true,     
+    }
+    
+  })
+  
+  t2
+  .to(".sAboutIndexInfo__phylosophy-block-wrap", { y: -320})
+  ;
+ 
+	var t3 = gsap.timeline({
+    
+    scrollTrigger: {
+      trigger: ".sIndexInfo",
+      scroller,
+      start: 'top bottom',
+			end: '100%',
+			scrub: true,
+			// markers: true, 
+      invalidateOnRefresh: true,     
+    }
+    
+  })
+  
+  t3
+  .fromTo(".sIndexInfo__picture img", { x: 150}, { x: 50})
+  ;
+ 
+	// var t4 = gsap.timeline({
+    
+  //   scrollTrigger: {
+  //     trigger: '.footer',
+  //     scroller,
+	// 		start: () => "top -" + $('.footer').height(),
+	// 		end: () => "+=" + $('.footer').height(),
+	// 		// scrub: true,
+	// 		// pin: true,
+	// 		// end: '200% bottom',
+	// 		// scrub: true,
+	// 		markers: true, 
+	// 		duration: 1500
+  //     // invalidateOnRefresh: true,     
+  //   }
+    
+  // })
+  
+  // t4
+  // .fromTo(".footer", { y:'-100%'}, { y: 0})
+  // ; 
+
+	// if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	// 	$("body").niceScroll({
+	// 		scrollspeed: 120, // scrolling speed
+	// 		mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
+	// 		touchbehavior: true, // DEPRECATED!! use "touchemulate"
+	// 		emulatetouch: true, // enable cursor-drag scrolling like touch devices in desktop computer
+	// 		hwacceleration: true, // use hardware accelerated scroll when supported
+	// 		boxzoom: true, // enable zoom for box content
+	// 		dblclickzoom: true, // (only when boxzoom=true) zoom activated when double click on box
+	// 		gesturezoom: true, // (only when boxzoom=true and with touch devices) zoom activated when pinch out/in on box
+	// 		grabcursorenabled: false, // (only when touchbehavior=true) display "grab" icon
+	// 		bouncescroll: true, // (only when touchbehavior=true) display "grab" icon
+	// 		autohidemode: false,
+	// 		// smoothscroll: false, // scroll with ease movement
+	// 		// sensitiverail: false
+	// 	});
+	// }
+
+
+
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

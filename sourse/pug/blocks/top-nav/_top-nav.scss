@@ -1,12 +1,13 @@
 .top-nav {
 	background-color: transparent;
 	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	display: flex;
 	align-items: center;
-	z-index: 100;
+	z-index: 999;
 	transition-duration: 0.4s;
 
 	@include media-breakpoint-up(lg) {
@@ -28,6 +29,12 @@
 	}
 	&.fixed {
 		background-color: rgba(10, 10, 10, 0.48);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(10);
+			padding-bottom: rem(10); 
+		}
+		padding-top: rem(10);
+		padding-bottom: rem(10);
 	}
 	&.active {
 		background-color: $primary;

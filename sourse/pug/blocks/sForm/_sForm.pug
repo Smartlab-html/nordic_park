@@ -3,15 +3,15 @@ mixin sForm()
 	+b.SECTION.sForm.section.scroll-slide#sForm&attributes(attributes)
 		.container
 			+e.wrap
-				+e.title.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0s") СВЯЖИТЕСЬ С НАМИ
+				+e.title.wow(data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s") СВЯЖИТЕСЬ С НАМИ
 				+e.main
-					h2.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0.4s") Нужна помощь при выборе дома?
-					+e.caption.wow.animate__fadeInUp(data-wow-duration="1s" data-wow-delay="0.8s") Оставьте номер телефона, мы перезвоним вам в ближайшее время.
+					h2.wow(data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s") Нужна помощь при выборе дома?
+					+e.caption.wow(data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s") Оставьте номер телефона, мы перезвоним вам в ближайшее время.
 					+form-wrap()
 						.form-wrap__input-wrap.form-group
 							input.form-wrap__input.form-control(name='tel' type='tel' placeholder='НОМЕР ТЕЛЕФОНА' pattern='[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}' inputmode='text')
 							.sForm__thanks Спасибо, мы скоро вам перезвоним!
-						a.sForm__ask.wow.animate__zoomIn(data-wow-duration="1s" data-wow-delay="1.2s" href="#")
+						a.sForm__ask.wow(data-animate="animate__zoomIn" data-wow-duration="1s" data-wow-delay="1.2s" href="#")
 							.sForm__ask-text-wrap
 								span.sForm__ask-text ЗАДАТЬ ВОПРОС
 	// end sForm

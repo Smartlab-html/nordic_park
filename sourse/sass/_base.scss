@@ -42,6 +42,7 @@
 }
 body,
 html {
+	overflow: hidden;
 	// position: fixed;
   //   top: 0;
   //   left: 0;
@@ -49,6 +50,7 @@ html {
   //   height: 100%;
   //   margin: 0;
   //   padding: 0;
+	// overflow: hidden;
 	font-size: var(--bs-body-font-size);
 	@include media-breakpoint-up(xxl) {
 		font-size: calc(var(--bs-body-font-size) + 0.15vw);
@@ -132,9 +134,9 @@ body {
 }
 
 .main-wrapper {
-	position: relative;
-	width: 100%;
-	overflow: hidden;
+	// position: relative;
+	// width: 100%;
+	// overflow: hidden;
 	// display: flex;
 	// flex-direction: row;
 	// /	overflow: scroll;
@@ -386,8 +388,9 @@ ul {
 }
 
 @include media-breakpoint-up(lg) {
-	.wow {
-		visibility: hidden;
+	.wow:not(.animate__animated) {
+		// visibility: hidden;
+		opacity: 0;
 	}
 }
 
@@ -519,4 +522,18 @@ h6 {
 }
 .nicescroll-rails{
 	z-index: 900 !important;
+}
+
+
+.scroller {
+  height: 100vh;
+	// position: fixed;
+}
+
+[class^="gsap-marker"] {
+	left: 0 !important;
+}
+
+.scrollbar-track{
+	z-index: 990 !important;
 }
