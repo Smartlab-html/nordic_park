@@ -60,7 +60,7 @@ html {
 	// overflow: hidden;
 	font-size: var(--bs-body-font-size);
 	@include media-breakpoint-up(xxl) {
-		font-size: calc(var(--bs-body-font-size) + 0.15vw);
+		font-size: calc(var(--bs-body-font-size) + 0.12vw);
 	}
 }
 html {

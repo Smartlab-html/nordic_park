@@ -210,6 +210,9 @@
 		}
 	}
 	&__picture {
+		@include media-breakpoint-up(xxxl) {
+			margin-left: calc((100vw - 1700px) * -0.5 - 20vw);
+		}
 		@include media-breakpoint-up(xxl) {
 			margin-left: calc((100vw - 1312px) * -0.5 - 20vw);
 		}

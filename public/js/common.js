@@ -451,10 +451,10 @@ function eventHandler() {
 	gsap.registerPlugin(ScrollTrigger);
 
 	ScrollTrigger.defaults({
-		toggleActions: "play none play none", 
+		toggleActions: "play none play none",
 	});
 	let bodyScrollBar = Scrollbar.init(scroller, {
-	// let bodyScrollBar = Scrollbar.init(document.body, {
+		// let bodyScrollBar = Scrollbar.init(document.body, {
 		damping: 0.1,
 		thumbMinSize: 20,
 		delegateTo: document,
@@ -473,9 +473,9 @@ function eventHandler() {
 		scroller: scroller,
 		start: 'top -80',
 		end: 99999,
-		toggleActions: "play none none none", 
+		toggleActions: "play none none none",
 		// markers: true,
-		toggleClass: {className: 'fixed', targets: '.top-nav'}
+		toggleClass: { className: 'fixed', targets: '.top-nav' }
 	});
 	// ScrollTrigger.create({
 	// 	scroller: scroller,
@@ -483,14 +483,14 @@ function eventHandler() {
 	// 	end: 99999,
 	// 	toggleClass: {className: 'animate__animated', targets: '.top-nav'}
 	// });
- 
-	gsap.utils.toArray(" .wow").forEach(wow => { 
-		
+
+	gsap.utils.toArray(" .wow").forEach(wow => {
+
 
 		const animate = wow.dataset.animate;
 		console.log(animate);
 		function myfunction() {
-			wow.classList.toggle(`animate__animated`); 
+			wow.classList.toggle(`animate__animated`);
 			if (animate) {
 				wow.classList.toggle(animate);
 			}
@@ -501,10 +501,10 @@ function eventHandler() {
 		ScrollTrigger.create({
 			scroller: scroller,
 			trigger: wow,
-			start: 'top 90%', 
-			end: 'bottom +100 top', 
+			start: 'top 90%',
+			end: 'bottom +100 top',
 			// markers: true,
-			toggleActions: "play none reverse none", 
+			toggleActions: "play none reverse none",
 			onEnter: () => myfunction(),
 			// onLeave: () => myfunction(),
 			onLeaveBack: () => myfunction(),
@@ -513,79 +513,79 @@ function eventHandler() {
 		});
 	})
 
-	 
+
 
 	// var tl = gsap.timeline({
-    
-  //   scrollTrigger: {
-  //     trigger: ".sAboutIndexInfo",
-  //     scroller,
-  //     start: '-40% bottom',
+
+	//   scrollTrigger: {
+	//     trigger: ".sAboutIndexInfo",
+	//     scroller,
+	//     start: '-40% bottom',
 	// 		end: 'bottom',
 	// 		scrub: true,
 	// 		markers: true,
-  //     toggleActions: "play none reverse none",
-  //     invalidateOnRefresh: true,     
-  //   }
-    
-  // })
+	//     toggleActions: "play none reverse none",
+	//     invalidateOnRefresh: true,     
+	//   }
+
+	// })
 	// tl
 	// .fromTo(".sAboutIndexInfo__picture-bg", { x: '-100%' }, { x: 0 })
-	
-	
+
+
 	gsap.from(".sAboutIndexInfo__picture-bg", {
 		scrollTrigger: {
-				scroller,
-				trigger:".sAboutIndexInfo",
-			start: '-10% -10%',
-			end: 'bottom bottom', 
+			scroller,
+			trigger: ".sAboutIndexInfo",
+			start: '-25% -10%',
+			end: 'bottom bottom',
 			// markers: true,
-			}, 
-			x: '-100%'
-		});
-	
-	
+		},
+		x: '-100%'
+	});
+
+
 	var t2 = gsap.timeline({
-    
-    scrollTrigger: {
-      trigger: ".sAboutIndexInfo",
-      scroller,
-      start: '-10% bottom',
+
+		scrollTrigger: {
+			trigger: ".sAboutIndexInfo",
+			scroller,
+			start: '-10% bottom',
 			end: 'bottom',
 			scrub: true,
 			// markers: true, 
-      invalidateOnRefresh: true,     
-    }
-    
-  })
-  
-  t2
-  .to(".sAboutIndexInfo__phylosophy-block-wrap", { y: -320})
-  ;
- 
+			invalidateOnRefresh: true,
+		}
+
+	})
+
+	t2
+		.to(".sAboutIndexInfo__phylosophy-block-wrap", { y: -320 })
+		;
+
 	var t3 = gsap.timeline({
-    
-    scrollTrigger: {
-      trigger: ".sIndexInfo",
-      scroller,
-      start: 'top bottom',
+
+		scrollTrigger: {
+			trigger: ".sIndexInfo",
+			scroller,
+			start: 'top bottom',
 			end: '100%',
 			scrub: true,
 			// markers: true, 
-      invalidateOnRefresh: true,     
-    }
-    
-  })
-  
-  t3
-  .fromTo(".sIndexInfo__picture img", { x: 150}, { x: 50})
-  ;
- 
+			invalidateOnRefresh: true,
+		}
+
+	})
+
+	t3
+		.fromTo(".sIndexInfo__picture img", { x: 150 }, { x: 50 })
+		;
+
 	// var t4 = gsap.timeline({
-    
-  //   scrollTrigger: {
-  //     trigger: '.footer',
-  //     scroller,
+
+	//   scrollTrigger: {
+	//     trigger: '.footer',
+	//     scroller,
 	// 		start: () => "top -" + $('.footer').height(),
 	// 		end: () => "+=" + $('.footer').height(),
 	// 		// scrub: true,
@@ -594,14 +594,14 @@ function eventHandler() {
 	// 		// scrub: true,
 	// 		markers: true, 
 	// 		duration: 1500
-  //     // invalidateOnRefresh: true,     
-  //   }
-    
-  // })
-  
-  // t4
-  // .fromTo(".footer", { y:'-100%'}, { y: 0})
-  // ; 
+	//     // invalidateOnRefresh: true,     
+	//   }
+
+	// })
+
+	// t4
+	// .fromTo(".footer", { y:'-100%'}, { y: 0})
+	// ; 
 
 	// if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 	// 	$("body").niceScroll({

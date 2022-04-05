@@ -81,14 +81,14 @@
 		// @include media-breakpoint-up(xxl) {
 		// 	font-size: calc(50px + 2.8vw);
 		// }
-		@include media-breakpoint-up(lg) {
-			font-size: rem(92);
+		@include media-breakpoint-up(xl) {
+			font-size: rem(82);
 			margin-right: 32px;
 			margin-bottom: 0;
 		}
 		margin-bottom: 30px;
 		@include media-breakpoint-up(sm) {
-			font-size: 80px;
+			font-size: 66px;
 		}
 		font-size: 44px;
 		line-height: 100%;
