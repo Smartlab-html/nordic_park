@@ -401,6 +401,7 @@ function eventHandler() {
 	const IndexCaptionSlider = new Swiper('.sIndexSlider__caption-slider--js', {
 		slidesPerView: 1,
 		loop: true,
+		spaceBetween: 20,
 		speed: 1500,
 		pagination: {
 			el: ".swiper-pagination",
@@ -450,7 +451,7 @@ function eventHandler() {
 	gsap.registerPlugin(ScrollTrigger);
 
 	ScrollTrigger.defaults({
-		toggleActions: "play none reverse none", 
+		toggleActions: "play none play none", 
 	});
 	let bodyScrollBar = Scrollbar.init(scroller, {
 	// let bodyScrollBar = Scrollbar.init(document.body, {
@@ -500,9 +501,9 @@ function eventHandler() {
 			scroller: scroller,
 			trigger: wow,
 			start: 'top 90%', 
-			// end: 'bottom +100 top', 
+			end: 'bottom +100 top', 
 			// markers: true,
-			
+			toggleActions: "play none reverse none", 
 			onEnter: () => myfunction(),
 			// onLeave: () => myfunction(),
 			onLeaveBack: () => myfunction(),
