@@ -40,10 +40,11 @@ html(lang="ru")
 	//- body.loaded_hiding(class= mainPage) 
 	body(class=mainPage data-bg=bg ) 
 		+top-nav
-		.main-wrapper.scroller
-			block pagecontent
-				h3 content
-		
+		.scroller
+			.main-wrapper
+				block pagecontent
+					h3 content
+			
 		+footer
 		+modal()
 
