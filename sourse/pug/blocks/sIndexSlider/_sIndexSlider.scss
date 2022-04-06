@@ -161,7 +161,10 @@
 		}
 	}
 	&__pic-slider-bg {
-		@include block(1923, 900);
+		@include media-breakpoint-up(lg){
+			@include block(1923, 900);
+		}
+		@include block(704, 448);
 		picture {
 			position: absolute;
 			top: 0;

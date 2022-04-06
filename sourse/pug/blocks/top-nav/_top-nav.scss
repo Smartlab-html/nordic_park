@@ -13,13 +13,11 @@
 	@include media-breakpoint-up(lg) {
 		padding-top: rem(30);
 		padding-bottom: rem(30);
-		padding-left: rem(48);
-		padding-right: rem(48);
 	}
 	padding-top: rem(23);
 	padding-bottom: rem(23);
-	padding-left: rem(32);
-	padding-right: rem(32);
+	padding-left: var(--topnav-padding);
+	padding-right: var(--topnav-padding);
 	@include media-breakpoint-between(md, xl) {
 	}
 	@include media-breakpoint-only(md) {
@@ -41,7 +39,7 @@
 	}
 	&__logo {
 		@include media-breakpoint-up(lg) {
-			width: rem(152);
+			width: var(--logo-size);
 			height: rem(56);
 		}
 		@include media-breakpoint-up(sm) {
@@ -63,7 +61,7 @@
 			width: 100%;
 			height: 100%;
 		}
-		margin-right: rem(60);
+		margin-right: var(--logo-margin);
 	}
 	&__menu-item-text-wrap {
 		display: flex;

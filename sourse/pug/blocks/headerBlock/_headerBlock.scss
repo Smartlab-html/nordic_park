@@ -2,7 +2,7 @@
 .headerBlock {
 	margin-bottom: 1px;
 	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
 	@include media-breakpoint-up(xl) {
@@ -36,6 +36,11 @@
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
+		@include media-breakpoint-up(lg){
+			max-width: 100%;
+			padding-left: calc(var(--logo-size) + var(--logo-margin) + var(--topnav-padding));
+			padding-right: calc(var(--logo-size) + var(--logo-margin) + var(--topnav-padding));
+		}
 	}
 	video {
 		object-fit: cover;
@@ -81,7 +86,7 @@
 		// @include media-breakpoint-up(xxl) {
 		// 	font-size: calc(50px + 2.8vw);
 		// }
-		@include media-breakpoint-up(xl) {
+		@include media-breakpoint-up(xxl) {
 			font-size: rem(82);
 			margin-right: 32px;
 			margin-bottom: 0;
