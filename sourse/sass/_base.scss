@@ -25,10 +25,10 @@
 }
 .main-wrapper {
 	@include media-breakpoint-up(xxl) {
-		padding-bottom: rem(771);
+		margin-bottom: rem(771);
 	}
 	@include media-breakpoint-up(lg) {
-		padding-bottom: rem(798);
+		margin-bottom: rem(798);
 		z-index: 2;
 	}
 	// @include media-breakpoint-up(md) {

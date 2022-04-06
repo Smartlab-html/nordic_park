@@ -10,7 +10,10 @@
 		left: 0;
 		width: 100%;
 		z-index: 0;
-		}
+	}
+	@include media-breakpoint-up(xxl){
+		height: rem(771);
+	}
 	@include media-breakpoint-up(sm) {
 		padding-bottom: rem(80);
 		padding-top: rem(100);
@@ -69,21 +72,27 @@
 	&__title {
 		font-weight: 500;
 		@include media-breakpoint-up(sm) {
-			font-size: $small;
+			font-size: 14px;
 		}
 		font-size: 10px;
 		line-height: 100%;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		color: rgba(255, 255, 255, 0.5) !important;
+		transition-duration: 0.4s;
+	}
+	a.footer__title{
+		&:hover {
+			color: $white !important;
+		}
 	}
 	&__caption {
 		@include media-breakpoint-up(sm) {
-			font-size: rem(17);
+			font-size: 17px;
 		}
 		font-size: rem(12);
 		line-height: 160%;
-		color: $white;
+		color: $white !important;
 	}
 	&__logo {
 		width: rem(91);
