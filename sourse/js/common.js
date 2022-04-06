@@ -454,23 +454,23 @@ function eventHandler() {
 		toggleActions: "play none play none",
 	});
 	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		gsap.registerPlugin(ScrollTrigger);
+		let bodyScrollBar = Scrollbar.init(scroller, {
+			// let bodyScrollBar = Scrollbar.init(document.body, {
+			damping: 0.1,
+			thumbMinSize: 20,
+			delegateTo: document,
+		});
+		ScrollTrigger.scrollerProxy(scroller, {
+			scrollTop(value) {
+				if (arguments.length) {
+					bodyScrollBar.scrollTop = value;
+				}
+				return bodyScrollBar.scrollTop;
+			},
+		});
+		bodyScrollBar.addListener(ScrollTrigger.update);
 	}
-	let bodyScrollBar = Scrollbar.init(scroller, {
-		// let bodyScrollBar = Scrollbar.init(document.body, {
-		damping: 0.1,
-		thumbMinSize: 20,
-		delegateTo: document,
-	});
-	ScrollTrigger.scrollerProxy(scroller, {
-		scrollTop(value) {
-			if (arguments.length) {
-				bodyScrollBar.scrollTop = value;
-			}
-			return bodyScrollBar.scrollTop;
-		},
-	});
-	bodyScrollBar.addListener(ScrollTrigger.update);
+	
 
 	ScrollTrigger.create({
 		scroller: scroller,
