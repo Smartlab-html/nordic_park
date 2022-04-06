@@ -39,19 +39,23 @@
 		}
 		position: absolute;
 		bottom: 0;
-		left: rem(70);
-		width: rem(420);
+		left: calc(rem(30) + 5.7vw);
+		width: rem(360);
 		padding-top: rem(70);
 		padding-bottom: rem(74);
 		padding-left: rem(60);
 		padding-right: rem(60);
 		@include media-breakpoint-up(xxl) {
-			left: rem(140);
-			padding-top: rem(140);
-			padding-bottom: rem(148);
-			padding-left: rem(120);
-			padding-right: rem(120);
-			width: rem(566);
+			padding-top: calc(rem(20) + 5.3vw);
+			padding-bottom: calc(rem(28) + 5.3vw);
+			padding-left: calc(rem(30) + 4.3vw);
+			padding-right: calc(rem(30) + 4.3vw);
+			width: calc(rem(220) + 17.7vw);
+			max-width: 566px;
+		}
+		@include media-breakpoint-up(xxxl) {
+			width: rem(700);
+			max-width: none;
 		}
 		background-color: $white;
 		z-index: 3;
@@ -63,7 +67,6 @@
 			width: auto;
 			bottom: 0;
 			right: 0;
-
 		}
 	}
 	&__caption-slider-arrows {
@@ -101,14 +104,28 @@
 	}
 	&__caption-slider-title {
 		font-weight: 600;
-		font-size: rem(32);
+		@include media-breakpoint-up(xxl) {
+			font-size: 32px;
+			margin-bottom: 32px;
+		}
+		@include media-breakpoint-up(xxxl) {
+			font-size: 48px;
+		}
+		font-size: 24px;
 		line-height: 120%;
-		margin-bottom: rem(32);
+		margin-bottom: 24px;
 	}
 	&__caption-slider-text {
-		margin-bottom: rem(56);
+		margin-bottom: 40px;
 		line-height: 180%;
-		font-size: $large;
+		font-size: 14px;
+		@include media-breakpoint-up(xxl) {
+			font-size: 18px;
+			margin-bottom: rem(56);
+		}
+		@include media-breakpoint-up(xxxl) {
+			font-size: 22px;
+		}
 	}
 	&__pic-slider {
 		.swiper-button-hand {
@@ -123,13 +140,13 @@
 				}
 			}
 			border: none;
-			@include media-breakpoint-down(sm){
+			@include media-breakpoint-down(sm) {
 				top: -50px;
 			}
 			.icon {
-				@include media-breakpoint-up(sm){
+				@include media-breakpoint-up(sm) {
 					width: 32px;
-				height: 32px;
+					height: 32px;
 				}
 				width: 16px;
 				height: 16px;
@@ -141,9 +158,9 @@
 				transform: translate(-50%, -50%);
 			}
 		}
-		@include media-breakpoint-up(sm){
+		@include media-breakpoint-up(sm) {
 			--swiperArrowPosition: 32px;
-		--swiperArrowSize: #{rem(72)};
+			--swiperArrowSize: #{rem(72)};
 		}
 		--swiperArrowPosition: 16px;
 		--swiperArrowSize: #{rem(36)};
@@ -161,7 +178,7 @@
 		}
 	}
 	&__pic-slider-bg {
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			@include block(1923, 900);
 		}
 		@include block(704, 448);
