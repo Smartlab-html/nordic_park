@@ -453,6 +453,9 @@ function eventHandler() {
 	ScrollTrigger.defaults({
 		toggleActions: "play none play none",
 	});
+	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		gsap.registerPlugin(ScrollTrigger);
+	}
 	let bodyScrollBar = Scrollbar.init(scroller, {
 		// let bodyScrollBar = Scrollbar.init(document.body, {
 		damping: 0.1,
@@ -619,6 +622,7 @@ function eventHandler() {
 	// 		// smoothscroll: false, // scroll with ease movement
 	// 		// sensitiverail: false
 	// 	});
+	// }
 	// }
 
 
