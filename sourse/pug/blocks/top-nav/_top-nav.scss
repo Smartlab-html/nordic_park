@@ -29,7 +29,7 @@
 		background-color: rgba(10, 10, 10, 0.48);
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(10);
-			padding-bottom: rem(10); 
+			padding-bottom: rem(10);
 		}
 		padding-top: rem(10);
 		padding-bottom: rem(10);
@@ -213,7 +213,9 @@
 	}
 }
 .gray-bg {
-	.top-nav__menu-item {
-		color: $body-color;
+	.top-nav:not(.fixed) {
+		.top-nav__menu-item {
+			color: $body-color;
+		}
 	}
 }

@@ -119,7 +119,7 @@
 	}
 	&__more {
 		position: absolute;
-		width: 160px;
+		width: rem(160);
 		@include media-breakpoint-up(sm) {
 			bottom: 48px;
 			left: 64px;
@@ -138,6 +138,7 @@
 		}
 		.icon {
 			width: 32px;
+			min-width: 32px;
 			height: 32px;
 			color: transparent;
 			stroke: $white;

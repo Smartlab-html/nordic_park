@@ -79,9 +79,10 @@
 		@include block(780, 900);
 	}
 	.row {
-		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-x: #{rem(16)};
 		@include media-breakpoint-up(sm) {
 			--bs-gutter-y: #{rem(100)};
+			--bs-gutter-x: #{rem(32)};
 		}
 		--bs-gutter-y: #{rem(60)};
 	}

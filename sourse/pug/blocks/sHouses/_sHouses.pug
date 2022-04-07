@@ -9,15 +9,15 @@ mixin sHouses(data)
 				.col-lg-6
 					+house-item(`VIND`,`148`,`1`,`0`)
 				.col-lg-6
-					+house-item(`FELT`,`180`,`2`,`1`)
+					+house-item(`FELT`,`180`,`2`,`2`)
 				.col-lg-6
-					+house-item(`BARN`,`215`,`3`,`2`)
+					+house-item(`BARN`,`215`,`3`,`4`)
 				.col-lg-6
-					+house-item(`JORD`,`220`,`4`,`3`)
+					+house-item(`JORD`,`220`,`4`,`6`)
 				.col-lg-6
-					+house-item(`SKOG`,`260`,`5`,`4`)
+					+house-item(`SKOG`,`260`,`5`,`8`)
 				.col-lg-6
-					+house-item(`STEN`,`286`,`6`,`5`)
+					+house-item(`STEN`,`286`,`6`,`10`)
 	// end sHouses
 
 mixin house-item(title,square,img,delay)
@@ -27,6 +27,6 @@ mixin house-item(title,square,img,delay)
 		+e.square.animate__animated.animate__zoomIn.animate__slow.animate__delay-1s(style=`--animate-duration: 200ms; --animate-delay:${delay}.6s;`)
 			+e.square-info!=square
 			+e.square-title Общая площадь, м²
-		+e.more.animate__animated.animate__zoomIn.animate__slow.animate__delay-1s(style=`--animate-duration: 200ms; --animate-delay:${delay}.8s;`)
+		+e.more.animate__animated.animate__zoomIn.animate__slow.animate__delay-1s(style=`--animate-duration: 200ms; --animate-delay:${delay}.8s;` href="#")
 			span Подробнее
 			+icon(`chevron-right`)

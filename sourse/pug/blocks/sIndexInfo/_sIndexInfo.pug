@@ -12,7 +12,7 @@ mixin sIndexInfo(data)
 					h2.wow(data-animate="animate__fadeInUp"  data-wow-duration="1s" data-wow-delay="0s") Коротко <br>о главном
 					.row
 						mixin item(text,pic,delay)
-							.col-sm-6
+							.col-6
 								+e.item
 									+e.pic.wow(data-animate="animate__zoomIn"  data-wow-duration="0.8s" data-wow-delay=`${delay}s`)
 										+icon(`index-info-${pic}`)
