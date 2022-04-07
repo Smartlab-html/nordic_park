@@ -1,39 +1,40 @@
 mixin footer()
-	+b.FOOTER.footer
-		.container
-			+e.string
-				+e.info
-					.row
-						.col-6
-							+e.title ОФИС ПРОДАЖ
-							+e.caption г. Москва, Дмитровское шоссе, 161А
-						.col-6
-							+e.title Адрес поселка
-							+e.caption городской округ Мытищи, д. Лысково
-						.col-6
-							+e.title Контактный телефон
-							+e.caption(href="tel:+79851405500") +7 985 140-55-00
-						.col-6
-							+e.title E-MAIL
-							+e.caption(href="mailto:info@nordicpark.ru") info@nordicpark.ru
-			+e.string
-				+e.block
-					+e.logo(href="/")
-						img(src="img/svg/logo.svg", alt="")
-				+e.block
-					.row
-						.col-lg-6
-							ul
-								li
-									+e.title(href="#") Дома
-								li
-									+e.title(href="#") Генплан
-								li
-									+e.title(href="#") Расположение
-								li
-									+e.title(href="#") Контакты
-						.col-lg-6
-							+e.title(href="#") Политика конфиденциальности
+	.footer-wrap
+		+b.FOOTER.footer
+			.container
+				+e.string
+					+e.info
+						.row
+							.col-6
+								+e.title ОФИС ПРОДАЖ
+								+e.caption г. Москва, Дмитровское шоссе, 161А
+							.col-6
+								+e.title Адрес поселка
+								+e.caption городской округ Мытищи, д. Лысково
+							.col-6
+								+e.title Контактный телефон
+								+e.caption(href="tel:+79851405500") +7 985 140-55-00
+							.col-6
+								+e.title E-MAIL
+								+e.caption(href="mailto:info@nordicpark.ru") info@nordicpark.ru
+				+e.string
+					+e.block
+						+e.logo(href="/")
+							img(src="img/svg/logo.svg", alt="")
+					+e.block
+						.row
+							.col-lg-6
+								ul
+									li
+										+e.title(href="#") Дома
+									li
+										+e.title(href="#") Генплан
+									li
+										+e.title(href="#") Расположение
+									li
+										+e.title(href="#") Контакты
+							.col-lg-6
+								+e.title(href="#") Политика конфиденциальности
 //- mixin footer()
 //- 	+b.FOOTER.footer
 //- 		.container

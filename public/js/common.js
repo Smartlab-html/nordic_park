@@ -518,6 +518,21 @@ function eventHandler() {
 
 
 
+	// gsap.utils.toArray(".main-content, .footer").forEach((panel, i) => {
+	// 	ScrollTrigger.create({
+	// 		trigger: panel,
+	// 		start: "top top", 
+	// 		pin: true, 
+	// 		pinSpacing: false 
+	// 	});
+	// });
+	
+	
+	// ScrollTrigger.create({
+	// 	snap: 1 / 1 // snap whole page to the closest section!
+	// });
+	
+
 	// var tl = gsap.timeline({
 
 	//   scrollTrigger: {
@@ -542,12 +557,41 @@ function eventHandler() {
 			trigger: ".sAboutIndexInfo",
 			start: '-25% -10%',
 			end: 'bottom bottom',
+			toggleActions: "play none reverse none",
+			
 			// markers: true,
 		},
 		x: '-100%'
 	});
+	// gsap.fromTo(".footer", {
+	// 	scrollTrigger: {
+	// 		scroller,
+	// 		trigger: '.footer',
+	// 		start: 'top bottom',
+	// 		end: 'bottom',
+	// 		markers: true,
+	// 		// pin:true,
+	// 	},
+		
+	// });
 
 
+	var foot = gsap.timeline({
+
+		scrollTrigger: { 
+			scroller,
+			trigger: '.footer-wrap',
+			start: 'top bottom',
+			// endTrigger: "html",
+			end: 'bottom bottom',
+			// markers: true,
+			// toggleActions: "play none reverse none",
+			scrub: true, 
+		}
+
+	})
+	foot
+		.to(".footer", {y: 0});
 	var t2 = gsap.timeline({
 
 		scrollTrigger: {
