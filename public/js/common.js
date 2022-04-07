@@ -591,8 +591,24 @@ function eventHandler() {
 		}
 
 	})
+	var contactsMap = gsap.timeline({
+
+		scrollTrigger: { 
+			scroller,
+			trigger: '.footer-wrap',
+			start: 'top bottom',
+			// endTrigger: "html",
+			end: 'bottom bottom',
+			// markers: true,
+			// toggleActions: "play none reverse none",
+			scrub: true, 
+		}
+
+	})
 	foot
 		.from(".footer", {y: '-100%'});
+	contactsMap
+		.from(".sMapContacts", {y: '-100%'});
 	var t2 = gsap.timeline({
 
 		scrollTrigger: {

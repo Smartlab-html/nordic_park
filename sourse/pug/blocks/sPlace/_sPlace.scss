@@ -96,15 +96,15 @@
 	}
 } // end.sPlace
 .with-map {
-	.sMap {
-		@include media-breakpoint-up(lg) {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			z-index: 0;
-		}
-	}
+	// .sMap {
+	// 	@include media-breakpoint-up(lg) {
+	// 		position: fixed;
+	// 		bottom: 0;
+	// 		left: 0;
+	// 		width: 100%;
+	// 		z-index: 0;
+	// 	}
+	// }
 }
 
 .sMap {

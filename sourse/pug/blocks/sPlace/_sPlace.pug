@@ -16,9 +16,10 @@ mixin sMap
 		+e.map-widget#map-place
 
 mixin sMapContacts
-	+b.sMap#sContacts__map
-		script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
-		+e.map-widget#map-place
+	.footer-wrap
+		+b.sMap.sMapContacts#sContacts__map
+			script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
+			+e.map-widget#map-place
 
 mixin sContacts(data)
 	// start sPlace
