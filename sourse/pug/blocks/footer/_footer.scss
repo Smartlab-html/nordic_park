@@ -1,3 +1,6 @@
+// [data-scrollbar="true"] {
+// 	.foote
+// }
 .footer {
 	// margin-top: auto;
 	background-color: $body-color;
@@ -11,7 +14,7 @@
 	// 	width: 100%;
 	// 	z-index: 0;
 	// }
-	transform: translateY(-100%);
+	// transform: translateY(-100%);
 	@include media-breakpoint-up(xxl){
 		// height: rem(771);
 	}

@@ -453,13 +453,15 @@ function eventHandler() {
 	ScrollTrigger.defaults({
 		toggleActions: "play none play none",
 	});
+	let bodyScrollBar;
 	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		let bodyScrollBar = Scrollbar.init(scroller, {
+		 bodyScrollBar = Scrollbar.init(scroller, {
 			// let bodyScrollBar = Scrollbar.init(document.body, {
 			damping: 0.1,
 			thumbMinSize: 20,
 			delegateTo: document,
 		});
+	}
 		ScrollTrigger.scrollerProxy(scroller, {
 			scrollTop(value) {
 				if (arguments.length) {
@@ -469,7 +471,6 @@ function eventHandler() {
 			},
 		});
 		bodyScrollBar.addListener(ScrollTrigger.update);
-	}
 	
 
 	ScrollTrigger.create({
@@ -591,7 +592,7 @@ function eventHandler() {
 
 	})
 	foot
-		.to(".footer", {y: 0});
+		.from(".footer", {y: '-100%'});
 	var t2 = gsap.timeline({
 
 		scrollTrigger: {
