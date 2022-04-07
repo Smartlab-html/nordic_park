@@ -16,7 +16,7 @@ mixin sMap
 		+e.map-widget#map-place
 
 mixin sMapContacts
-	.footer-wrap
+	.footer-wrap#footer-wrap
 		+b.sMap.sMapContacts#sContacts__map
 			script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f')
 			+e.map-widget#map-place
@@ -31,14 +31,20 @@ mixin sContacts(data)
 				mixin item(title,caption)
 					+e.title!=title
 					+e.caption-info!=caption
+				mixin item2()
+					+e.title Контактный телефон
+					+e.caption-info(href="tel:+79851405500") +7 985 140-55-00
+				mixin item3()
+					+e.title E-MAIL
+					+e.caption-info(href="mailto:info@nordicpark.ru") info@nordicpark.ru
 				.col-lg-3.col-sm-6.animate__animated.animate__fadeIn.animate__slow.animate__delay-1s(style=`--animate-duration: 800ms; --animate-delay:0.5s;`)
 					+item(`ОФИС ПРОДАЖ`,`г. Москва, Дмитровское шоссе, 161А`)
 				.col-lg-9.col-sm-6.animate__animated.animate__fadeIn.animate__slow.animate__delay-1s(style=`--animate-duration: 800ms; --animate-delay:1s;`)
 					+item(`Адрес поселка`,`городской округ Мытищи, д. Лысково`)
 				.col-lg-3.col-sm-6.animate__animated.animate__fadeIn.animate__slow.animate__delay-1s(style=`--animate-duration: 800ms; --animate-delay:1.5s;`)
-					+item(`Контактный телефон`,`+7 985 140-55-00`)
+					+item2
 				.col-lg-9.col-sm-6.animate__animated.animate__fadeIn.animate__slow.animate__delay-1s(style=`--animate-duration: 800ms; --animate-delay:2s;`)
-					+item(`E-MAIL`,`info@nordicpark.ru`)
+					+item3
 			+e.down-link.animate__animated.animate__fadeInUp.scroll-link(data-wow-duration="1s" data-wow-delay="0s" href="#sContacts__map")
 				+icon(`arrow-down`)
 	// end sPlace

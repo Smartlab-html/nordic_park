@@ -27,7 +27,7 @@ block pagecontent
 		var myMap = new ymaps.Map('map-place', {
 		center: [56.086711, 37.541952],
 		zoom: 11,
-		controls: []
+		controls: ['zoomControl']
 		}, {
 		searchControlProvider: 'yandex#search'
 		}),
@@ -46,8 +46,10 @@ block pagecontent
 		});
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		//... отключаем перетаскивание карты
-		myMap.zoom = 11;
+			myMap.zoom = 11;
 		}
+		//- myMap.behaviors.disable('drag');
+		myMap.behaviors.disable('scrollZoom');
 		myMap.geoObjects
 		.add(myPlacemark);
 		// myMap.behaviors.disable('drag');

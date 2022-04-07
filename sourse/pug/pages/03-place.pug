@@ -29,7 +29,7 @@ block pagecontent
 		var myMap = new ymaps.Map('map-place', {
 		center: [56.086711, 37.541952],
 		zoom: 11,
-		controls: []
+		controls: ['zoomControl']
 		}, {
 		searchControlProvider: 'yandex#search'
 		}),
@@ -102,9 +102,19 @@ block pagecontent
 		//... отключаем перетаскивание карты
 		myMap.zoom = 11;
 		}
+		myMap.behaviors.disable('scrollZoom');
 		myMap.geoObjects
 		.add(myPlacemark)
 		.add(myPlacemark2)
+		//- .add(new ymaps.Placemark([56.129043, 37.540323], {
+		//- 	balloonContent: 'Икша Ривер Клаб',
+		//- 	iconCaption: 'Икша Ривер Клаб',
+		//- 	//- iconLayout: 'default#image',
+		//- 	//- // Своё изображение иконки метки.
+		//- 	//- iconImageHref: 'img/svg/place-map-kashtan.svg',
+		//- 	}, {
+		//- 		//- preset: 'islands#greenDotIconWithCaption'
+		//- 	}))
 		.add(myPlacemark3)
 		.add(myPlacemark4)
 		.add(myPlacemark5);

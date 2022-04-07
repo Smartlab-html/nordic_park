@@ -91,14 +91,14 @@
 							<div class="col-lg-3 col-sm-6 animate__animated animate__fadeIn animate__slow animate__delay-1s" style="--animate-duration: 800ms; --animate-delay:1.5s;">
 										<div class="sPlace__title">Контактный телефон
 										</div>
-										<div class="sPlace__caption-info">+7 985 140-55-00
-										</div>
+										<a class="sPlace__caption-info" href="tel:+79851405500">+7 985 140-55-00
+										</a>
 							</div>
 							<div class="col-lg-9 col-sm-6 animate__animated animate__fadeIn animate__slow animate__delay-1s" style="--animate-duration: 800ms; --animate-delay:2s;">
 										<div class="sPlace__title">E-MAIL
 										</div>
-										<div class="sPlace__caption-info">info@nordicpark.ru
-										</div>
+										<a class="sPlace__caption-info" href="mailto:info@nordicpark.ru">info@nordicpark.ru
+										</a>
 							</div>
 						</div>
 						<a class="sPlace__down-link animate__animated animate__fadeInUp scroll-link" data-wow-duration="1s" data-wow-delay="0s" href="#sContacts__map">
@@ -109,7 +109,7 @@
 					</div>
 				</section>
 				<!-- end sPlace-->
-				<div class="footer-wrap">
+				<div class="footer-wrap" id="footer-wrap">
 					<div class="sMap sMapContacts" id="sContacts__map">
 						<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=6331e0a6-b922-4b24-a8f0-88e62d68142f"></script>
 						<div class="sMap__map-widget" id="map-place">
@@ -122,7 +122,7 @@
 					var myMap = new ymaps.Map('map-place', {
 					center: [56.086711, 37.541952],
 					zoom: 11,
-					controls: []
+					controls: ['zoomControl']
 					}, {
 					searchControlProvider: 'yandex#search'
 					}),
@@ -141,8 +141,10 @@
 					});
 					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 					//... отключаем перетаскивание карты
-					myMap.zoom = 11;
+						myMap.zoom = 11;
 					}
+					//- myMap.behaviors.disable('drag');
+					myMap.behaviors.disable('scrollZoom');
 					myMap.geoObjects
 					.add(myPlacemark);
 					// myMap.behaviors.disable('drag');

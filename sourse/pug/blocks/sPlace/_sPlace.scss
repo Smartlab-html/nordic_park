@@ -33,7 +33,7 @@
 		margin-bottom: rem(46);
 	}
 	.row {
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(60);
 		}
 		@include media-breakpoint-up(sm) {
@@ -52,16 +52,17 @@
 	&__caption {
 		@include media-breakpoint-up(lg) {
 			max-width: rem(326);
-			// margin-bottom: rem(80);
+			margin-bottom: rem(80);
 		}
 		@include media-breakpoint-up(sm) {
-			// margin-bottom: rem(100);
+			margin-bottom: rem(100);
 		}
-		// margin-bottom: rem(60);
+		margin-bottom: rem(60);
 	}
-	&__caption-info{
+	&__caption-info {
 		font-size: rem(18);
 		line-height: 160%;
+		color: $white !important;
 	}
 	&__down-link {
 		@include media-breakpoint-down(lg) {
