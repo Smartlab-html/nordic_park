@@ -21,7 +21,8 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		+e.logo.animate__animated.animate__fadeIn(href="/")
-			img(src="img/svg/logo.svg", alt="")
+			//- img(src="img/svg/logo.svg", alt="")
+			include ../../../../public/img/svg/logo.svg
 		//- +e.menu.wow.animate__bounceInLeft(data-wow-duration="1s" data-wow-delay="0.2s")
 		+e.menu
 			+e.menu-item--special.animate__animated.animate__fadeInLeft(href="#")

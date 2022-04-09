@@ -3,84 +3,31 @@ mixin sHouses(data)
 	+b.SECTION.sHouses.section#sHouses&attributes(attributes)
 		.container
 			+breadcrumb(`ГЛАВНАЯ`,`ДОМА`)
-			+e.title-wrap.animate__animated.animate__fadeIn.animate__delay-1s
+			+e.title-wrap.wow(data-animate="animate__fadeIn" )
 				h1 Дома
 			.row
-				.col-lg-6
-					+b.house-item.bg-wrap.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 400ms; --animate-delay:0.0s;`)
-						+pic(`house-item-1.jpg`,``,0).picture-bg
-						h3.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:0.4s;`) VIND
-						+e.square.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:0.6s;`)
-							+e.square-info 148
-							+e.square-title Общая площадь, м²
-						+e.more.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:0.8s;` href="#")
-							span Подробнее
-							+icon(`chevron-right`)
-				.col-lg-6
-					//- +house-item(`FELT`,`180`,`2`,`2`)
-					+b.house-item.bg-wrap.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 400ms; --animate-delay:2.0s;`)
-						+pic(`house-item-1.jpg`,``,0).picture-bg
-						h3.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:2.4s;`) FELT
-						+e.square.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:2.6s;`)
-							+e.square-info 180
-							+e.square-title Общая площадь, м²
-						+e.more.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:2.8s;` href="#")
-							span Подробнее
-							+icon(`chevron-right`)
-				.col-lg-6
-					//- +house-item(`BARN`,`215`,`3`,`0`)
-					+b.house-item.bg-wrap.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 400ms; --animate-delay:0.0s;`)
-						+pic(`house-item-1.jpg`,``,0).picture-bg
-						h3.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:0.4s;`) BARN
-						+e.square.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:0.6s;`)
-							+e.square-info 215
-							+e.square-title Общая площадь, м²
-						+e.more.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:0.8s;` href="#")
-							span Подробнее
-							+icon(`chevron-right`)
-				.col-lg-6
-					//- +house-item(`JORD`,`220`,`4`,`2`)
-					+b.house-item.bg-wrap.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 400ms; --animate-delay:2.0s;`)
-						+pic(`house-item-1.jpg`,``,0).picture-bg
-						h3.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:2.4s;`) JORD
-						+e.square.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:2.6s;`)
-							+e.square-info 220
-							+e.square-title Общая площадь, м²
-						+e.more.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:2.8s;` href="#")
-							span Подробнее
-							+icon(`chevron-right`)
-				.col-lg-6
-					//- +house-item(`SKOG`,`260`,`5`,`4`)
-					+b.house-item.bg-wrap.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 400ms; --animate-delay:0.0s;`)
-						+pic(`house-item-1.jpg`,``,0).picture-bg
-						h3.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:0.4s;`) SKOG
-						+e.square.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:0.6s;`)
-							+e.square-info 260
-							+e.square-title Общая площадь, м²
-						+e.more.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:0.8s;` href="#")
-							span Подробнее
-							+icon(`chevron-right`)
-				.col-lg-6
-					//- +house-item(`STEN`,`286`,`6`,`6`)
-					+b.house-item.bg-wrap.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 400ms; --animate-delay:2.0s;`)
-						+pic(`house-item-1.jpg`,``,0).picture-bg
-						h3.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:2.4s;`) STEN
-						+e.square.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:2.6s;`)
-							+e.square-info 286
-							+e.square-title Общая площадь, м²
-						+e.more.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:2.8s;` href="#")
-							span Подробнее
-							+icon(`chevron-right`)
+				+e.col.col-lg-6
+					+house-item(`VIND`,`148`,`2`,`2`) 
+				+e.col.col-lg-6
+					+house-item(`FELT`,`180`,`2`,`2`) 
+				+e.col.col-lg-6
+					+house-item(`BARN`,`215`,`3`,`0`) 
+				+e.col.col-lg-6
+					+house-item(`JORD`,`220`,`4`,`2`) 
+				+e.col.col-lg-6
+					+house-item(`SKOG`,`260`,`5`,`4`) 
+				+e.col.col-lg-6
+					+house-item(`STEN`,`286`,`6`,`6`) 
 	// end sHouses
 
 mixin house-item(title,square,img,delay)
-	+b.house-item.bg-wrap.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" data-wow-delay=`${delay}.0s` style=`--animate-duration: 400ms; --animate-delay:${delay}.0s;`)
-		+pic(`house-item-${img}.jpg`,``,0).picture-bg
-		h3.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:${delay}.4s;`)!=title
-		+e.square.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:${delay}.6s;`)
+	+b.house-item.bg-wrap.wow(data-animate="animate__fadeIn" href="#"  )
+		+pic(`house-item-${img}.jpg`,`bg`,0).picture-bg
+		.h3.wow(data-animate="animate__fadeIn"  )!=title
+		+e.square.wow(data-animate="animate__fadeIn"  )
 			+e.square-info!=square
 			+e.square-title Общая площадь, м²
-		+e.more.wow.animate__slow.animate__delay-1s(data-animate="animate__zoomIn" style=`--animate-duration: 200ms; --animate-delay:${delay}.8s;` href="#")
+		+e.more.wow(data-animate="animate__fadeIn" )
 			span Подробнее
 			+icon(`chevron-right`)
 

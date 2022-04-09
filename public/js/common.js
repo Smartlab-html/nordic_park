@@ -555,10 +555,10 @@ function eventHandler() {
 	gsap.from(".sAboutIndexInfo__picture-bg", {
 		scrollTrigger: {
 			scroller,
-			trigger: ".sAboutIndexInfo",
-			start: '-25% -10%',
-			end: 'bottom bottom',
-			toggleActions: "play none reverse none",
+			trigger: ".sAboutIndexInfo__picture-bg",
+			start: 'top 90%',
+			end: 'bottom +100 top',
+			toggleActions: "play none none none",
 			
 			// markers: true,
 		},
@@ -592,23 +592,7 @@ function eventHandler() {
 
 	})
 	foot
-		.from(".footer", {y: '-100%'});
-	var mapContact = gsap.timeline({
-
-		scrollTrigger: { 
-			scroller,
-			trigger: '.footer-wrap',
-			start: 'top bottom',
-			// endTrigger: "html",
-			end: 'bottom bottom',
-			// markers: true,
-			// toggleActions: "play none reverse none",
-			scrub: true, 
-		}
-
-	})
-	mapContact
-		.from(".sMapContacts", {y: '-100%'});
+		.from(".footer, #sContacts__map", {y: '-100%'});
 	var t2 = gsap.timeline({
 
 		scrollTrigger: {

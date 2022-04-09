@@ -1,3 +1,10 @@
+body:not(.main-page ) .top-nav:not(.fixed) .top-nav__logo{
+	svg{
+		[fill="white"] {
+			fill: $body-color !important;
+		}
+	}
+}
 .top-nav {
 	background-color: transparent;
 	position: fixed;
@@ -54,6 +61,7 @@
 		z-index: 101;
 
 		position: relative;
+		svg,
 		img {
 			position: absolute;
 			top: 0;

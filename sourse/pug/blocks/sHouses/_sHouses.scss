@@ -47,25 +47,41 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
+	&__col:nth-child(even) .house-item {
+		animation-delay: .4s;
+		* {
+			animation-delay: .8s;
+		}
+	}
 } // end.sHouses
 
 .house-item {
-	color: $white;
+	color: $white !important;
+	position: relative;
+	display: block;
+ &:hover{
+	 .icon{
+		animation: 2s slidein infinite;
+	 }
+ }
 	picture {
 		@include block(684, 580);
 		&::before {
 			background: linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32));
 			z-index: 1;
 		}
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
+		// img {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 100%;
+		// }
 	}
-	h3 {
+	* {
+		animation-delay: .5s;
+	}
+	.h3 {
 		position: absolute;
 		@include media-breakpoint-up(sm) {
 			top: 48px;
@@ -120,6 +136,7 @@
 	&__more {
 		position: absolute;
 		width: rem(160);
+
 		@include media-breakpoint-up(sm) {
 			bottom: 48px;
 			left: 64px;
@@ -140,9 +157,33 @@
 			width: 32px;
 			min-width: 32px;
 			height: 32px;
-			color: transparent;
-			stroke: $white;
+			// color: transparent;
+			// stroke: $white;
+			fill: none;
+			stroke: currentColor;
+			@include mt;
+		
+			animation-delay: 0s !important;
+			// animation-name: slidein;
+
 		}
 	}
 }
 
+
+
+ 
+
+@keyframes slidein {
+  from {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+
+}
