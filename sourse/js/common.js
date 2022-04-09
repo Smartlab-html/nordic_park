@@ -481,18 +481,11 @@ function eventHandler() {
 		// markers: true,
 		toggleClass: { className: 'fixed', targets: '.top-nav' }
 	});
-	// ScrollTrigger.create({
-	// 	scroller: scroller,
-	// 	start: 'top -80',
-	// 	end: 99999,
-	// 	toggleClass: {className: 'animate__animated', targets: '.top-nav'}
-	// });
-
+ 
 	gsap.utils.toArray(" .wow").forEach(wow => {
 
 
-		const animate = wow.dataset.animate;
-		console.log(animate);
+		const animate = wow.dataset.animate; 
 		function myfunction() {
 			wow.classList.toggle(`animate__animated`);
 			if (animate) {
@@ -516,66 +509,24 @@ function eventHandler() {
 			invalidateOnRefresh: true,
 		});
 	})
+ 
 
-
-
-	// gsap.utils.toArray(".main-content, .footer").forEach((panel, i) => {
-	// 	ScrollTrigger.create({
-	// 		trigger: panel,
-	// 		start: "top top", 
-	// 		pin: true, 
-	// 		pinSpacing: false 
-	// 	});
-	// });
+	if (document.querySelector(".sAboutIndexInfo__picture-bg")) {
 	
-	
-	// ScrollTrigger.create({
-	// 	snap: 1 / 1 // snap whole page to the closest section!
-	// });
-	
-
-	// var tl = gsap.timeline({
-
-	//   scrollTrigger: {
-	//     trigger: ".sAboutIndexInfo",
-	//     scroller,
-	//     start: '-40% bottom',
-	// 		end: 'bottom',
-	// 		scrub: true,
-	// 		markers: true,
-	//     toggleActions: "play none reverse none",
-	//     invalidateOnRefresh: true,     
-	//   }
-
-	// })
-	// tl
-	// .fromTo(".sAboutIndexInfo__picture-bg", { x: '-100%' }, { x: 0 })
-
-
-	gsap.from(".sAboutIndexInfo__picture-bg", {
-		scrollTrigger: {
-			scroller,
-			trigger: ".sAboutIndexInfo__picture-bg",
-			start: 'top 90%',
-			end: 'bottom +100 top',
-			toggleActions: "play none none none",
-			
-			// markers: true,
-		},
-		x: '-100%'
-	});
-	// gsap.fromTo(".footer", {
-	// 	scrollTrigger: {
-	// 		scroller,
-	// 		trigger: '.footer',
-	// 		start: 'top bottom',
-	// 		end: 'bottom',
-	// 		markers: true,
-	// 		// pin:true,
-	// 	},
-		
-	// });
-
+		gsap.from(".sAboutIndexInfo__picture-bg", {
+			scrollTrigger: {
+				scroller,
+				trigger: ".sAboutIndexInfo__picture-bg",
+				start: 'top 90%',
+				end: 'bottom +100 top',
+				toggleActions: "play none none none",
+				
+				// markers: true,
+			},
+			x: '-100%'
+		});
+	}
+ 
 
 	var foot = gsap.timeline({
 
@@ -592,84 +543,46 @@ function eventHandler() {
 
 	})
 	foot
-		.from(".footer, #sContacts__map", {y: '-100%'});
-	var t2 = gsap.timeline({
+		.from(".footer, #sContacts__map", { y: '-100%' });
+	if (document.querySelector(".sAboutIndexInfo")) {
+		var t2 = gsap.timeline({
 
-		scrollTrigger: {
-			trigger: ".sAboutIndexInfo",
-			scroller,
-			start: '-10% bottom',
-			end: 'bottom',
-			scrub: true,
-			// markers: true, 
-			invalidateOnRefresh: true,
+			scrollTrigger: {
+				trigger: ".sAboutIndexInfo",
+				scroller,
+				start: '-10% bottom',
+				end: 'bottom',
+				scrub: true,
+				// markers: true, 
+				invalidateOnRefresh: true,
+			}
+
+		})
+
+		t2
+			.to(".sAboutIndexInfo__phylosophy-block-wrap", { y: -320 })
+			;
+			
+			var t3 = gsap.timeline({
+				
+				scrollTrigger: {
+					trigger: ".sIndexInfo",
+					scroller,
+					start: 'top bottom',
+					end: '100%',
+					scrub: true,
+					// markers: true, 
+					invalidateOnRefresh: true,
+				}
+				
+			})
+			
+			t3
+			.fromTo(".sIndexInfo__picture img", { x: 150 }, { x: 50 })
+			;
+			
 		}
-
-	})
-
-	t2
-		.to(".sAboutIndexInfo__phylosophy-block-wrap", { y: -320 })
-		;
-
-	var t3 = gsap.timeline({
-
-		scrollTrigger: {
-			trigger: ".sIndexInfo",
-			scroller,
-			start: 'top bottom',
-			end: '100%',
-			scrub: true,
-			// markers: true, 
-			invalidateOnRefresh: true,
-		}
-
-	})
-
-	t3
-		.fromTo(".sIndexInfo__picture img", { x: 150 }, { x: 50 })
-		;
-
-	// var t4 = gsap.timeline({
-
-	//   scrollTrigger: {
-	//     trigger: '.footer',
-	//     scroller,
-	// 		start: () => "top -" + $('.footer').height(),
-	// 		end: () => "+=" + $('.footer').height(),
-	// 		// scrub: true,
-	// 		// pin: true,
-	// 		// end: '200% bottom',
-	// 		// scrub: true,
-	// 		markers: true, 
-	// 		duration: 1500
-	//     // invalidateOnRefresh: true,     
-	//   }
-
-	// })
-
-	// t4
-	// .fromTo(".footer", { y:'-100%'}, { y: 0})
-	// ; 
-
-	// if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-	// 	$("body").niceScroll({
-	// 		scrollspeed: 120, // scrolling speed
-	// 		mousescrollstep: 40, // scrolling speed with mouse wheel (pixel)
-	// 		touchbehavior: true, // DEPRECATED!! use "touchemulate"
-	// 		emulatetouch: true, // enable cursor-drag scrolling like touch devices in desktop computer
-	// 		hwacceleration: true, // use hardware accelerated scroll when supported
-	// 		boxzoom: true, // enable zoom for box content
-	// 		dblclickzoom: true, // (only when boxzoom=true) zoom activated when double click on box
-	// 		gesturezoom: true, // (only when boxzoom=true and with touch devices) zoom activated when pinch out/in on box
-	// 		grabcursorenabled: false, // (only when touchbehavior=true) display "grab" icon
-	// 		bouncescroll: true, // (only when touchbehavior=true) display "grab" icon
-	// 		autohidemode: false,
-	// 		// smoothscroll: false, // scroll with ease movement
-	// 		// sensitiverail: false
-	// 	});
-	// }
-	// }
-
+ 
 
 
 
@@ -680,27 +593,3 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// gsap.to(".sForm", {
-// 	yPercent: -100,
-// 	ease: "none",
-// 	stagger: 0.5,
-// 	scrollTrigger: {
-// 		trigger: "#sForm",
-// 		start: "top top",
-// 		end: "+=300%",
-// 		scrub: true,
-// 		pin: true
-// 	}
-// });
-
-
-// gsap.set(".sForm", { zIndex: (i, target, targets) => targets.length - i });
-// if (document.readyState !== 'loading') {
-// 	eventHandler();
-// } else {
-// 	document.addEventListener('DOMContentLoaded', eventHandler);
-// }
-

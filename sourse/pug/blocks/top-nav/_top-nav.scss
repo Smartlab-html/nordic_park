@@ -1,4 +1,4 @@
-body:not(.main-page ) .top-nav:not(.fixed) .top-nav__logo{
+body.gray-bg .top-nav:not(.fixed) .top-nav__logo{
 	svg{
 		[fill="white"] {
 			fill: $body-color !important;

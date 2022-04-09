@@ -21,8 +21,8 @@ mixin sHouses(data)
 	// end sHouses
 
 mixin house-item(title,square,img,delay)
-	+b.house-item.bg-wrap.wow(data-animate="animate__fadeIn" href="#"  )
-		+pic(`house-item-${img}.jpg`,`bg`,0).picture-bg
+	+b.house-item.bg-wrap(  href="#"  )
+		+pic(`house-item-${img}-sm.jpg`,`bg`,0).picture-bg.wow(data-animate="animate__fadeIn")
 		.h3.wow(data-animate="animate__fadeIn"  )!=title
 		+e.square.wow(data-animate="animate__fadeIn"  )
 			+e.square-info!=square

@@ -66,6 +66,7 @@
  }
 	picture {
 		@include block(684, 580);
+		animation-delay: 0s !important;
 		&::before {
 			background: linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32));
 			z-index: 1;
