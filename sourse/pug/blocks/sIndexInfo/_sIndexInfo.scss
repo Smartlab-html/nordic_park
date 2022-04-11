@@ -70,10 +70,18 @@
 			top: 0;
 			height: 100%;
 			left: -29%;
-			@include media-breakpoint-up(xxl){
+			@include media-breakpoint-up(xxl) {
 				object-position: 0px -10vw;
 			}
 		}
+	}
+	&__item-title {
+		margin-bottom: 8px;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(24);
+		}
+		font-size: rem(14);
+		font-weight: 600;
 	}
 	&__pic-wrap {
 		@include block(780, 900);
@@ -109,3 +117,51 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sIndexInfo
+
+.sProjectInfo {
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(200)};
+	}
+	--sPT: 0;
+	h2 {
+		@include media-breakpoint-up(lg) {
+			font-size: rem(72);
+			margin-bottom: rem(110);
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 36px;
+		}
+	}
+	.sIndexInfo__item-text {
+		@include media-breakpoint-down(sm) {
+			font-size: 12px;
+		}
+	}
+	.sIndexInfo__pic-wrap {
+		--ratio: 866/780;
+		@include media-breakpoint-down(lg) {
+			--ratio: 600/704;
+		}
+	}
+	.sIndexInfo__picture {
+		display: block !important;
+		@include media-breakpoint-up(lg) {
+			top: rem(200);
+			left: 0;
+			width: 40.6vw;
+		}
+		@include media-breakpoint-down(lg) {
+			position: relative;
+			top: unset;
+			left: unset;
+			max-height: none;
+			width: 100%;
+			margin-bottom: rem(100);
+		}
+		img{
+			object-position: unset !important;
+			left: 0;
+			width: 100%;
+		}
+	}
+}

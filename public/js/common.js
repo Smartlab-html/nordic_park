@@ -455,23 +455,23 @@ function eventHandler() {
 	});
 	let bodyScrollBar;
 	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		 bodyScrollBar = Scrollbar.init(scroller, {
+		bodyScrollBar = Scrollbar.init(scroller, {
 			// let bodyScrollBar = Scrollbar.init(document.body, {
 			damping: 0.1,
 			thumbMinSize: 20,
 			delegateTo: document,
 		});
 	}
-		ScrollTrigger.scrollerProxy(scroller, {
-			scrollTop(value) {
-				if (arguments.length) {
-					bodyScrollBar.scrollTop = value;
-				}
-				return bodyScrollBar.scrollTop;
-			},
-		});
-		bodyScrollBar.addListener(ScrollTrigger.update);
-	
+	ScrollTrigger.scrollerProxy(scroller, {
+		scrollTop(value) {
+			if (arguments.length) {
+				bodyScrollBar.scrollTop = value;
+			}
+			return bodyScrollBar.scrollTop;
+		},
+	});
+	bodyScrollBar.addListener(ScrollTrigger.update);
+
 
 	ScrollTrigger.create({
 		scroller: scroller,
@@ -481,11 +481,11 @@ function eventHandler() {
 		// markers: true,
 		toggleClass: { className: 'fixed', targets: '.top-nav' }
 	});
- 
+
 	gsap.utils.toArray(" .wow").forEach(wow => {
 
 
-		const animate = wow.dataset.animate; 
+		const animate = wow.dataset.animate;
 		function myfunction() {
 			wow.classList.toggle(`animate__animated`);
 			if (animate) {
@@ -509,10 +509,10 @@ function eventHandler() {
 			invalidateOnRefresh: true,
 		});
 	})
- 
+
 
 	if (document.querySelector(".sAboutIndexInfo__picture-bg")) {
-	
+
 		gsap.from(".sAboutIndexInfo__picture-bg", {
 			scrollTrigger: {
 				scroller,
@@ -520,17 +520,17 @@ function eventHandler() {
 				start: 'top 90%',
 				end: 'bottom +100 top',
 				toggleActions: "play none none none",
-				
+
 				// markers: true,
 			},
 			x: '-100%'
 		});
 	}
- 
+
 
 	var foot = gsap.timeline({
 
-		scrollTrigger: { 
+		scrollTrigger: {
 			scroller,
 			trigger: '.footer-wrap',
 			start: 'top bottom',
@@ -538,7 +538,7 @@ function eventHandler() {
 			end: 'bottom bottom',
 			// markers: true,
 			// toggleActions: "play none reverse none",
-			scrub: true, 
+			scrub: true,
 		}
 
 	})
@@ -562,27 +562,49 @@ function eventHandler() {
 		t2
 			.to(".sAboutIndexInfo__phylosophy-block-wrap", { y: -320 })
 			;
-			
-			var t3 = gsap.timeline({
-				
-				scrollTrigger: {
-					trigger: ".sIndexInfo",
-					scroller,
-					start: 'top bottom',
-					end: '100%',
-					scrub: true,
-					// markers: true, 
-					invalidateOnRefresh: true,
-				}
-				
-			})
-			
-			t3
+
+		var t3 = gsap.timeline({
+
+			scrollTrigger: {
+				trigger: ".sIndexInfo",
+				scroller,
+				start: 'top bottom',
+				end: '100%',
+				scrub: true,
+				// markers: true, 
+				invalidateOnRefresh: true,
+			}
+
+		})
+
+		t3
 			.fromTo(".sIndexInfo__picture img", { x: 150 }, { x: 50 })
 			;
-			
-		}
- 
+		
+
+	}
+	if (document.querySelector(".sProjectInfo")) {
+		var t4 = gsap.timeline({
+
+			scrollTrigger: {
+				trigger: ".sProjectInfo",
+				scroller,
+				start: '-30%',
+				end: '100%',
+				scrub: true,
+				// markers: true, 
+				invalidateOnRefresh: true,
+			}
+
+		})
+
+		t4
+			.fromTo(".sProjectInfo__picture", { y: 300 }, { y: -100 })
+			;
+		
+
+	}
+
 
 
 

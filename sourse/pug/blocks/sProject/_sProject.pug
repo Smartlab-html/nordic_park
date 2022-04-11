@@ -1,0 +1,24 @@
+mixin sProject(data)
+	// start sProject
+	+b.SECTION.sProject.section#sProject&attributes(attributes)
+		.container
+			+e.title-wrap
+				+e.title.wow(data-animate="animate__fadeInUp") О ПРОЕКТЕ
+				+e.info-wrap
+					+e.info-item.wow(data-animate="animate__fadeInUp")
+						+e.info-title Общая площадь, м²
+						+e.info-text 215
+					+e.info-item.wow(data-animate="animate__fadeInUp")
+						+e.info-title Стоимость, ₽/м²
+						+e.info-text 100 000
+			+e.stage-block
+				+e.stage.wow(data-animate="animate__fadeInUp")
+					+e.stage-title Этаж 1
+					+e.stage-pic
+						+img(`stage-item.jpg`)
+				+e.stage.wow(data-animate="animate__fadeInUp")
+					+e.stage-title Этаж 2
+					+e.stage-pic
+						+img(`stage-item.jpg`)
+
+	// end sProject

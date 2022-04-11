@@ -1,0 +1,146 @@
+// start .sProject
+.sProject {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+
+	background-color: #f2f2f2;
+	--sPT: #{rem(100)};
+	--sPB: #{rem(100)};
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+		background-color: $white;
+		--sPT: #{rem(200)};
+		--sPB: #{rem(400)};
+	}
+	&__title-wrap {
+		display: flex;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: rem(180);
+		}
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 100px;
+		}
+		margin-bottom: 50px;
+		flex-direction: column;
+	}
+	&__title {
+		@include media-breakpoint-up(lg) {
+			font-size: rem(16);
+			color: #0a0a0a;
+			margin-bottom: 0;
+		}
+		font-weight: 600;
+		margin-bottom: 32px;
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 0.08em;
+		color: rgba(10, 10, 10, 0.6);
+	}
+	&__info-wrap {
+		display: flex;
+		@include media-breakpoint-down(lg) {
+			justify-content: space-between;
+		}
+	}
+	&__info-item {
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(187);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-right: 70px;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__info-title {
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(14);
+			margin-bottom: rem(20);
+		}
+		font-size: calc(7px + 0.9vw);
+		margin-bottom: 14px;
+		font-weight: 700;
+	}
+	&__info-text {
+		font-weight: 500;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(80);
+		}
+		line-height: 100%;
+		font-size: 40px;
+	}
+	&__stage-block {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@include media-breakpoint-up(lg) {
+			// margin-bottom: rem(400);
+		}
+		// margin-bottom: 36px;
+	}
+	&__stage {
+		@include media-breakpoint-up(lg) {
+			width: calc(50% - 16px);
+			margin-bottom: 16px;
+		}
+		width: 100%;
+		margin-bottom: 64px;
+	}
+	&__stage-title {
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+		}
+		font-weight: 600;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(32);
+			margin-bottom: rem(48);
+		}
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 32px;
+	}
+	&__stage-pic {
+		img {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	&__structure-block {
+		@include media-breakpoint-up(lg) {
+			background-color: #f2f2f2;
+			margin-bottom: rem(200);
+		}
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(100);
+		}
+		margin-bottom: rem(50);
+		position: relative;
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sProject

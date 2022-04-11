@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Главная</title>
+		<title>Проект дома</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -68,121 +68,170 @@
 		<div class="scroller">
 			<div class="main-wrapper">
 				<!-- start headerBlock-->
-				<div class="headerBlockIndex headerBlock section bg-wrap" id="headerBlock">
-					<!-- picture-->
-					<picture class="picture-bg"> 
-						<source type="image/webp" srcset="img/@2x/webp/index-bg.webp"/><img src="img/@2x/index-bg.jpg" alt="" loading="lazy"/>
-					</picture>
-					<!-- /picture-->
-					<video class="picture-bg" loading="lazy" preload="auto" no-controls="no-controls" autoplay="autoplay" loop="loop" playsinline="playsinline" muted="muted">
-						<source src="video/video.webp" type="video/webp"/>
-						<source src="video/video.mp4" type="video/mp4"/>
-					</video>
+				<div class="headerBlockProject headerBlock section bg-wrap" id="headerBlock">
+					<div class="headerBlockProject__pic picture-bg"><img src="img/project-bg.jpg" alt="" loading="lazy"/>
+					</div>
 					<div class="container">
-						<div class="headerBlockIndex__wrap row"> 
-							<div class="col-lg-6 animate__animated animate__fadeInUp">
-								<h1>Коттеджный поселок в&nbsp;реликтовом лесу</h1>
-							</div>
-							<div class="headerBlockIndex__info-block col-lg-6 align-self-end"> 
-								<div class="headerBlockIndex__caption swiper animate__animated animate__fadeIn animate__slow">
-									<div class="swiper-wrapper">
-										<div class="headerBlockIndex__caption-slide swiper-slide">В 20 минутах от города, посреди реликтового леса, в шаговой доступности от большой воды.
-										</div>
-										<div class="headerBlockIndex__caption-slide swiper-slide">6 типов домов площадью от 150 до 300 м2 по проектам ведущего архитектурного бюро в стиле современный минимализм и Барн-Хаус.
-										</div>
-										<div class="headerBlockIndex__caption-slide swiper-slide">По всей протяженности поселка на площади более 2 га расположился живописный ландшафтный парк с детскими игровыми и work out площадками, прогулочными дорожками, летним кафе 
-										</div>
-									</div>
-								</div>
-								<div class="headerBlockIndex__numbers-wrap">
-									<div class="headerBlockIndex__number animate__animated animate__fadeInUp animate__slow">
-										<div class="headerBlockIndex__number-title">20
-										</div>
-										<div class="headerBlockIndex__number-caption">км от МКАД<br>по Дмитровскому шоссе
-										</div>
-									</div>
-									<div class="headerBlockIndex__number animate__animated animate__fadeInUp animate__slow">
-										<div class="headerBlockIndex__number-title">85
-										</div>
-										<div class="headerBlockIndex__number-caption">домов на участках<br>от 8 до 14 соток
-										</div>
-									</div>
-								</div>
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb breadcrumb--light animate__animated animate__slideInLeft" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Дома</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">BARN</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+						<div class="headerBlockProject__info-wrap">
+							<h1>BARN 215</h1>
+							<div class="headerBlockProject__btn-wrap">
+								<a class="headerBlockProject__show" href="#">ПОКАЗАТЬ на генплане
+								</a>
+								<a class="headerBlockProject__rent" href="#">Забронировать дом
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- end headerBlock-->
-				<!-- start sAboutIndex-->
-				<div class="sAboutIndex" id="sAboutIndex">
-					<div class="sAboutIndex__caption-block">
-						<div class="container">
-							<div class="sAboutIndex__caption-block-wrap">
-								<div class="sAboutIndex__caption-block-title wow" data-animate="animate__fadeIn" data-wow-duration="1s" data-wow-delay="0s">О поселке
-								</div>
-								<div class="sAboutIndex__caption-block-info">
-									<h2 class="wow" data-animate="animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">Nordic Park</h2>
-									<p class="wow" data-animate="animate__fadeIn" data-wow-duration="1s" data-wow-delay="1s">Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к&nbsp;которому привыкли в мегаполисе.</p>
-									<a class="sAboutIndex__down-link scroll-link" href="#sAboutIndexInfo">
-										<svg class="icon icon-arrow-down ">
-											<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- end sAboutIndex-->
-				<div class="sAboutIndexInfo" id="sAboutIndexInfo">
+				<!-- start sProject-->
+				<section class="sProject section" id="sProject">
 					<div class="container">
-						<div class="sAboutIndexInfo__wrap">
-							<div class="sAboutIndexInfo__picture-block">
-								<div class="sAboutIndexInfo__picture">
-									<div class="sAboutIndexInfo__picture-bg">
-									</div><img src="img/@2x/house.jpg" alt="" loading="lazy"/>
+						<div class="sProject__title-wrap">
+							<div class="sProject__title wow" data-animate="animate__fadeInUp">О ПРОЕКТЕ
+							</div>
+							<div class="sProject__info-wrap">
+								<div class="sProject__info-item wow" data-animate="animate__fadeInUp">
+									<div class="sProject__info-title">Общая площадь, м²
+									</div>
+									<div class="sProject__info-text">215
+									</div>
+								</div>
+								<div class="sProject__info-item wow" data-animate="animate__fadeInUp">
+									<div class="sProject__info-title">Стоимость, ₽/м²
+									</div>
+									<div class="sProject__info-text">100 000
+									</div>
 								</div>
 							</div>
-							<div class="sAboutIndexInfo__phylosophy-block">
-								<div class="sAboutIndexInfo__phylosophy-block-wrap">
-									<div class="sAboutIndexInfo__phylosophy-block-title">Философия
-									</div>
-									<h3 class="wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">lagom</h3>
-									<p class="wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Мы&nbsp;вдохновлялись шведской философией умеренности и&nbsp;гармонии. Слово Lagom переводится как &laquo;столько, сколько нужно&raquo;, &laquo;в&nbsp;самый раз&raquo;.<br /><br />Достаточность без излишеств. Современный минимализм<br />в&nbsp;архитектурном стиле домов и&nbsp;дизайне интерьеров в&nbsp;сочетании с&nbsp;уникальным расположением поселка позволил создать пространство, в&nbsp;котором все преимущества жизни на&nbsp;природе сочетаются с&nbsp;возможностями городской архитектуры.</p>
+						</div>
+						<div class="sProject__stage-block">
+							<div class="sProject__stage wow" data-animate="animate__fadeInUp">
+								<div class="sProject__stage-title">Этаж 1
+								</div>
+								<div class="sProject__stage-pic"><img src="img/stage-item.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="sProject__stage wow" data-animate="animate__fadeInUp">
+								<div class="sProject__stage-title">Этаж 2
+								</div>
+								<div class="sProject__stage-pic"><img src="img/stage-item.jpg" alt="" loading="lazy"/>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
+				<!-- end sProject-->
+				<!-- start sIndexInfo-->
+				<section class="sIndexInfo sProjectInfo section" id="sIndexInfo">
+					<div class="container">
+						<div class="sIndexInfo__wrap">
+							<div class="sIndexInfo__block">
+								<div class="sIndexInfo__picture sProjectInfo__picture">
+									<div class="sIndexInfo__pic-wrap"><img src="img/project-info.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="sIndexInfo__block">
+								<h2 class="wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Из чего сделаны дома</h2>
+								<div class="row">
+										<div class="col-6">
+											<div class="sIndexInfo__item">
+												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
+													<svg class="icon icon-project-info-1 ">
+														<use xlink:href="img/svg/sprite.svg#project-info-1"></use>
+													</svg>
+												</div>
+												<div class="sIndexInfo__item-title wow" data-animate="animate__fadeIn">Заполнение стен
+												</div>
+												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Керамический блок Porotherm
+												</div>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="sIndexInfo__item">
+												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
+													<svg class="icon icon-project-info-2 ">
+														<use xlink:href="img/svg/sprite.svg#project-info-2"></use>
+													</svg>
+												</div>
+												<div class="sIndexInfo__item-title wow" data-animate="animate__fadeIn">Несущий каркас
+												</div>
+												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Самонесущие стены, сборный железобетон
+												</div>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="sIndexInfo__item">
+												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
+													<svg class="icon icon-project-info-3 ">
+														<use xlink:href="img/svg/sprite.svg#project-info-3"></use>
+													</svg>
+												</div>
+												<div class="sIndexInfo__item-title wow" data-animate="animate__fadeIn">Отделка дома
+												</div>
+												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Эластичная штукатурка и натуральное дерево
+												</div>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="sIndexInfo__item">
+												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
+													<svg class="icon icon-project-info-4 ">
+														<use xlink:href="img/svg/sprite.svg#project-info-4"></use>
+													</svg>
+												</div>
+												<div class="sIndexInfo__item-title wow" data-animate="animate__fadeIn">Окна
+												</div>
+												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Двойные стеклопакеты, стекло iGlass с газовым наполнением
+												</div>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sIndexInfo-->
 				<!-- start sIndexSlider-->
-				<div class="sIndexSlider section" id="sIndexSlider">
+				<div class="sIndexSlider sIndexSlider--project section" id="sIndexSlider">
 					<div class="sIndexSlider__pic-slider sIndexSlider__pic-slider--js swiper">
 						<div class="swiper-wrapper">
 								<div class="sIndexSlider__pic-slider-item swiper-slide">
-									<div class="sIndexSlider__pic-slider-title">Современная архитектура
+									<div class="sIndexSlider__pic-slider-title">Интерьеры домов
 									</div>
 									<div class="sIndexSlider__pic-slider-bg">
-										<picture style="transform: translate3d(0px, 0px, 0px); transition: all 0ms ease 0s;"><img class="swiper-lazy" data-src="img/@2x/index-slide-1.jpg" alt=""/></picture>
+										<picture style="transform: translate3d(0px, 0px, 0px); transition: all 0ms ease 0s;"><img class="swiper-lazy" data-src="img/@2x/project-slide-1.jpg" alt=""/></picture>
 									</div>
-									<div class="sIndexSlider__pic-slider-caption">Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+									<div class="sIndexSlider__pic-slider-caption">Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
 									</div>
 								</div>
 								<div class="sIndexSlider__pic-slider-item swiper-slide">
-									<div class="sIndexSlider__pic-slider-title">Современная архитектура
+									<div class="sIndexSlider__pic-slider-title">Интерьеры домов
 									</div>
 									<div class="sIndexSlider__pic-slider-bg">
-										<picture style="transform: translate3d(0px, 0px, 0px); transition: all 0ms ease 0s;"><img class="swiper-lazy" data-src="img/@2x/index-slide-1.jpg" alt=""/></picture>
+										<picture style="transform: translate3d(0px, 0px, 0px); transition: all 0ms ease 0s;"><img class="swiper-lazy" data-src="img/@2x/project-slide-1.jpg" alt=""/></picture>
 									</div>
-									<div class="sIndexSlider__pic-slider-caption">Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+									<div class="sIndexSlider__pic-slider-caption">Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
 									</div>
 								</div>
 								<div class="sIndexSlider__pic-slider-item swiper-slide">
-									<div class="sIndexSlider__pic-slider-title">Современная архитектура
+									<div class="sIndexSlider__pic-slider-title">Интерьеры домов
 									</div>
 									<div class="sIndexSlider__pic-slider-bg">
-										<picture style="transform: translate3d(0px, 0px, 0px); transition: all 0ms ease 0s;"><img class="swiper-lazy" data-src="img/@2x/index-slide-1.jpg" alt=""/></picture>
+										<picture style="transform: translate3d(0px, 0px, 0px); transition: all 0ms ease 0s;"><img class="swiper-lazy" data-src="img/@2x/project-slide-1.jpg" alt=""/></picture>
 									</div>
-									<div class="sIndexSlider__pic-slider-caption">Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+									<div class="sIndexSlider__pic-slider-caption">Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
 									</div>
 								</div>
 						</div>
@@ -202,21 +251,21 @@
 						<div class="sIndexSlider__caption-slider sIndexSlider__caption-slider--js swiper">
 							<div class="swiper-wrapper">
 								<div class="sIndexSlider__caption-slider-item swiper-slide">
-									<div class="sIndexSlider__caption-slider-title">Современная архитектура
+									<div class="sIndexSlider__caption-slider-title">Интерьеры домов
 									</div>
-									<div class="sIndexSlider__caption-slider-text wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
-									</div>
-								</div>
-								<div class="sIndexSlider__caption-slider-item swiper-slide">
-									<div class="sIndexSlider__caption-slider-title">Современная архитектура
-									</div>
-									<div class="sIndexSlider__caption-slider-text wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+									<div class="sIndexSlider__caption-slider-text wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
 									</div>
 								</div>
 								<div class="sIndexSlider__caption-slider-item swiper-slide">
 									<div class="sIndexSlider__caption-slider-title">Современная архитектура
 									</div>
-									<div class="sIndexSlider__caption-slider-text wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Архитектура поселка выдержана в стиле современного минимализма. Все дома выходят окнами в лес или в парк. При строительстве и отделке домов используются только качественные и экологически чистые материалы.
+									<div class="sIndexSlider__caption-slider-text wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
+									</div>
+								</div>
+								<div class="sIndexSlider__caption-slider-item swiper-slide">
+									<div class="sIndexSlider__caption-slider-title">Современная архитектура
+									</div>
+									<div class="sIndexSlider__caption-slider-text wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
 									</div>
 								</div>
 							</div>
@@ -237,93 +286,6 @@
 					</div>
 				</div>
 				<!-- end sIndexSlider-->
-				<!-- start sIndexInfo-->
-				<section class="sIndexInfo section" id="sIndexInfo">
-					<div class="container">
-						<div class="sIndexInfo__wrap">
-							<div class="sIndexInfo__block">
-								<div class="sIndexInfo__title">ПРЕИМУЩЕСТВА
-								</div>
-								<div class="sIndexInfo__picture">
-									<div class="sIndexInfo__pic-wrap"><img src="img/index-info.jpg" alt="" loading="lazy"/>
-									</div>
-								</div>
-							</div>
-							<div class="sIndexInfo__block">
-								<h2 class="wow" data-animate="animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0s">Коротко <br>о главном</h2>
-								<div class="row">
-										<div class="col-6">
-											<div class="sIndexInfo__item">
-												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
-													<svg class="icon icon-index-info-1 ">
-														<use xlink:href="img/svg/sprite.svg#index-info-1"></use>
-													</svg>
-												</div>
-												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Уникальное расположение поселка в&nbsp;сердце реликтового леса
-												</div>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="sIndexInfo__item">
-												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
-													<svg class="icon icon-index-info-2 ">
-														<use xlink:href="img/svg/sprite.svg#index-info-2"></use>
-													</svg>
-												</div>
-												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Всего 20&nbsp;минут в&nbsp;пути от&nbsp;города до&nbsp;дома по&nbsp;скоростному шоссе
-												</div>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="sIndexInfo__item">
-												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
-													<svg class="icon icon-index-info-3 ">
-														<use xlink:href="img/svg/sprite.svg#index-info-3"></use>
-													</svg>
-												</div>
-												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Все участки имеют выход в&nbsp;лес или в&nbsp;парк, вы&nbsp;будете жить в&nbsp;окружении природы
-												</div>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="sIndexInfo__item">
-												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
-													<svg class="icon icon-index-info-4 ">
-														<use xlink:href="img/svg/sprite.svg#index-info-4"></use>
-													</svg>
-												</div>
-												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Закрытая территория, круглосуточная охрана, служба бытового сервиса и&nbsp;эксплуатации
-												</div>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="sIndexInfo__item">
-												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
-													<svg class="icon icon-index-info-5 ">
-														<use xlink:href="img/svg/sprite.svg#index-info-5"></use>
-													</svg>
-												</div>
-												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Многообразие объектов инфраструктуры в&nbsp;пешей доступности: рестораны, спа, велнес
-												</div>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="sIndexInfo__item">
-												<div class="sIndexInfo__pic wow" data-animate="animate__zoomIn">
-													<svg class="icon icon-index-info-6 ">
-														<use xlink:href="img/svg/sprite.svg#index-info-6"></use>
-													</svg>
-												</div>
-												<div class="sIndexInfo__item-text wow" data-animate="animate__fadeIn">Максимум комфорта благодаря высокому качеству строительных материалов и&nbsp;инженерных сетей
-												</div>
-											</div>
-										</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end sIndexInfo-->
 				<!-- start sForm-->
 				<section class="sForm section scroll-slide" id="sForm">
 					<div class="container">

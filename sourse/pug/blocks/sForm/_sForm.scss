@@ -9,6 +9,7 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(420)};
 		--sPB: #{rem(200)};
+		margin-top: -1px;
 	}
 	&__wrap {
 		display: flex;

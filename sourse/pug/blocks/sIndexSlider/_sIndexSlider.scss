@@ -21,6 +21,11 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	background-color: $white;
+	&--project {
+		@include media-breakpoint-up(lg) {
+			background-color: $primary;
+		}
+	}
 	@include media-breakpoint-up(md) {
 	}
 	@include media-breakpoint-up(sm) {

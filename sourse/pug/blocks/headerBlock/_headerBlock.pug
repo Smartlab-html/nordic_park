@@ -7,22 +7,39 @@ mixin headerBlockIndex()
 			source(src="video/video.mp4" type='video/mp4')
 		.container
 			+e.wrap.row 
-					.col-lg-6.animate__animated.animate__fadeInUp
-						h1 Коттеджный поселок в&nbsp;реликтовом лесу
-					+e.info-block.col-lg-6.align-self-end 
-							//- +e.caption Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
-							+e.caption.swiper.animate__animated.animate__fadeIn.animate__slow
-								.swiper-wrapper
-									+e.caption-slide.swiper-slide В 20 минутах от города, посреди реликтового леса, в шаговой доступности от большой воды.
-									+e.caption-slide.swiper-slide 6 типов домов площадью от 150 до 300 м2 по проектам ведущего архитектурного бюро в стиле современный минимализм и Барн-Хаус.
-									+e.caption-slide.swiper-slide По всей протяженности поселка на площади более 2 га расположился живописный ландшафтный парк с детскими игровыми и work out площадками, прогулочными дорожками, летним кафе 
-							+e.numbers-wrap
-								+e.number.animate__animated.animate__fadeInUp.animate__slow
-									+e.number-title 20
-									+e.number-caption км от МКАД<br>по Дмитровскому шоссе
-								+e.number.animate__animated.animate__fadeInUp.animate__slow
-									+e.number-title 85
-									+e.number-caption домов на участках<br>от 8 до 14 соток
+				.col-lg-6.animate__animated.animate__fadeInUp
+					h1 Коттеджный поселок в&nbsp;реликтовом лесу
+				+e.info-block.col-lg-6.align-self-end 
+						//- +e.caption Коттеджный поселок Nordic Park создан для людей, которые стремятся жить за городом, но при этом хотят сохранить тот уровень комфорта, к которому привыкли в мегаполисе.
+						+e.caption.swiper.animate__animated.animate__fadeIn.animate__slow
+							.swiper-wrapper
+								+e.caption-slide.swiper-slide В 20 минутах от города, посреди реликтового леса, в шаговой доступности от большой воды.
+								+e.caption-slide.swiper-slide 6 типов домов площадью от 150 до 300 м2 по проектам ведущего архитектурного бюро в стиле современный минимализм и Барн-Хаус.
+								+e.caption-slide.swiper-slide По всей протяженности поселка на площади более 2 га расположился живописный ландшафтный парк с детскими игровыми и work out площадками, прогулочными дорожками, летним кафе 
+						+e.numbers-wrap
+							+e.number.animate__animated.animate__fadeInUp.animate__slow
+								+e.number-title 20
+								+e.number-caption км от МКАД<br>по Дмитровскому шоссе
+							+e.number.animate__animated.animate__fadeInUp.animate__slow
+								+e.number-title 85
+								+e.number-caption домов на участках<br>от 8 до 14 соток
+	// end headerBlock
+
+mixin headerBlockProject()
+	// start headerBlock
+	+b.headerBlockProject.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
+		+e.pic.picture-bg
+			+img(`project-bg.jpg`)
+		//- video.picture-bg(loading='lazy' preload='auto' no-controls  autoplay  loop  playsinline  muted  )
+		//- 	source(src="video/video.webp" type='video/webp')
+		//- 	source(src="video/video.mp4" type='video/mp4')
+		.container
+			+breadcrumb-light(`Главная`,`Дома`, `BARN`)
+			+e.info-wrap
+				h1 BARN 215
+				+e.btn-wrap
+					+e.show(href="#") ПОКАЗАТЬ на генплане
+					+e.rent(href="#") Забронировать дом
 	// end headerBlock
 
 mixin headerBlock()
