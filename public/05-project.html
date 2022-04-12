@@ -14,7 +14,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/>
 	</head>
-	<body class="main-page"> 
+	<body> 
 		<!-- start top-nav-->
 		<div class="top-nav block-with-lazy">
 			<a class="top-nav__logo animate__animated animate__fadeIn" href="/"><svg width="152" height="56" viewBox="0 0 152 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,6 +65,9 @@
 			</div>
 		</div>
 		<!-- end top-nav-->
+		<div class="fixed-wrap">
+			<div class="headerBlockProject__btn-wrap fixed"><a class="headerBlockProject__show" href="#">ПОКАЗАТЬ на генплане</a><a class="headerBlockProject__rent" href="#">Забронировать дом</a></div>
+		</div>
 		<div class="scroller">
 			<div class="main-wrapper">
 				<!-- start headerBlock-->
@@ -73,7 +76,7 @@
 					</div>
 					<div class="container">
 						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb breadcrumb--light animate__animated animate__slideInLeft" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<ol class="breadcrumb breadcrumb--light" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 										<meta itemprop="position" content="1"/></a></li>
 								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Дома</span>
@@ -95,7 +98,7 @@
 				</div>
 				<!-- end headerBlock-->
 				<!-- start sProject-->
-				<section class="sProject section" id="sProject">
+				<div class="sProject section" id="sProject">
 					<div class="container">
 						<div class="sProject__title-wrap">
 							<div class="sProject__title wow" data-animate="animate__fadeInUp">О ПРОЕКТЕ
@@ -130,7 +133,7 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
 				<!-- end sProject-->
 				<!-- start sIndexInfo-->
 				<section class="sIndexInfo sProjectInfo section" id="sIndexInfo">
@@ -203,6 +206,69 @@
 					</div>
 				</section>
 				<!-- end sIndexInfo-->
+				<!-- start sProject-->
+				<section class="sProject sProjectBuild section" id="sProject">
+					<div class="container">
+						<div class="sProject__title-wrap">
+							<div class="sProject__title wow" data-animate="animate__fadeInUp">Материалы
+							</div>
+							<div class="sProject__info-wrap wow" data-animate="animate__fadeInUp">
+								<h2>Как сделаны дома</h2>
+							</div>
+						</div>
+						<div class="sProject__caption-wrap">
+							<div class="sProject__caption-item">
+								<div class="sProject__caption-pic">
+									<div class="sProject__caption-pic-bg">
+									</div><img src="img/caption-item-1.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="sProject__caption-block">
+									<div class="sProject__caption-title">Стены
+									</div>
+									<div class="sProject__caption-text">Стены домов сделаны из&nbsp;натуральных керамических блоков Porotherm&nbsp;44 (теплая керамика)&nbsp;&mdash; это оптимальное решение для комфортного проживания, которое обеспечит отличный микроклимат <br />и&nbsp;энергоэффективность в&nbsp;доме.<br /><br />Стена толщиной 440&nbsp;мм не&nbsp;требует дополнительного утепления. Высокий уровень звукоизоляции обеспечивает защиту от&nbsp;шума с&nbsp;улицы.
+									</div>
+								</div>
+							</div>
+							<div class="sProject__caption-item">
+								<div class="sProject__caption-pic">
+									<div class="sProject__caption-pic-bg">
+									</div><img src="img/caption-item-2.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="sProject__caption-block">
+									<div class="sProject__caption-title">Перекрытия
+									</div>
+									<div class="sProject__caption-text">Перекрытия выполнены из&nbsp;сборных железобетонных плит. В&nbsp;настоящее время это, пожалуй, самое надежное техническое решение, ведь сборные плиты изготавливаются на&nbsp;заводах,<br />в&nbsp;соответствии с&nbsp;утвержденными стандартами, проходят выходной контроль качества.
+									</div>
+								</div>
+							</div>
+							<div class="sProject__caption-item">
+								<div class="sProject__caption-pic">
+									<div class="sProject__caption-pic-bg">
+									</div><img src="img/caption-item-3.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="sProject__caption-block">
+									<div class="sProject__caption-title">Плоская кровля
+									</div>
+									<div class="sProject__caption-text">Использование ПВХ-мембраны<br />в&nbsp;качестве кровельного покрытия обеспечивает максимальную надежность конструкции. Самые уязвимые места любой кровли&nbsp;&mdash; это стыки и&nbsp;примыкания конструкций.<br /><br />Широкий рулон мембраны<br />с&nbsp;пропаянными швами позволяет минимизировать количество стыков,<br />а&nbsp;ее&nbsp;высокая гибкость дает возможность избежать сложных стыков, например, в&nbsp;углах парапетов.
+									</div>
+								</div>
+							</div>
+							<div class="sProject__caption-item">
+								<div class="sProject__caption-pic">
+									<div class="sProject__caption-pic-bg">
+									</div><img src="img/caption-item-4.jpg" alt="" loading="lazy"/>
+								</div>
+								<div class="sProject__caption-block">
+									<div class="sProject__caption-title">Остекление
+									</div>
+									<div class="sProject__caption-text">Благодаря тому, что дома оборудованы крупноформатными окнами, создается ощущение, что граница между домом и&nbsp;окружающей природой стирается. Пространство участка будто&nbsp;бы перетекает в&nbsp;дом, создавая ощущение безмятежности. <br /><br />Окна оборудованы двойными стеклопакетами, что обеспечивает отличную шумоизоляцию. Использование стекла iGlass<br />с&nbsp;газовым наполнением значительно снижает потери тепла. Также в&nbsp;наших домах оконные конструкции сделаны из&nbsp;теплого алюминиевого профиля, что делает их&nbsp;легкими и&nbsp;прочными.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sProject-->
 				<!-- start sIndexSlider-->
 				<div class="sIndexSlider sIndexSlider--project section" id="sIndexSlider">
 					<div class="sIndexSlider__pic-slider sIndexSlider__pic-slider--js swiper">

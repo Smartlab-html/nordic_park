@@ -482,6 +482,16 @@ function eventHandler() {
 		toggleClass: { className: 'fixed', targets: '.top-nav' }
 	});
 
+	ScrollTrigger.create({
+		scroller: scroller,
+		trigger: `.headerBlockProject__btn-wrap`,
+		start: 'top -5%',
+		end: 99999,
+		toggleActions: "play none none none",
+		// markers: true,
+		toggleClass: { className: 'fixed', targets: '.fixed-wrap' }
+	});
+
 	gsap.utils.toArray(" .wow").forEach(wow => {
 
 
@@ -528,22 +538,7 @@ function eventHandler() {
 	}
 
 
-	var foot = gsap.timeline({
 
-		scrollTrigger: {
-			scroller,
-			trigger: '.footer-wrap',
-			start: 'top bottom',
-			// endTrigger: "html",
-			end: 'bottom bottom',
-			// markers: true,
-			// toggleActions: "play none reverse none",
-			scrub: true,
-		}
-
-	})
-	foot
-		.from(".footer, #sContacts__map", { y: '-100%' });
 	if (document.querySelector(".sAboutIndexInfo")) {
 		var t2 = gsap.timeline({
 
@@ -580,7 +575,7 @@ function eventHandler() {
 		t3
 			.fromTo(".sIndexInfo__picture img", { x: 150 }, { x: 50 })
 			;
-		
+
 
 	}
 	if (document.querySelector(".sProjectInfo")) {
@@ -589,7 +584,7 @@ function eventHandler() {
 			scrollTrigger: {
 				trigger: ".sProjectInfo",
 				scroller,
-				start: '-30%',
+				start: '40% bottom',
 				end: '100%',
 				scrub: true,
 				// markers: true, 
@@ -601,11 +596,87 @@ function eventHandler() {
 		t4
 			.fromTo(".sProjectInfo__picture", { y: 300 }, { y: -100 })
 			;
-		
+
 
 	}
+	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		if (document.querySelector(".sProjectBuild")) {
+			// 	var t5 = gsap.timeline({
+
+			// 		scrollTrigger: {
+			// 			trigger: ".sProject__caption-item",
+			// 			scroller,
+			// 			start: '40% bottom',
+			// 			end: '100%',
+			// 			scrub: true,
+			// 			// markers: true, 
+			// 			invalidateOnRefresh: true,
+			// 		}
+
+			// 	})
+
+			// 	t5
+			// 		.fromTo(".sProject__caption-block", { y: 300 }, { y: -100 })
+			// 		;
 
 
+			// }
+			gsap.utils.toArray(" .sProject__caption-item").forEach(trigger => {
+				var capItem = gsap.timeline({
+					scrollTrigger: {
+						trigger,
+						scroller,
+						start: '-10% bottom',
+						end: 'bottom',
+						scrub: true,
+						// toggleActions: "play none reverse none"
+						// markers: true, 
+						invalidateOnRefresh: true
+					}
+				})
+
+				capItem
+					.fromTo(trigger.querySelector('.sProject__caption-block'), { y: 600 }, { y: -100 })
+					;
+			})
+			gsap.utils.toArray(".sProject__caption-pic-bg").forEach(trigger => {
+				gsap.from(trigger, {
+					scrollTrigger: {
+						scroller,
+						trigger,
+						start: 'top 20%',
+						end: 'bottom +100 top',
+						toggleActions: "play none none none",
+
+						// markers: true,
+					},
+					x: '-100%'
+				});
+			})
+		}
+	}
+
+	var foot = gsap.timeline({
+
+		scrollTrigger: {
+			scroller,
+			trigger: '.footer-wrap',
+			start: 'top bottom',
+			// endTrigger: "html",
+			end: 'bottom bottom',
+			// markers: true,
+			// toggleActions: "play none reverse none",
+			scrub: true,
+		}
+
+	})
+	foot
+		.from(".footer", { y: '-100%' });
+	const bread = document.querySelectorAll('.breadcrumb-item');
+	bread.forEach((element, index) => {
+		element.style.setProperty('--animate-delay', `${index * 0.5}s`);
+		element.classList.add(`animate__animated`, `animate__fadeInLeft`, `animate__delay-1s`)
+	});
 
 
 

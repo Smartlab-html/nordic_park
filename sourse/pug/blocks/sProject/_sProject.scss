@@ -133,6 +133,15 @@
 		margin-bottom: rem(50);
 		position: relative;
 	}
+	h2 {
+		@include media-breakpoint-up(lg) {
+			font-size: rem(72);
+			margin-bottom: rem(110);
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 36px;
+		}
+	}
 	@include media-breakpoint-up(md) {
 	}
 	@include media-breakpoint-up(sm) {
@@ -143,4 +152,122 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
+	&__caption-item {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(426px);
+			flex-direction: row-reverse;
+			align-items: flex-start;
+			& > * {
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+		}
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 100px;
+		}
+		margin-bottom: 50px;
+		display: flex;
+		flex-direction: column;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:nth-child(even) {
+			@include media-breakpoint-up(lg) {
+				flex-direction: row;
+			}
+		}
+	}
+	&__caption-block {
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-up(xl) {
+			width: 25%;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 35%;
+		}
+		@include media-breakpoint-up(lg) {
+			&::before {
+				content: "";
+				position: absolute;
+				@include media-breakpoint-up(xxl) {
+				}
+				@include media-breakpoint-up(xl) {
+					width: calc(100% + 120px);
+					height: calc(100% + 140px);
+				}
+				width: calc(100% + 60px);
+				height: calc(100% + 70px);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: #f2f2f2;
+				z-index: -1;
+			}
+		}
+	}
+	&__caption-title {
+		@include media-breakpoint-up(xxl) {
+			font-size: 48px;
+		}
+		@include media-breakpoint-up(sm) {
+			font-size: rem(36);
+			margin-bottom: rem(32);
+		}
+		font-size: 30px;
+		margin-bottom: 24px;
+		font-weight: 600;
+		line-height: 120%;
+	}
+	&__caption-text {
+		font-weight: 300;
+		@include media-breakpoint-up(sm) {
+			font-size: 18px;
+		}
+		font-size: 14px;
+	}
+	&__caption-pic {
+		@include media-breakpoint-up(xl) {
+			max-width: 75%;
+			width: 75%;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: 65%;
+			width: 65%;
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(64);
+		}
+		margin-bottom: rem(32);
+		img {
+			max-width: 100%;
+		}
+		position: relative;
+	}
+	&__caption-pic-bg {
+		position: absolute;
+		top: -1%;
+		background-color: #fff;
+		height: 102%;
+		left: 102%;
+		position: absolute;
+		top: -1%;
+		width: 102%;
+		z-index: 1;
+		@include media-breakpoint-down(lg){
+			display: none;
+		}
+	}
 } // end.sProject
+
+.sProjectBuild {
+	.sProject__info-wrap {
+		@include media-breakpoint-up(xxl) {
+			max-width: 50%;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: 65%;
+		}
+	}
+}

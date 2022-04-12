@@ -1,7 +1,7 @@
 //- breadcrumb
 mixin breadcrumb(...items)
 	nav(aria-label="breadcrumb" )
-		ol.breadcrumb.animate__animated.animate__slideInLeft(itemscope itemtype="http://schema.org/BreadcrumbList")
+		ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList")
 			-for (var i = 0; i < items.length; i++)
 				li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
 					a(href=(i == 0 ? "/" : '#') itemprop="item" )
@@ -10,7 +10,7 @@ mixin breadcrumb(...items)
 
 mixin breadcrumb-light(...items)
 	nav(aria-label="breadcrumb" )
-		ol.breadcrumb.breadcrumb--light.animate__animated.animate__slideInLeft(itemscope itemtype="http://schema.org/BreadcrumbList")
+		ol.breadcrumb.breadcrumb--light(itemscope itemtype="http://schema.org/BreadcrumbList")
 			-for (var i = 0; i < items.length; i++)
 				li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
 					a(href=(i == 0 ? "/" : '#') itemprop="item" )

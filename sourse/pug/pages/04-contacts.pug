@@ -7,7 +7,7 @@ include ../blocks/sPlace/_sPlace.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= ' with-map' 
+	- let  mainPage= '' 
 	- let  bg= null
 
 block title
@@ -20,7 +20,8 @@ block pagecontent
 	//- +header()
 	//- 	+top-nav
 	+sContacts
-	+sMapContacts
+	+sMap
+	+footer
 	//- script.
 	//- 	if (document.querySelector('.sMap')) {
 	//- 	ymaps.ready(function () {

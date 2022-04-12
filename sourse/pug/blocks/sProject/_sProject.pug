@@ -1,6 +1,6 @@
 mixin sProject(data)
 	// start sProject
-	+b.SECTION.sProject.section#sProject&attributes(attributes)
+	+b.sProject.section#sProject&attributes(attributes)
 		.container
 			+e.title-wrap
 				+e.title.wow(data-animate="animate__fadeInUp") О ПРОЕКТЕ
@@ -21,4 +21,27 @@ mixin sProject(data)
 					+e.stage-pic
 						+img(`stage-item.jpg`)
 
+	// end sProject
+
+mixin sProjectBuild(data)
+	// start sProject
+	+b.SECTION.sProject.sProjectBuild.section#sProject&attributes(attributes)
+		.container
+			+e.title-wrap
+				+e.title.wow(data-animate="animate__fadeInUp") Материалы
+				+e.info-wrap.wow(data-animate="animate__fadeInUp")
+					h2 Как сделаны дома
+			+e.caption-wrap
+				mixin item(title,text,pic)
+					+e.caption-item
+						+e.caption-pic
+							+e.caption-pic-bg
+							+img(`caption-item-${pic}.jpg`)
+						+e.caption-block
+							+e.caption-title!=title
+							+e.caption-text!=text
+				+item(`Стены`,`Стены домов сделаны из&nbsp;натуральных керамических блоков Porotherm&nbsp;44 (теплая керамика)&nbsp;&mdash; это оптимальное решение для комфортного проживания, которое обеспечит отличный микроклимат <br />и&nbsp;энергоэффективность в&nbsp;доме.<br /><br />Стена толщиной 440&nbsp;мм не&nbsp;требует дополнительного утепления. Высокий уровень звукоизоляции обеспечивает защиту от&nbsp;шума с&nbsp;улицы.`,`1`)
+				+item(`Перекрытия`,`Перекрытия выполнены из&nbsp;сборных железобетонных плит. В&nbsp;настоящее время это, пожалуй, самое надежное техническое решение, ведь сборные плиты изготавливаются на&nbsp;заводах,<br />в&nbsp;соответствии с&nbsp;утвержденными стандартами, проходят выходной контроль качества.`,`2`)
+				+item(`Плоская кровля`,`Использование ПВХ-мембраны<br />в&nbsp;качестве кровельного покрытия обеспечивает максимальную надежность конструкции. Самые уязвимые места любой кровли&nbsp;&mdash; это стыки и&nbsp;примыкания конструкций.<br /><br />Широкий рулон мембраны<br />с&nbsp;пропаянными швами позволяет минимизировать количество стыков,<br />а&nbsp;ее&nbsp;высокая гибкость дает возможность избежать сложных стыков, например, в&nbsp;углах парапетов.`,`3`)
+				+item(`Остекление`,`Благодаря тому, что дома оборудованы крупноформатными окнами, создается ощущение, что граница между домом и&nbsp;окружающей природой стирается. Пространство участка будто&nbsp;бы перетекает в&nbsp;дом, создавая ощущение безмятежности. <br /><br />Окна оборудованы двойными стеклопакетами, что обеспечивает отличную шумоизоляцию. Использование стекла iGlass<br />с&nbsp;газовым наполнением значительно снижает потери тепла. Также в&nbsp;наших домах оконные конструкции сделаны из&nbsp;теплого алюминиевого профиля, что делает их&nbsp;легкими и&nbsp;прочными.`,`4`)
 	// end sProject

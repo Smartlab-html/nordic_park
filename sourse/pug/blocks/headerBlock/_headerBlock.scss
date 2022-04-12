@@ -266,6 +266,12 @@
 		@include media-breakpoint-down(sm) {
 			justify-content: unset;
 		}
+		// &.fixed{
+		// 	position: fixed;
+		// 	width: 100%;
+		// 	top: 100%;
+		// 	left: 50%;
+		// }
 	}
 	&__show,
 	&__rent {
