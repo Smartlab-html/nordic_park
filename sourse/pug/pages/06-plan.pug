@@ -1,0 +1,19 @@
+extends ../layout/main-plan.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sPlan/_sPlan.pug 
+
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let title= 'Генплан'
+	title= title
+block pagecontent
+	+sPlan
+
+
+
