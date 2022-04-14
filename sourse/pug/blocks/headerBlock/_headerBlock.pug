@@ -38,8 +38,12 @@ mixin headerBlockProject()
 			+e.info-wrap
 				h1 BARN 215
 				+e.btn-wrap
-					+e.show(href="#") ПОКАЗАТЬ на генплане
-					+e.rent(href="#") Забронировать дом
+					+e.show(href="#")
+						+e.btn-text-wrap
+							+e.btn-text ПОКАЗАТЬ на генплане
+					+e.rent(href="#") 
+						+e.btn-text-wrap
+							+e.btn-text Забронировать дом
 	// end headerBlock
 
 mixin headerBlock()

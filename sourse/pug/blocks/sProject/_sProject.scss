@@ -117,6 +117,7 @@
 		margin-bottom: 32px;
 	}
 	&__stage-pic {
+		cursor: pointer;
 		img {
 			max-width: 100%;
 			width: 100%;
@@ -242,6 +243,7 @@
 		margin-bottom: rem(32);
 		img {
 			max-width: 100%;
+			width: 100%;
 		}
 		position: relative;
 	}
@@ -255,7 +257,7 @@
 		top: -1%;
 		width: 102%;
 		z-index: 1;
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 	}

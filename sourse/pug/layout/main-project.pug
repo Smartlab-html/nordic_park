@@ -42,8 +42,12 @@ html(lang="ru")
 		+top-nav
 		.fixed-wrap
 			.headerBlockProject__btn-wrap.fixed
-				a.headerBlockProject__show(href='#') ПОКАЗАТЬ на генплане
-				a.headerBlockProject__rent(href='#') Забронировать дом
+				a.headerBlockProject__show(href='#')
+					.headerBlockProject__btn-text-wrap
+						.headerBlockProject__btn-text ПОКАЗАТЬ на генплане
+				a.headerBlockProject__rent(href='#') 
+					.headerBlockProject__btn-text-wrap
+						.headerBlockProject__btn-text Забронировать дом
 		.scroller
 			.main-wrapper
 				block pagecontent

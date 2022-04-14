@@ -573,9 +573,13 @@ h6 {
 		display: none;
 	}
 	.headerBlockProject__show, .headerBlockProject__rent{
-		padding-top: rem(12);
-		padding-bottom: rem(12);
+		padding-top: rem(3);
+		padding-bottom: rem(3);
 		font-size: 14px;
 		max-width: 300px;
+	}
+	.headerBlockProject__btn-text-wrap{
+		padding-top: rem(8);
+		padding-bottom: rem(8);
 	}
 }

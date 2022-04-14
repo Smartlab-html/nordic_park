@@ -14,11 +14,11 @@ mixin sProject(data)
 			+e.stage-block
 				+e.stage.wow(data-animate="animate__fadeInUp")
 					+e.stage-title Этаж 1
-					+e.stage-pic
+					+e.A.stage-pic(data-fancybox data-src="img/stage-item.jpg")
 						+img(`stage-item.jpg`)
 				+e.stage.wow(data-animate="animate__fadeInUp")
 					+e.stage-title Этаж 2
-					+e.stage-pic
+					+e.A.stage-pic(data-fancybox data-src="img/stage-item.jpg")
 						+img(`stage-item.jpg`)
 
 	// end sProject
