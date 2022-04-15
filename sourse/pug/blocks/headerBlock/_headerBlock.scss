@@ -336,11 +336,19 @@
 			color: $white !important;
 			background-color: $primary;
 		}
+		&.colorize{
+			color: $white !important;
+			background-color: $primary;
+		}
 	}
 	&__rent {
 		color: $white !important;
 		background-color: $primary;
 		&:hover {
+			color: $body-color !important;
+			background-color: $white;
+		}
+		&.colorize{
 			color: $body-color !important;
 			background-color: $white;
 		}

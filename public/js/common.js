@@ -520,6 +520,12 @@ function eventHandler() {
 		});
 	})
 
+	$('.headerBlockProject__rent').hover(function(){
+		$(this).parent().children(`.headerBlockProject__show`).toggleClass(`colorize`);
+	});
+	$('.headerBlockProject__show').hover(function(){
+		$(this).parent().children(`.headerBlockProject__rent`).toggleClass(`colorize`);
+	});
 
 	if (document.querySelector(".sAboutIndexInfo__picture-bg")) {
 
