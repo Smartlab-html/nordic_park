@@ -1,18 +1,17 @@
 // start .sPlan
 .sPlan {
-	min-height: 100vh;
-	
+	// min-height: 100vh;
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
-		padding-top: rem(120);
+		// padding-top: rem(120);
 	}
 	@include media-breakpoint-up(md) {
 	}
 	@include media-breakpoint-up(sm) {
-		padding-top: rem(120);
+		// padding-top: rem(120);
 	}
-	padding-top: rem(100);
+	// padding-top: rem(100);
 	@include media-breakpoint-between(md, xl) {
 	}
 	@include media-breakpoint-only(xl) {
@@ -29,13 +28,28 @@
 		height: 100%;
 	}
 	&__wrap {
-		@include block(1920, 1074);
-		min-width: 1200px;
-		min-height: 671px;
+		// @include block(1920, 1074);
+		// min-width: 1200px;
+		// min-height: 671px;
+		min-height: 100vh;
+		position: relative;
+		aspect-ratio: 1920 / 1074;
 	}
-	&__block{
+	&__block {
 		max-width: 100%;
-		overflow: auto;
+		overflow-x: auto;
+		// &::-webkit-scrollbar {
+		// 	width: 12px; /* ширина scrollbar */
+		// }
+		// &::-webkit-scrollbar-track {
+		// 	background-color: #f2f2f2;
+		// }
+		// &::-webkit-scrollbar-thumb {
+		// 	background-color: blue; /* цвет плашки */
+		// 	border-radius: 20px; /* закругления плашки */
+		// 	border: 3px solid orange; /* padding вокруг плашки */
+		// 	z-index: 2;
+		// }
 	}
-	background-color: $primary;
+	// background-color: $primary;
 } // end.sPlan
