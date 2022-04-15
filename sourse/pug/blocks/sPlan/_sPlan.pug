@@ -1,5 +1,7 @@
 mixin sPlan(data)
 	// start sPlan
 	+b.sPlan#sPlan&attributes(attributes)
-		iframe(src="https://www.nordicpark.ru/api/coords/", frameborder="0") 
+		+e.block
+			+e.wrap
+				iframe(src="https://www.nordicpark.ru/api/coords/", frameborder="0") 
 	// end sPlan

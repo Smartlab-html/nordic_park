@@ -206,6 +206,9 @@
 				z-index: -1;
 			}
 		}
+		@include media-breakpoint-down(lg){
+			transform: none !important;
+		}
 	}
 	&__caption-title {
 		@include media-breakpoint-up(xxl) {
