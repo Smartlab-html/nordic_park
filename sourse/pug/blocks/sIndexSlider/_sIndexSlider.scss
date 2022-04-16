@@ -147,18 +147,23 @@
 				opacity: 0;
 			}
 			border: none;
+			background: none !important;
+			box-shadow: none;
 			@include media-breakpoint-down(sm) {
 				top: -50px;
 			}
 			.icon {
 				@include media-breakpoint-up(sm) {
-					width: 32px;
-					height: 32px;
+					// width: 32px;
+					// height: 32px;
 				}
-				width: 16px;
-				height: 16px;
-				stroke: $body-color;
-				color: transparent;
+				font-size: 32px;
+				// font-size: 16px;
+				// width: 16px;
+				// height: 16px;
+				stroke: currentColor;
+				fill: none;
+				color: #fff;
 				position: absolute;
 				top: 50%;
 				left: 50%;
