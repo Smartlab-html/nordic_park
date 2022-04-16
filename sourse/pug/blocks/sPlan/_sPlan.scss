@@ -33,8 +33,13 @@
 		// width: 100%;
 		// height: 100vh;
 		@include block(1920, 1080);
-		min-width: 1920px;
-		min-height: 1080px;
+		@media   (min-width: 1199px) {
+			min-width: 1920px;
+			min-height: 1080px;
+			height: 100vh;
+		}
+		min-width: 1198px;
+		min-height: 673px;
 		// min-width: 1200px;
 		// min-height: 671px;
 		// min-height: 100vh;
