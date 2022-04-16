@@ -22,7 +22,7 @@
 	@include media-breakpoint-up(lg) {
 		background-color: $white;
 		--sPT: #{rem(200)};
-		--sPB: #{rem(400)};
+		// --sPB: #{rem(400)};
 	}
 	&__title-wrap {
 		display: flex;

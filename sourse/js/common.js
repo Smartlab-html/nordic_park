@@ -421,27 +421,35 @@ function eventHandler() {
 		whenResize();
 	}
 
-	const IndexPicSlider = new Swiper('.sIndexSlider__pic-slider--js', swiperOptions);
-	const IndexCaptionSlider = new Swiper('.sIndexSlider__caption-slider--js', {
-		slidesPerView: 1,
-		loop: true,
-		spaceBetween: 20,
-		speed: 1500,
-		pagination: {
-			el: ".swiper-pagination",
-			type: "fraction",
-		},
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-		// thumbs: {
-		// 	swiper: IndexPicSlider,
-		// }
-	});
-
-	IndexCaptionSlider.controller.control = IndexPicSlider;
-	IndexPicSlider.controller.control = IndexCaptionSlider;
+	let slidersBlock = document.querySelectorAll(".sIndexSlider");
+	
+	for (const slider of slidersBlock) {
+		
+		let slImg = slider.querySelector('.sIndexSlider__pic-slider--js');
+		let slText = slider.querySelector('.sIndexSlider__caption-slider--js');
+		const IndexPicSlider = new Swiper(slImg, swiperOptions);
+		const IndexCaptionSlider = new Swiper(slText, {
+			slidesPerView: 1,
+			loop: true,
+			spaceBetween: 20,
+			speed: 1500,
+			pagination: {
+				el: slider.querySelector(".swiper-pagination"),
+				type: "fraction",
+			},
+			navigation: {
+				nextEl: slider.querySelector(".swiper-button-next"),
+				prevEl: slider.querySelector(".swiper-button-prev"),
+			},
+			// thumbs: {
+			// 	swiper: IndexPicSlider,
+			// }
+		});
+		if (slText) {
+			IndexCaptionSlider.controller.control = IndexPicSlider;
+			IndexPicSlider.controller.control = IndexCaptionSlider;
+		}
+	}
 	const HeaderSlider = new Swiper('.headerBlockIndex__caption ', {
 		slidesPerView: '1',
 		// effect: "fade",

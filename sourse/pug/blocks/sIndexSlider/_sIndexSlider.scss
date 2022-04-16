@@ -133,6 +133,11 @@
 		}
 	}
 	&__pic-slider {
+		&:hover {
+			.swiper-button-hand {
+			opacity: 1;
+		}
+		}
 		.swiper-button-hand {
 			// @include media-breakpoint-up(lg) {
 			// 	display: none;
@@ -140,9 +145,6 @@
 			transition-duration: 0.4s;
 			@include media-breakpoint-up(lg) {
 				opacity: 0;
-				&:hover {
-					opacity: 1;
-				}
 			}
 			border: none;
 			@include media-breakpoint-down(sm) {
