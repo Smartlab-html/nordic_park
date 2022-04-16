@@ -2,6 +2,9 @@ mixin sPlan(data)
 	// start sPlan
 	+b.sPlan#sPlan&attributes(attributes)
 		+e.block
-			+e.wrap
-				iframe(src="https://www.nordicpark.ru/api/coords/", frameborder="0") 
+			style.
+				
+
+			+e.wrap#genplan_block
+				iframe(src="https://www.nordicpark.ru/api/coords/", style="margin: auto;display: block;" id="genplan_map" width="1920" height="1080"   frameborder="0") 
 	// end sPlan

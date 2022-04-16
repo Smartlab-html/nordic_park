@@ -18,26 +18,33 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
-	iframe {
+
+	
+	iframe#genplan_map {
 		// min-height: 100vh;
 		// width: 100vw;
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		width: 100% !important;
+		height: 100% !important;
 	}
 	&__wrap {
-		// @include block(1920, 1074);
+		// width: 100%;
+		// height: 100vh;
+		@include block(1920, 1080);
+		min-width: 1920px;
+		min-height: 1080px;
 		// min-width: 1200px;
 		// min-height: 671px;
-		min-height: 100vh;
-		position: relative;
-		aspect-ratio: 1920 / 1074;
+		// min-height: 100vh;
+		// position: relative;
+		// aspect-ratio: 1920 / 1074;
 	}
 	&__block {
-		max-width: 100%;
-		overflow-x: auto;
+		overflow: auto;
+		// max-width: 100%;
+		// overflow-x: auto;
 		// &::-webkit-scrollbar {
 		// 	width: 12px; /* ширина scrollbar */
 		// }

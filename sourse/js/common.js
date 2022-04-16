@@ -397,6 +397,30 @@ function eventHandler() {
 
 	};
 
+	if (document.body.classList.contains("plan-page")) {
+		function setFixedNav() {
+			let topNav = document.querySelector('.top-nav  ');
+			if (!topNav) return;
+			window.scrollY > 0
+				? topNav.classList.add('fixed')
+				: topNav.classList.remove('fixed');
+		}
+	
+		function whenResize() {
+			setFixedNav();
+		}
+	
+		window.addEventListener('scroll', () => {
+			setFixedNav();
+	
+		}, { passive: true })
+		window.addEventListener('resize', () => {
+			whenResize();
+		}, { passive: true });
+	
+		whenResize();
+	}
+
 	const IndexPicSlider = new Swiper('.sIndexSlider__pic-slider--js', swiperOptions);
 	const IndexCaptionSlider = new Swiper('.sIndexSlider__caption-slider--js', {
 		slidesPerView: 1,

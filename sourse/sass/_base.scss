@@ -46,11 +46,28 @@
 	// 	z-index: 2;
 	// }
 }
+html {
+	@include media-breakpoint-up(lg) { 
+		overflow: hidden;
+		} 
+}
+.plan-page {
+	.top-nav{
+		position: fixed;
+	}
+}
+body{
+	@include media-breakpoint-up(lg) {
+		&:not(.plan-page){
+			
+	
+			overflow: hidden;
+		}
+	}
+
+}
 body,
 html {
-	@include media-breakpoint-up(lg) {
-		overflow: hidden;
-	}
 	width: 100%;
 	// position: fixed;
 	//   top: 0;
