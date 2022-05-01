@@ -2,16 +2,23 @@
 mixin modal() 
 	//  start modals
 	//- a(href="modal-call").link-modal-js modal-call 
-	div(id="modal-call"  style="display: none" )
+	div(id="modal"  style="display: none" )
 		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+			+form-wrap 
+				+e.title Забронировать
+				+e.text 
+					span.text-secondary Участок:
+					| 44
+	
+				+e.text 
+					span.text-secondary Тип дома: 
+					| Barn 215
 
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
+				br
+				br
+				+input("Номер телефона",'tel')(required)  
 				+policy()
+				+e.INPUT.btn.btn(type="submit"  value="Отправить")  
 	// #modal-call
 	
 	// end modals

@@ -1,4 +1,16 @@
 .form-wrap{
+	&__title{
+		@include rfs(24px);
+		font-weight: 600;
+		margin-bottom: rem(50);
+	}
+	&__text{
+		font-size: rem(18);
+		margin-bottom: rem(16);
+		text-transform: uppercase;
+		font-weight: 500;
+
+	}
  	&__input-wrap{
 			// @extend .form-group;
 			
@@ -7,14 +19,47 @@
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		 border-radius: 0;
+		 border: none;
+		 border-bottom: 2px solid  #0A0A0A;
+		 margin-bottom: rem(27);
+		 text-transform: uppercase;
+		 padding-left: 0;
+		 padding-right: 0;
+		 text-transform: uppercase;
  	}
  	&__btn{
  		cursor: pointer;
+		 @extend .btn, .btn-primary;
+		 width: 100%;
+		 padding: 20px 36px;
+		 font-size: rem(16);
+		 border-radius: 999px;
  	}
  	label{
  		width: 100%;
  		display: block;
  	}
+
+	 &__policy{
+		 font-size: rem(14);
+		 margin-bottom: rem(40);
+		 max-width: 280px;
+		 	.custom-input{
+				
+				&__input{
+							
+					background-color: #C4C4C4;
+					border-color: #C4C4C4;
+					border-radius: 50%;
+					&:checked{
+						background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{#000}'/></svg>");
+						background-color: #C4C4C4;
+						border-color: #C4C4C4;
+					}
+				}
+			}
+	 }
 }
 
 

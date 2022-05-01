@@ -5,16 +5,10 @@ const JSCCommon = {
 
 		Fancybox.bind(link, {
 			arrows: false,
-			// infobar: false,
-			touch: false,
-			trapFocus: false,
-			placeFocusBack: false,
-			infinite: false,
-			dragToClose: false,
 			type: 'inline',
-			autoFocus: false,
-			groupAll: false,
-			groupAttr: false,
+			touch: false,
+			showClass: "fancybox-throwOutUp",
+			hideClass: "fancybox-throwOutDown",
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
@@ -296,7 +290,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	JSCCommon.animateScroll();
+	// JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
@@ -479,8 +473,14 @@ function eventHandler() {
 	// 	acceleration: 1.2,
 	// });
 
-	let scroller = document.querySelector(".scroller")
+	/* Main navigation */
 	gsap.registerPlugin(ScrollTrigger);
+
+	let scroller = document.querySelector(".scroller") ,
+tween;
+
+
+
 
 	ScrollTrigger.defaults({
 		toggleActions: "play none play none",
@@ -503,6 +503,26 @@ function eventHandler() {
 		},
 	});
 	bodyScrollBar.addListener(ScrollTrigger.update);
+
+	document.querySelectorAll(".scroll-link").forEach(anchor => {
+	
+		anchor.addEventListener("click", function (e) {
+	
+			e.preventDefault(); 
+			let targetElem = document.querySelector(this.getAttribute("href")),
+				y = targetElem.offsetTop;
+				bodyScrollBar.scrollTo(0, y, 1600);
+			// console.log(this.getAttribute("href"));
+			// gsap.to(scroller, {
+				
+			// 	scrollTo: {
+			// 		y: y,
+			// 		// autoKill: true,
+			// 	},
+			// 	duration: 1
+			// });
+		});
+});
 
 
 	ScrollTrigger.create({
@@ -534,9 +554,7 @@ function eventHandler() {
 				wow.classList.toggle(animate);
 			}
 		};
-		const rect = wow.getBoundingClientRect();
-		console.log(rect.top);
-
+		const rect = wow.getBoundingClientRect(); 
 		ScrollTrigger.create({
 			scroller: scroller,
 			trigger: wow,

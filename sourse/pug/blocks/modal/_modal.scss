@@ -11,9 +11,9 @@
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: rem(422);
 	// min-height: 100%; 
-	padding: 40px;
+	padding: rem(50) rem(30);
 
 	.modal-content {
 		// max-width: 485px;
@@ -145,4 +145,49 @@ a {
 	}
 }
 
+.fancybox__content{
 
+	.carousel__button.is-close {
+		width: rem(64);
+		height: rem(64);
+		top: rem(32);
+		right: rem(32);
+		background: #FFFFFF;
+		border: 1px solid rgba(196, 196, 196, 0.5);
+		border-radius: 50%;
+		color: #000;
+		--carousel-button-svg-filter: none;
+		--carousel-button-svg-width: 12px;
+		svg{
+
+		}
+	}
+}
+
+.fancybox-throwOutUp {
+  animation: 0.2s ease both fancybox-throwOutUp;
+}
+
+.fancybox-throwOutDown {
+  animation: 0.2s ease both fancybox-throwOutDown;
+}
+
+@keyframes fancybox-throwOutUp {
+  from {
+    transform: translate3d(0, 30%, 0);
+    opacity: 0;
+  }
+	
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes fancybox-throwOutDown {
+  to {
+    transform: translate3d(0, 30%, 0);
+    opacity: 0;
+  }
+}

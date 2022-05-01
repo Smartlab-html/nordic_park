@@ -37,6 +37,11 @@ mixin top-nav()
 			+e.menu-item.animate__animated.animate__fadeInLeft(href="#")
 				+e.menu-item-text-wrap
 					+e.SPAN.menu-item-text Контакты
+					
+			+e.menu-item.animate__animated.animate__fadeInLeft(href="#modal" data-fancybox="modal")
+				+e.menu-item-text-wrap
+					+e.SPAN.menu-item-text Модалка
+
 		+b.menu-mobile--js
 			+e.wrap
 				+e.item(href="#") Дома
