@@ -2,9 +2,10 @@ mixin headerBlockIndex()
 	// start headerBlock
 	+b.headerBlockIndex.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
 		+pic(`index-bg.jpg`,``,0).picture-bg
-		video.picture-bg(loading='lazy' preload='auto' no-controls  autoplay  loop  playsinline  muted  )
-			source(src="video/video.webp" type='video/webp')
-			source(src="video/video.mp4" type='video/mp4')
+		
+		.video-container
+			//- <iframe width="560" height="315" src="https://www.youtube.com/embed/fmoEYkgMTEo?autoplay=1&loop=1&enablejsapi=1&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&mute=1&playlist=fmoEYkgMTEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/fmoEYkgMTEo?autoplay=1&loop=1&enablejsapi=1&&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&origin=https://www.teletribe.ru&playlist=fmoEYkgMTEo&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		.container
 			+e.wrap.row 
 				.col-lg-6.animate__animated.animate__fadeInUp

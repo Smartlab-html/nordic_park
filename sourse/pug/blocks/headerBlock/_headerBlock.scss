@@ -42,10 +42,20 @@
 			padding-right: calc(var(--logo-size) + var(--logo-margin) + var(--topnav-padding));
 		}
 	}
+	// #player{
+	// 	position: absolute;
+	// 		top: 0;
+	// 		left: 0;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		object-fit: cover;
+	// }
+	#player,
+	iframe,
 	video {
 		object-fit: cover;
 		@include media-breakpoint-down(lg) {
-			display: none;
+			// display: none;
 		}
 	}
 	picture {
@@ -353,4 +363,29 @@
 			background-color: $white;
 		}
 	}
+}
+.video-container {
+	position: absolute;
+	@include a-cent;
+}
+
+.video-container  iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw !important;
+  height: 100vh !important;
+  transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-container iframe {
+    height: 56.25vw !important;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-container iframe {
+    width: 177.78vh !important;
+  }
 }
