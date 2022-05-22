@@ -55,7 +55,7 @@
 	video {
 		object-fit: cover;
 		@include media-breakpoint-down(lg) {
-			// display: none;
+			display: none;
 		}
 	}
 	picture {
